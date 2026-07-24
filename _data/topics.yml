@@ -67,6 +67,30 @@ categories:
         slug: beat-the-resume-screener
         blurb: Get past applicant tracking software with AI.
         status: live
+      - title: Who's Responsible When AI Gets It Wrong?
+        slug: who-is-responsible
+        blurb: The accountability gap, and why it's hard to challenge AI.
+        status: live
+      - title: When AI Has Caused Real Harm
+        slug: real-harm-cases
+        blurb: Five real, documented cases, and the lesson in each.
+        status: live
+      - title: Bias and Fairness in AI
+        slug: bias-and-fairness
+        blurb: Why AI isn't automatically fair, and what to watch for.
+        status: live
+      - title: When AI Pretends to Care
+        slug: when-ai-pretends-to-care
+        blurb: When a warm-sounding AI can't actually help.
+        status: live
+      - title: Human Dignity and the Right to an Explanation
+        slug: human-dignity
+        blurb: Treating people as people, and knowing why AI decided.
+        status: live
+      - title: The Hidden Costs of AI
+        slug: hidden-costs-of-ai
+        blurb: What AI costs the world, plus the ethics capstone.
+        status: live
 
   - id: software
     label: Office Productivity
