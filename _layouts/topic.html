@@ -1,0 +1,127 @@
+---
+layout: default
+---
+{%- comment -%} Look up category label/icon from the nav data file. {%- endcomment -%}
+{%- assign cat_label = page.category -%}
+{%- assign cat_id = "" -%}
+{%- for c in site.data.topics.categories -%}
+  {%- if c.id == page.category -%}
+    {%- assign cat_label = c.label -%}{%- assign cat_id = c.id -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- comment -%} Derive a YouTube embed id from a URL or bare id. {%- endcomment -%}
+{%- assign vid = "" -%}
+{%- if page.video_url and page.video_url != "" -%}
+  {%- assign u = page.video_url -%}
+  {%- if u contains "youtu.be/" -%}
+    {%- assign vid = u | split: "youtu.be/" | last | split: "?" | first | split: "/" | first -%}
+  {%- elsif u contains "watch?v=" -%}
+    {%- assign vid = u | split: "watch?v=" | last | split: "&" | first -%}
+  {%- elsif u contains "/embed/" -%}
+    {%- assign vid = u | split: "/embed/" | last | split: "?" | first -%}
+  {%- else -%}
+    {%- assign vid = u -%}
+  {%- endif -%}
+{%- endif -%}
+
+<article class="topic">
+  <div class="band">
+    <div class="container topic-hero">
+      <p class="breadcrumb">
+        <a href="{{ '/' | relative_url }}">Home</a> ·
+        <a href="{{ '/#cat-' | append: cat_id | relative_url }}">{{ cat_label }}</a>
+      </p>
+      {% if cat_id != "" %}
+      <span class="cat-chip">
+        {% for c in site.data.topics.categories %}{% if c.id == cat_id %}<svg class="icon" aria-hidden="true"><use href="#icon-{{ c.icon }}"></use></svg>{% endif %}{% endfor %}
+        {{ cat_label }}
+      </span>
+      {% endif %}
+      <h1>{{ page.title }}</h1>
+      {% if page.description %}<p class="lead">{{ page.description }}</p>{% endif %}
+
+      {% comment %} Video: renders an embed if provided, a friendly placeholder if not. {% endcomment %}
+      <div class="video-wrap">
+        {% if vid != "" %}
+        <div class="video-frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/{{ vid }}"
+                  title="Video lesson: {{ page.title }}"
+                  loading="lazy" allowfullscreen
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        </div>
+        {% else %}
+        <div class="video-placeholder">
+          <svg class="icon" aria-hidden="true"><use href="#icon-play"></use></svg>
+          <strong>A video walkthrough is coming for this lesson.</strong>
+          <span>You can work through everything below right now. No video needed.</span>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div class="container section--tight">
+    <div class="topic-body">
+      {% comment %} ---- Within-page table of contents ---- {% endcomment %}
+      <nav class="toc" aria-label="On this page">
+        <h2>On this page</h2>
+        <ol>
+          {% for part in page.parts %}
+          {% assign pid = part.id | default: part.title | slugify %}
+          <li><a href="#{{ pid }}">{{ part.title }}</a></li>
+          {% endfor %}
+        </ol>
+      </nav>
+
+      <div class="topic-parts rich">
+        {% for part in page.parts %}
+        {% assign pid = part.id | default: part.title | slugify %}
+        <section class="part reveal" id="{{ pid }}" aria-labelledby="{{ pid }}-h">
+          <p class="part__label">Part {{ forloop.index }}</p>
+          <h2 id="{{ pid }}-h">{{ part.title }}</h2>
+          {% if part.intro %}<p class="lead">{{ part.intro }}</p>{% endif %}
+
+          {% for block in part.blocks %}
+          {%- assign bt = block.type | default: "lesson" -%}
+          <div class="block block--{{ bt }}">
+            <p class="block__tag">
+              {% case bt %}
+              {% when "activity" %}
+                <span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-pencil"></use></svg></span> Activity · try it
+              {% when "quiz" %}
+                <span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-badge"></use></svg></span> Check your understanding
+              {% else %}
+                <span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson
+              {% endcase %}
+            </p>
+            {% if block.title %}<h3>{{ block.title }}</h3>{% endif %}
+            <div class="block__body rich">
+              {% if block.body %}{{ block.body | markdownify }}{% endif %}
+
+              {% if block.images %}
+                {% for img in block.images %}
+                <figure class="figure">
+                  <img src="{{ img.src | relative_url }}" alt="{{ img.alt }}"
+                       {% if img.width %}width="{{ img.width }}"{% endif %} loading="lazy">
+                  {% if img.caption %}<figcaption>{{ img.caption }}</figcaption>{% endif %}
+                </figure>
+                {% endfor %}
+              {% endif %}
+
+              {% if bt == "quiz" and block.quiz_url %}
+                <a class="btn btn--quiz" href="{{ block.quiz_url }}" target="_blank" rel="noopener">
+                  {{ block.quiz_label | default: "Open the quiz" }}
+                  <svg class="icon" aria-hidden="true"><use href="#icon-external"></use></svg>
+                  <span class="visually-hidden">(opens in a new tab)</span>
+                </a>
+              {% endif %}
+            </div>
+          </div>
+          {% endfor %}
+        </section>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</article>

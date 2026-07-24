@@ -1,0 +1,83 @@
+# ==========================================================================
+# NAVIGATION SOURCE OF TRUTH
+# This single file drives the mega menu and the home page catalog.
+# To add a topic to the menu: add an entry under the right category.
+# `slug` must match the filename in _topics/ (e.g. slug "what-ai-is"
+# -> _topics/what-ai-is.md). Set status: soon for a topic not written yet.
+# Editable from /admin (see "Site Navigation" collection).
+# ==========================================================================
+
+categories:
+  - id: ai
+    label: AI at Work
+    icon: sparkles
+    blurb: Use AI tools well, and know when not to.
+    topics:
+      - title: What AI Actually Is
+        slug: what-ai-is
+        blurb: Plain-English basics before you touch a single tool.
+        status: live
+      - title: Prompting Fundamentals
+        slug: prompting-fundamentals
+        blurb: The one skill that changes everything. Meet RTCF.
+        status: live
+      - title: Spotting AI Opportunities at Work
+        slug: identifying-opportunities
+        blurb: Which tasks are worth handing to AI, and which are not.
+        status: live
+      - title: When AI Gets It Wrong
+        slug: when-ai-gets-it-wrong
+        blurb: Hallucinations, verification, and staying in the loop.
+        status: live
+      - title: Advanced Prompting Techniques
+        slug: advanced-prompting
+        blurb: Four moves that turn good prompts into great ones.
+        status: live
+      - title: Image AI, A Practical Intro
+        slug: image-ai
+        blurb: Make useful visuals from words, and spot the limits.
+        status: live
+      - title: Bots vs. AI Agents
+        slug: bots-vs-agents
+        blurb: What each one can do, and what to keep for yourself.
+        status: live
+
+  - id: software
+    label: Everyday Software
+    icon: grid
+    blurb: The programs you meet at almost every desk job.
+    topics:
+      - title: "Basic Excel: Level 1"
+        slug: excel-level-1
+        blurb: Cells, formatting, and your first real formulas.
+        status: live
+      - title: "Basic Excel: Level 2"
+        slug: excel-level-2
+        blurb: Functions, sorting, and simple charts.
+        status: soon
+      - title: Writing with Word
+        slug: word-basics
+        blurb: Documents that look clean and professional.
+        status: soon
+
+  - id: devices
+    label: Devices & Digital Life
+    icon: device
+    blurb: Get comfortable with the tech you use every day.
+    topics:
+      - title: "Mobile Tech: iPhone Basics"
+        slug: iphone-basics
+        blurb: Buttons, home screen, and making it yours.
+        status: live
+      - title: "Mobile Tech: Android Basics"
+        slug: android-basics
+        blurb: The same essentials, the Samsung and Android way.
+        status: soon
+      - title: Getting Around Windows 11
+        slug: windows-11-basics
+        blurb: The desktop, the taskbar, and finding your files.
+        status: soon
+      - title: Staying Safe Online
+        slug: online-safety
+        blurb: Passwords, scams, and protecting your information.
+        status: soon

@@ -1,0 +1,147 @@
+# ==========================================================================
+# Decap CMS configuration for Tutorial Hub
+# Admin panel lives at /admin on the deployed site.
+#
+# AUTH: GitHub backend. GitHub Pages cannot run the OAuth handshake itself, so
+# you need a tiny OAuth relay running somewhere free (Cloudflare Worker, Vercel,
+# or Netlify). Set `base_url` (and `auth_endpoint` if your relay needs it) to
+# point at it. Full step-by-step is in README.md > "Turning on the /admin editor".
+# ==========================================================================
+
+backend:
+  name: github
+  repo: PC-Master-Race/CourseTech
+  branch: main
+  # base_url: https://YOUR-OAUTH-RELAY.example.workers.dev   # <-- set this (see README)
+
+# Where uploaded images are stored in the repo, and how they are referenced on the site.
+media_folder: "assets/uploads"
+public_folder: "/CourseTech/assets/uploads"
+
+# Save drafts as PRs off. Commit straight to the branch (simplest for one editor).
+publish_mode: simple
+
+# Friendlier commit messages in the repo history.
+site_url: https://pc-master-race.github.io/CourseTech
+display_url: https://pc-master-race.github.io/CourseTech
+logo_url: https://pc-master-race.github.io/CourseTech/assets/favicon.svg
+
+collections:
+  # ---------------------------------------------------------------------------
+  # 1) TOPIC PAGES — one file per topic, form-based (no raw front matter editing)
+  # ---------------------------------------------------------------------------
+  - name: topics
+    label: "Topic pages"
+    label_singular: "Topic page"
+    folder: "_topics"
+    create: true
+    slug: "{{fields.slug}}"
+    identifier_field: title
+    summary: "{{title}}  ·  {{category}}"
+    sortable_fields: [title, category]
+    fields:
+      - { name: title, label: "Topic title", widget: string, hint: "Shows as the big page heading." }
+      - name: slug
+        label: "URL slug (filename)"
+        widget: string
+        pattern: ['^[a-z0-9-]+$', "Lowercase letters, numbers, and dashes only."]
+        hint: "This becomes the web address and MUST match the slug you use in the menu (Site Navigation). Example: what-ai-is"
+      - name: category
+        label: "Category"
+        widget: select
+        options:
+          - { label: "AI at Work", value: ai }
+          - { label: "Everyday Software", value: software }
+          - { label: "Devices & Digital Life", value: devices }
+      - { name: description, label: "One-line description", widget: text, hint: "A short sentence under the title." }
+      - name: video_url
+        label: "YouTube video (optional)"
+        widget: string
+        required: false
+        hint: "Paste the full YouTube link, or leave blank. The page works fine without a video."
+      - name: parts
+        label: "Parts"
+        label_singular: "Part"
+        widget: list
+        hint: "Break the topic into parts. Each part shows in the on-page table of contents."
+        summary: "{{fields.title}}"
+        fields:
+          - { name: title, label: "Part title", widget: string, hint: "e.g. Getting started, or Your first formula." }
+          - { name: id, label: "Anchor id (optional)", widget: string, required: false, hint: "Leave blank to auto-generate from the title." }
+          - { name: intro, label: "Part intro (optional)", widget: text, required: false }
+          - name: blocks
+            label: "Content blocks"
+            label_singular: "Block"
+            widget: list
+            summary: "{{fields.type}}: {{fields.title}}"
+            fields:
+              - name: type
+                label: "Block type"
+                widget: select
+                default: lesson
+                options:
+                  - { label: "Lesson (teaching)", value: lesson }
+                  - { label: "Activity (hands-on task)", value: activity }
+                  - { label: "Quiz (links to a quiz)", value: quiz }
+              - { name: title, label: "Block heading (optional)", widget: string, required: false }
+              - name: body
+                label: "Text"
+                widget: markdown
+                required: false
+                hint: "Use bullets, numbered steps, and tables where you can. No em dashes."
+              - name: quiz_url
+                label: "Quiz link (Quiz blocks only)"
+                widget: string
+                required: false
+                hint: "Paste the link to your Gemini-built quiz. Opens in a new tab."
+              - { name: quiz_label, label: "Quiz button text (optional)", widget: string, required: false, default: "Open the quiz" }
+              - name: images
+                label: "Images"
+                label_singular: "Image"
+                widget: list
+                required: false
+                summary: "{{fields.alt}}"
+                fields:
+                  - { name: src, label: "Image file", widget: image }
+                  # Alt text is REQUIRED. An image cannot be saved without it.
+                  - { name: alt, label: "Alt text (describe the image)", widget: string, required: true, hint: "Required. Describe what the image shows for screen-reader users." }
+                  - { name: caption, label: "Caption (optional)", widget: string, required: false }
+
+  # ---------------------------------------------------------------------------
+  # 2) SITE NAVIGATION — edit the mega menu / home catalog (_data/topics.yml)
+  # ---------------------------------------------------------------------------
+  - name: navigation
+    label: "Site navigation (menu)"
+    files:
+      - name: topics_nav
+        label: "Topics menu"
+        file: "_data/topics.yml"
+        description: "Controls the Browse-topics mega menu and the home page. Add a topic here so it shows in the menu, then create its page under Topic pages using the same slug."
+        fields:
+          - name: categories
+            label: "Categories"
+            widget: list
+            summary: "{{fields.label}}"
+            fields:
+              - { name: id, label: "Category id", widget: string, pattern: ['^[a-z0-9-]+$', "Lowercase, no spaces."] }
+              - { name: label, label: "Category name", widget: string }
+              - name: icon
+                label: "Icon"
+                widget: select
+                options: [sparkles, grid, device, book]
+              - { name: blurb, label: "Short description", widget: string }
+              - name: topics
+                label: "Topics in this category"
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { name: title, label: "Title", widget: string }
+                  - { name: slug, label: "Slug", widget: string, pattern: ['^[a-z0-9-]+$', "Lowercase letters, numbers, dashes."], hint: "Must match the Topic page slug." }
+                  - { name: blurb, label: "One-line blurb", widget: string }
+                  - name: status
+                    label: "Status"
+                    widget: select
+                    default: live
+                    options:
+                      - { label: "Live (page is ready)", value: live }
+                      - { label: "Coming soon (greyed out)", value: soon }

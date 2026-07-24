@@ -1,0 +1,120 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<title>Mobile Tech: iPhone Basics · Tutorial Hub</title></head><body><a class="skip-link" href="#main">Skip to main content</a>
+  Inline SVG symbol sprite. Reference with:
+  <svg class="icon" aria-hidden="true"><use href="#icon-NAME"></use></svg>
+  Icons are decorative; always give the surrounding element a text label.
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="icon-sparkles" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3l1.9 4.6L18.5 9.5 13.9 11.4 12 16l-1.9-4.6L5.5 9.5 10.1 7.6z"/><path d="M19 14l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/>
+  </symbol>
+  <symbol id="icon-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>
+  </symbol>
+  <symbol id="icon-device" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="6" y="2.5" width="12" height="19" rx="3"/><line x1="10.5" y1="18.5" x2="13.5" y2="18.5"/>
+  </symbol>
+  <symbol id="icon-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H12v16H5.5A1.5 1.5 0 0 0 4 20.5z"/><path d="M20 4.5A1.5 1.5 0 0 0 18.5 3H12v16h6.5A1.5 1.5 0 0 1 20 20.5z"/>
+  </symbol>
+  <symbol id="icon-pencil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/><line x1="14" y1="6" x2="18" y2="10"/>
+  </symbol>
+  <symbol id="icon-badge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="10" r="7"/><path d="M9 10l2 2 4-4"/><path d="M8.5 16.5L7 22l5-2.5L17 22l-1.5-5.5"/>
+  </symbol>
+  <symbol id="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="4" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/>
+  </symbol>
+  <symbol id="icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="6 9 12 15 18 9"/>
+  </symbol>
+  <symbol id="icon-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v4.5A1.5 1.5 0 0 1 16.5 20h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10"/>
+  </symbol>
+  <symbol id="icon-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="9"/><polygon points="10 8.5 16 12 10 15.5" fill="currentColor" stroke="none"/>
+  </symbol>
+  <symbol id="icon-list" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="9" y1="6" x2="20" y2="6"/><line x1="9" y1="12" x2="20" y2="12"/><line x1="9" y1="18" x2="20" y2="18"/><circle cx="4.5" cy="6" r="1.2" fill="currentColor" stroke="none"/><circle cx="4.5" cy="12" r="1.2" fill="currentColor" stroke="none"/><circle cx="4.5" cy="18" r="1.2" fill="currentColor" stroke="none"/>
+  </symbol>
+  <symbol id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+  </symbol>
+</svg>
+
+<header class="site-header"><div class="container site-header__bar">
+<a class="brand" href="index.html"><span class="brand__mark" aria-hidden="true">TH</span><span>Tutorial Hub</span></a>
+<nav class="primary-nav" aria-label="Primary"><ul>
+<li><button type="button" class="nav-link" id="megaToggle" aria-expanded="false" aria-controls="megaPanel" aria-haspopup="true"><svg class="icon" aria-hidden="true"><use href="#icon-list"></use></svg> Browse topics <svg class="chev" aria-hidden="true"><use href="#icon-chevron"></use></svg></button></li>
+<li><a class="nav-link" href="index.html#all-topics">All topics</a></li>
+<li><a class="nav-link" href="about.html">About</a></li>
+</ul></nav></div>
+<div class="mega" id="megaPanel" data-open="false" role="region" aria-label="All topics" hidden><div class="mega__inner"><div class="mega__col"><div class="mega__col-head"><svg class="cat-icon" aria-hidden="true"><use href="#icon-sparkles"></use></svg><div><h3 id="mc-ai">AI at Work</h3><p>Use AI tools well, and know when not to.</p></div></div><ul class="mega__list" aria-labelledby="mc-ai"><li><a class="mega__link" href="topics-what-ai-is.html"><span><span class="t">What AI Actually Is</span><br><span class="d">Plain-English basics before you touch a single tool.</span></span></a></li><li><a class="mega__link" href="topics-prompting-fundamentals.html"><span><span class="t">Prompting Fundamentals</span><br><span class="d">The one skill that changes everything. Meet RTCF.</span></span></a></li><li><a class="mega__link" href="topics-identifying-opportunities.html"><span><span class="t">Spotting AI Opportunities at Work</span><br><span class="d">Which tasks are worth handing to AI, and which are not.</span></span></a></li><li><a class="mega__link" href="topics-when-ai-gets-it-wrong.html"><span><span class="t">When AI Gets It Wrong</span><br><span class="d">Hallucinations, verification, and staying in the loop.</span></span></a></li><li><a class="mega__link" href="topics-advanced-prompting.html"><span><span class="t">Advanced Prompting Techniques</span><br><span class="d">Four moves that turn good prompts into great ones.</span></span></a></li><li><a class="mega__link" href="topics-image-ai.html"><span><span class="t">Image AI, A Practical Intro</span><br><span class="d">Make useful visuals from words, and spot the limits.</span></span></a></li><li><a class="mega__link" href="topics-bots-vs-agents.html"><span><span class="t">Bots vs. AI Agents</span><br><span class="d">What each one can do, and what to keep for yourself.</span></span></a></li></ul></div><div class="mega__col"><div class="mega__col-head"><svg class="cat-icon" aria-hidden="true"><use href="#icon-grid"></use></svg><div><h3 id="mc-software">Everyday Software</h3><p>The programs you meet at almost every desk job.</p></div></div><ul class="mega__list" aria-labelledby="mc-software"><li><a class="mega__link" href="topics-excel-level-1.html"><span><span class="t">Basic Excel: Level 1</span><br><span class="d">Cells, formatting, and your first real formulas.</span></span></a></li><li><span class="mega__link is-soon"><span class="t">Basic Excel: Level 2</span><span class="soon-tag">Coming soon</span></span></li><li><span class="mega__link is-soon"><span class="t">Writing with Word</span><span class="soon-tag">Coming soon</span></span></li></ul></div><div class="mega__col"><div class="mega__col-head"><svg class="cat-icon" aria-hidden="true"><use href="#icon-device"></use></svg><div><h3 id="mc-devices">Devices & Digital Life</h3><p>Get comfortable with the tech you use every day.</p></div></div><ul class="mega__list" aria-labelledby="mc-devices"><li><a class="mega__link" href="topics-iphone-basics.html"><span><span class="t">Mobile Tech: iPhone Basics</span><br><span class="d">Buttons, home screen, and making it yours.</span></span></a></li><li><span class="mega__link is-soon"><span class="t">Mobile Tech: Android Basics</span><span class="soon-tag">Coming soon</span></span></li><li><span class="mega__link is-soon"><span class="t">Getting Around Windows 11</span><span class="soon-tag">Coming soon</span></span></li><li><span class="mega__link is-soon"><span class="t">Staying Safe Online</span><span class="soon-tag">Coming soon</span></span></li></ul></div></div></div>
+</header><div class="mega-overlay" id="megaOverlay" data-open="false" hidden></div><main id="main"><article class="topic"><div class="band"><div class="container topic-hero">
+<p class="breadcrumb"><a href="index.html">Home</a> · <a href="index.html#cat-devices">Devices & Digital Life</a></p>
+<span class="cat-chip"><svg class="icon" aria-hidden="true"><use href="#icon-device"></use></svg> Devices & Digital Life</span><h1>Mobile Tech: iPhone Basics</h1><p class="lead">Your iPhone's buttons, home screen, and how to make it truly yours. We'll go slow.</p>
+<div class="video-wrap"><div class="video-placeholder"><svg class="icon" aria-hidden="true"><use href="#icon-play"></use></svg><strong>A video walkthrough is coming for this lesson.</strong><span>You can work through everything below right now. No video needed.</span></div></div></div></div>
+<div class="container section--tight"><div class="topic-body">
+<nav class="toc" aria-label="On this page"><h2>On this page</h2><ol><li><a href="#before-we-begin">Before we begin</a></li><li><a href="#the-three-buttons-you-can-feel">The three buttons you can feel</a></li><li><a href="#your-home-screen">Your home screen</a></li><li><a href="#making-the-screen-easier-to-see">Making the screen easier to see</a></li></ol></nav>
+<div class="topic-parts rich"><section class="part reveal" id="before-we-begin" aria-labelledby="before-we-begin-h"><p class="part__label">Part 1</p><h2 id="before-we-begin-h">Before we begin</h2><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>Let's get set up</h3><div class="block__body rich"><p>Welcome. I am so glad you are here. Before we dive in, let's take a moment so today goes smoothly. Check these four things:</p>
+<ul>
+<li><strong>Your phone is charged.</strong> The screen should light up when you press a button.</li>
+<li><strong>Your glasses are on</strong> if you use them. Everything today is on that small screen.</li>
+<li><strong>This guide is open</strong> in front of you. You are reading it, so that one is done.</li>
+<li><strong>Your sound is on.</strong> Look at the left edge of the phone. If you see a little switch showing orange, the sound is off. We will come back to that.</li>
+</ul>
+<p>You are all set. Let's have some fun.</p></div></div></section><section class="part reveal" id="the-three-buttons-you-can-feel" aria-labelledby="the-three-buttons-you-can-feel-h"><p class="part__label">Part 2</p><h2 id="the-three-buttons-you-can-feel-h">The three buttons you can feel</h2><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>Your physical controls</h3><div class="block__body rich"><p>Your iPhone has three real buttons you can feel with your fingers. Let's learn where they are and what they do.</p>
+<p><strong>The Side Button (right edge).</strong> This is your on and off switch. You can feel it with your right thumb when you hold the phone normally.</p>
+<ul>
+<li>Press it <strong>once</strong> to wake the screen up.</li>
+<li>Press it <strong>once</strong> while the screen is on to lock the phone (the screen goes dark to save battery).</li>
+<li>Press and <strong>hold</strong> for two seconds to bring up the power-off menu.</li>
+</ul>
+<p><strong>The Volume Buttons (left edge).</strong> Two buttons, one above the other.</p>
+<ul>
+<li>Top button turns the sound <strong>up</strong>.</li>
+<li>Bottom button turns the sound <strong>down</strong>.</li>
+<li>When the phone is ringing, pressing either one quiets the ring right away.</li>
+</ul></div></div><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>How to turn the phone all the way off</h3><div class="block__body rich"><p>Sometimes you need to fully power down. Here is the safe way:</p>
+<ol>
+<li>Press and <strong>hold</strong> the <strong>Side Button</strong> (right) and the <strong>Volume Up</strong> button (left, top) at the same time.</li>
+<li>Hold both for about two seconds.</li>
+<li>A screen appears with a white bar that says "slide to power off" near the top.</li>
+<li>Put your finger on that white bar and <strong>slide it from left to right.</strong></li>
+</ol>
+<p>To turn it back on, press and hold the Side Button until the Apple logo appears.</p></div></div><div class="block block--activity"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-pencil"></use></svg></span> Activity · try it</p><h3>Practice the buttons</h3><div class="block__body rich"><p>Try each one slowly. There is no wrong move here.</p>
+<ol>
+<li>Press the Side Button once to lock the screen, then once more to wake it.</li>
+<li>Press Volume Up a few times, then Volume Down. Listen for the change.</li>
+<li>Find the little switch on the top left. Flip it and watch for the orange color.</li>
+</ol>
+<p>Do each one twice so your fingers remember where the buttons are.</p></div></div></section><section class="part reveal" id="your-home-screen" aria-labelledby="your-home-screen-h"><p class="part__label">Part 3</p><h2 id="your-home-screen-h">Your home screen</h2><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>What all those little pictures are</h3><div class="block__body rich"><p>When your phone is unlocked, you land on the <strong>home screen</strong>. Those little pictures are called <strong>apps</strong>. An app is just a program that does one job, like Phone, Messages, Camera, or Weather.</p>
+<ul>
+<li><strong>Tap</strong> an app once (a quick, light touch) to open it.</li>
+<li><strong>Swipe</strong> left or right (slide one finger across the glass) to see more pages of apps.</li>
+<li>Swipe <strong>up</strong> from the very bottom edge to close an app and come back home.</li>
+</ul>
+<p>The row of apps at the very bottom stays put on every page. That is called the <strong>Dock</strong>, and it is a good place to keep the apps you use most.</p></div></div><div class="block block--activity"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-pencil"></use></svg></span> Activity · try it</p><h3>Open and close an app</h3><div class="block__body rich"><p>Let's build the most important habit on the phone:</p>
+<ol>
+<li>Tap the <strong>Camera</strong> app to open it.</li>
+<li>Look around. Do not worry about taking a photo yet.</li>
+<li>Swipe up from the bottom edge to come back to the home screen.</li>
+</ol>
+<p>Do this with two more apps of your choice. Open, look, come home. That is the rhythm of using a phone.</p></div></div></section><section class="part reveal" id="making-the-screen-easier-to-see" aria-labelledby="making-the-screen-easier-to-see-h"><p class="part__label">Part 4</p><h2 id="making-the-screen-easier-to-see-h">Making the screen easier to see</h2><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>Bigger text and more</h3><div class="block__body rich"><p>This is one of my favorite parts, because it makes the phone yours. If the text feels small, we can fix it.</p>
+<ol>
+<li>Open the <strong>Settings</strong> app (the gray gear icon).</li>
+<li>Tap <strong>Display &amp; Brightness</strong>.</li>
+<li>Tap <strong>Text Size</strong> and drag the slider to the right to make words bigger.</li>
+</ol>
+<p>While you are in Settings, look for <strong>Accessibility.</strong> Inside there you can turn on <strong>Bold Text</strong>, or <strong>Zoom</strong> to magnify the screen. Try them and keep whatever helps. You should not have to squint.</p></div></div><div class="block block--quiz"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-badge"></use></svg></span> Check your understanding</p><h3>Quick check</h3><div class="block__body rich"><p>When you feel ready, take the short quiz on your buttons, the home screen, and making the screen easier to see. There is no time limit, and you can retake it.</p>
+<p>I'll add the quiz link here once it is built. It opens in a new tab.</p></div></div></section></div></div></div></article></main><footer class="site-footer"><div class="container"><div class="footer-grid">
+<div><a class="brand" href="index.html"><span class="brand__mark">TH</span><span>Tutorial Hub</span></a><p style="margin-top:16px;max-width:34ch;color:#9aa0b4;">Plain-English tech lessons, written for real people. Learn at your own pace, come back any time.</p></div>
+<div><h4>Topics</h4><ul><li><a href="index.html#cat-ai">AI at Work</a></li><li><a href="index.html#cat-software">Everyday Software</a></li><li><a href="index.html#cat-devices">Devices & Digital Life</a></li></ul></div>
+<div><h4>Site</h4><ul><li><a href="index.html#all-topics">All topics</a></li><li><a href="about.html">About this site</a></li></ul></div>
+</div><div class="footer-bottom">&copy; 2026 Mr. Perez. Built for adult learners at Mt. San Antonio College.</div></div></footer>
+<script src="assets/js/main.js" defer></script></body></html>

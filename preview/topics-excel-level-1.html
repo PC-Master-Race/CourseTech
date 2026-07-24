@@ -1,0 +1,182 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<title>Basic Excel: Level 1 · Tutorial Hub</title></head><body><a class="skip-link" href="#main">Skip to main content</a>
+  Inline SVG symbol sprite. Reference with:
+  <svg class="icon" aria-hidden="true"><use href="#icon-NAME"></use></svg>
+  Icons are decorative; always give the surrounding element a text label.
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="icon-sparkles" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3l1.9 4.6L18.5 9.5 13.9 11.4 12 16l-1.9-4.6L5.5 9.5 10.1 7.6z"/><path d="M19 14l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/>
+  </symbol>
+  <symbol id="icon-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>
+  </symbol>
+  <symbol id="icon-device" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="6" y="2.5" width="12" height="19" rx="3"/><line x1="10.5" y1="18.5" x2="13.5" y2="18.5"/>
+  </symbol>
+  <symbol id="icon-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H12v16H5.5A1.5 1.5 0 0 0 4 20.5z"/><path d="M20 4.5A1.5 1.5 0 0 0 18.5 3H12v16h6.5A1.5 1.5 0 0 1 20 20.5z"/>
+  </symbol>
+  <symbol id="icon-pencil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/><line x1="14" y1="6" x2="18" y2="10"/>
+  </symbol>
+  <symbol id="icon-badge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="10" r="7"/><path d="M9 10l2 2 4-4"/><path d="M8.5 16.5L7 22l5-2.5L17 22l-1.5-5.5"/>
+  </symbol>
+  <symbol id="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="4" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/>
+  </symbol>
+  <symbol id="icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="6 9 12 15 18 9"/>
+  </symbol>
+  <symbol id="icon-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v4.5A1.5 1.5 0 0 1 16.5 20h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10"/>
+  </symbol>
+  <symbol id="icon-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="9"/><polygon points="10 8.5 16 12 10 15.5" fill="currentColor" stroke="none"/>
+  </symbol>
+  <symbol id="icon-list" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="9" y1="6" x2="20" y2="6"/><line x1="9" y1="12" x2="20" y2="12"/><line x1="9" y1="18" x2="20" y2="18"/><circle cx="4.5" cy="6" r="1.2" fill="currentColor" stroke="none"/><circle cx="4.5" cy="12" r="1.2" fill="currentColor" stroke="none"/><circle cx="4.5" cy="18" r="1.2" fill="currentColor" stroke="none"/>
+  </symbol>
+  <symbol id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+  </symbol>
+</svg>
+
+<header class="site-header"><div class="container site-header__bar">
+<a class="brand" href="index.html"><span class="brand__mark" aria-hidden="true">TH</span><span>Tutorial Hub</span></a>
+<nav class="primary-nav" aria-label="Primary"><ul>
+<li><button type="button" class="nav-link" id="megaToggle" aria-expanded="false" aria-controls="megaPanel" aria-haspopup="true"><svg class="icon" aria-hidden="true"><use href="#icon-list"></use></svg> Browse topics <svg class="chev" aria-hidden="true"><use href="#icon-chevron"></use></svg></button></li>
+<li><a class="nav-link" href="index.html#all-topics">All topics</a></li>
+<li><a class="nav-link" href="about.html">About</a></li>
+</ul></nav></div>
+<div class="mega" id="megaPanel" data-open="false" role="region" aria-label="All topics" hidden><div class="mega__inner"><div class="mega__col"><div class="mega__col-head"><svg class="cat-icon" aria-hidden="true"><use href="#icon-sparkles"></use></svg><div><h3 id="mc-ai">AI at Work</h3><p>Use AI tools well, and know when not to.</p></div></div><ul class="mega__list" aria-labelledby="mc-ai"><li><a class="mega__link" href="topics-what-ai-is.html"><span><span class="t">What AI Actually Is</span><br><span class="d">Plain-English basics before you touch a single tool.</span></span></a></li><li><a class="mega__link" href="topics-prompting-fundamentals.html"><span><span class="t">Prompting Fundamentals</span><br><span class="d">The one skill that changes everything. Meet RTCF.</span></span></a></li><li><a class="mega__link" href="topics-identifying-opportunities.html"><span><span class="t">Spotting AI Opportunities at Work</span><br><span class="d">Which tasks are worth handing to AI, and which are not.</span></span></a></li><li><a class="mega__link" href="topics-when-ai-gets-it-wrong.html"><span><span class="t">When AI Gets It Wrong</span><br><span class="d">Hallucinations, verification, and staying in the loop.</span></span></a></li><li><a class="mega__link" href="topics-advanced-prompting.html"><span><span class="t">Advanced Prompting Techniques</span><br><span class="d">Four moves that turn good prompts into great ones.</span></span></a></li><li><a class="mega__link" href="topics-image-ai.html"><span><span class="t">Image AI, A Practical Intro</span><br><span class="d">Make useful visuals from words, and spot the limits.</span></span></a></li><li><a class="mega__link" href="topics-bots-vs-agents.html"><span><span class="t">Bots vs. AI Agents</span><br><span class="d">What each one can do, and what to keep for yourself.</span></span></a></li></ul></div><div class="mega__col"><div class="mega__col-head"><svg class="cat-icon" aria-hidden="true"><use href="#icon-grid"></use></svg><div><h3 id="mc-software">Everyday Software</h3><p>The programs you meet at almost every desk job.</p></div></div><ul class="mega__list" aria-labelledby="mc-software"><li><a class="mega__link" href="topics-excel-level-1.html"><span><span class="t">Basic Excel: Level 1</span><br><span class="d">Cells, formatting, and your first real formulas.</span></span></a></li><li><span class="mega__link is-soon"><span class="t">Basic Excel: Level 2</span><span class="soon-tag">Coming soon</span></span></li><li><span class="mega__link is-soon"><span class="t">Writing with Word</span><span class="soon-tag">Coming soon</span></span></li></ul></div><div class="mega__col"><div class="mega__col-head"><svg class="cat-icon" aria-hidden="true"><use href="#icon-device"></use></svg><div><h3 id="mc-devices">Devices & Digital Life</h3><p>Get comfortable with the tech you use every day.</p></div></div><ul class="mega__list" aria-labelledby="mc-devices"><li><a class="mega__link" href="topics-iphone-basics.html"><span><span class="t">Mobile Tech: iPhone Basics</span><br><span class="d">Buttons, home screen, and making it yours.</span></span></a></li><li><span class="mega__link is-soon"><span class="t">Mobile Tech: Android Basics</span><span class="soon-tag">Coming soon</span></span></li><li><span class="mega__link is-soon"><span class="t">Getting Around Windows 11</span><span class="soon-tag">Coming soon</span></span></li><li><span class="mega__link is-soon"><span class="t">Staying Safe Online</span><span class="soon-tag">Coming soon</span></span></li></ul></div></div></div>
+</header><div class="mega-overlay" id="megaOverlay" data-open="false" hidden></div><main id="main"><article class="topic"><div class="band"><div class="container topic-hero">
+<p class="breadcrumb"><a href="index.html">Home</a> · <a href="index.html#cat-software">Everyday Software</a></p>
+<span class="cat-chip"><svg class="icon" aria-hidden="true"><use href="#icon-grid"></use></svg> Everyday Software</span><h1>Basic Excel: Level 1</h1><p class="lead">Let's open Excel together and get comfortable with cells, formatting, and your first real formula.</p>
+<div class="video-wrap"><div class="video-placeholder"><svg class="icon" aria-hidden="true"><use href="#icon-play"></use></svg><strong>A video walkthrough is coming for this lesson.</strong><span>You can work through everything below right now. No video needed.</span></div></div></div></div>
+<div class="container section--tight"><div class="topic-body">
+<nav class="toc" aria-label="On this page"><h2>On this page</h2><ol><li><a href="#getting-to-know-the-excel-window">Getting to know the Excel window</a></li><li><a href="#putting-information-in-cells">Putting information in cells</a></li><li><a href="#making-it-look-right">Making it look right</a></li><li><a href="#your-first-formula">Your first formula</a></li><li><a href="#saving-and-printing">Saving and printing</a></li></ol></nav>
+<div class="topic-parts rich"><section class="part reveal" id="getting-to-know-the-excel-window" aria-labelledby="getting-to-know-the-excel-window-h"><p class="part__label">Part 1</p><h2 id="getting-to-know-the-excel-window-h">Getting to know the Excel window</h2><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>What you are looking at</h3><div class="block__body rich"><p>Let's open Excel and take a look around together. It can feel busy at first, so we will name the main parts. Once you know these, everything else gets easier.</p>
+<ul>
+<li><strong>The Ribbon.</strong> The strip of buttons across the top. It is grouped into tabs like Home, Insert, and Page Layout. Home is where you will spend most of your time.</li>
+<li><strong>Cells.</strong> The little boxes in the grid. Each one holds a piece of information.</li>
+<li><strong>Columns and rows.</strong> Columns go up and down and are labeled with letters (A, B, C). Rows go left and right and are labeled with numbers (1, 2, 3).</li>
+<li><strong>The cell reference.</strong> Every cell has an address made of its column letter and row number. The box where column B meets row 3 is cell <strong>B3</strong>.</li>
+<li><strong>The Name Box and Formula Bar.</strong> Just above the grid. The Name Box on the left shows which cell you are in. The Formula Bar shows what is inside it.</li>
+</ul>
+<blockquote>
+<p>A <strong>workbook</strong> is the whole Excel file. Inside it, each <strong>worksheet</strong> is one grid, or tab, along the bottom. One workbook can hold several worksheets.</p>
+</blockquote></div></div><div class="block block--activity"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-pencil"></use></svg></span> Activity · try it</p><h3>Find your way around</h3><div class="block__body rich"><p>Open a blank workbook and try these, no rush:</p>
+<ol>
+<li>Click cell <strong>B3</strong>. Check that the Name Box shows "B3."</li>
+<li>Click the letter <strong>C</strong> at the top. The whole column highlights.</li>
+<li>Click the number <strong>5</strong> on the left. The whole row highlights.</li>
+<li>Find the Home tab on the Ribbon and just read the button names.</li>
+</ol>
+<p>That is it. You are already navigating a spreadsheet.</p></div></div></section><section class="part reveal" id="putting-information-in-cells" aria-labelledby="putting-information-in-cells-h"><p class="part__label">Part 2</p><h2 id="putting-information-in-cells-h">Putting information in cells</h2><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>Type, edit, and move</h3><div class="block__body rich"><p>Getting text and numbers into cells is the heart of Excel. Here is how.</p>
+<ol>
+<li><strong>Click a cell</strong> to select it.</li>
+<li><strong>Type</strong> your text or number.</li>
+<li>Press <strong>Enter</strong> to move down, or <strong>Tab</strong> to move right.</li>
+</ol>
+<p>To change what is already in a cell:</p>
+<ul>
+<li><strong>Replace it:</strong> click the cell and type something new.</li>
+<li><strong>Edit part of it:</strong> double-click the cell, then fix just the part you want.</li>
+<li><strong>Clear it:</strong> click the cell and press <strong>Delete</strong>.</li>
+</ul>
+<p>Two quick habits that save time:</p>
+<ul>
+<li><strong>Copy and paste</strong> with Ctrl+C and Ctrl+V.</li>
+<li><strong>Undo</strong> a mistake with Ctrl+Z. This one is your best friend. You can undo again and again.</li>
+</ul></div></div></section><section class="part reveal" id="making-it-look-right" aria-labelledby="making-it-look-right-h"><p class="part__label">Part 3</p><h2 id="making-it-look-right-h">Making it look right</h2><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>Columns, rows, and formatting</h3><div class="block__body rich"><p>Sometimes your text is too wide for its cell, or you want numbers to stand out. Let's fix the look.</p>
+<p><strong>Resize a column so text fits:</strong></p>
+<ul>
+<li>Move your mouse to the line between two column letters at the top. The pointer becomes a two-way arrow.</li>
+<li>Double-click that line to auto-fit, or click and drag to set the width by hand.</li>
+</ul>
+<p>Rows work the same way, using the lines between the row numbers.</p>
+<p><strong>Common formatting, all on the Home tab:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Want to...</th>
+<th>Do this</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Make text bold</td>
+<td>Click <strong>B</strong>, or press Ctrl+B</td>
+</tr>
+<tr>
+<td>Change the size or font</td>
+<td>Use the font boxes on the Home tab</td>
+</tr>
+<tr>
+<td>Center text in a cell</td>
+<td>Click the center-align button</td>
+</tr>
+<tr>
+<td>Add a background color</td>
+<td>Use the paint-bucket (Fill) button</td>
+</tr>
+<tr>
+<td>Show numbers as money</td>
+<td>Click the <strong>$</strong> button</td>
+</tr>
+</tbody>
+</table>
+<p>The goal is a sheet that is easy to read at a glance. You do not need every button. A little bold and some space go a long way.</p></div></div><div class="block block--activity"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-pencil"></use></svg></span> Activity · try it</p><h3>Build a small budget table</h3><div class="block__body rich"><p>Let's make something real. In a blank sheet:</p>
+<ol>
+<li>In <strong>A1</strong>, type "Item." In <strong>B1</strong>, type "Cost."</li>
+<li>Fill in four rows below with items and amounts, like Groceries and 60.</li>
+<li>Make row 1 <strong>bold</strong>.</li>
+<li>Widen column A so the words fit.</li>
+<li>Select the cost numbers and click the <strong>$</strong> button.</li>
+</ol>
+<p>You just built and formatted a real table. Keep it open, we will add a formula to it next.</p></div></div></section><section class="part reveal" id="your-first-formula" aria-labelledby="your-first-formula-h"><p class="part__label">Part 4</p><h2 id="your-first-formula-h">Your first formula</h2><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>Let Excel do the math</h3><div class="block__body rich"><p>Here is where Excel earns its keep. A <strong>formula</strong> is a math instruction, and every formula starts with an equals sign.</p>
+<p>Add two cells together:</p>
+<ol>
+<li>Click an empty cell.</li>
+<li>Type <strong>=B2+B3</strong> and press Enter.</li>
+<li>The cell shows the total. Change B2 or B3 and the total updates by itself.</li>
+</ol>
+<p>For a longer list, use <strong>SUM</strong>. It adds up a whole range for you:</p>
+<ul>
+<li>Type <strong>=SUM(B2:B5)</strong> and press Enter.</li>
+<li>That means "add everything from B2 down to B5."</li>
+</ul>
+<p>The magic part: because the formula points at cells, not fixed numbers, your totals stay correct when the numbers change. That is the whole reason people use Excel instead of a calculator.</p></div></div><div class="block block--activity"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-pencil"></use></svg></span> Activity · try it</p><h3>Total your budget</h3><div class="block__body rich"><p>Back to the table you built:</p>
+<ol>
+<li>Click the empty cell just below your cost numbers.</li>
+<li>Type <strong>=SUM(</strong> then click and drag over your cost cells, then type <strong>)</strong> and press Enter.</li>
+<li>Change one of the costs above and watch the total update on its own.</li>
+</ol>
+<p>If your total looks off, press Ctrl+Z and try again. That is normal, and it is how everyone learns this.</p></div></div></section><section class="part reveal" id="saving-and-printing" aria-labelledby="saving-and-printing-h"><p class="part__label">Part 5</p><h2 id="saving-and-printing-h">Saving and printing</h2><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>Keep your work and share it</h3><div class="block__body rich"><p>Let's make sure your work is safe and ready to hand off.</p>
+<p><strong>Save it:</strong></p>
+<ul>
+<li>Press <strong>Ctrl+S</strong>, or click File, then Save.</li>
+<li>The first time, pick a folder and give the file a clear name.</li>
+<li>After that, Ctrl+S saves your latest changes in a second. Do it often.</li>
+</ul>
+<p><strong>Save a PDF</strong> (a fixed picture of your sheet that anyone can open):</p>
+<ul>
+<li>Click File, then <strong>Save As</strong> (or Export), and choose <strong>PDF</strong> in the file-type list.</li>
+</ul>
+<p><strong>Print it:</strong></p>
+<ul>
+<li>Press <strong>Ctrl+P</strong> to open the print screen.</li>
+<li>Use the preview on the right to check it fits nicely before you print.</li>
+</ul></div></div><div class="block block--quiz"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-badge"></use></svg></span> Check your understanding</p><h3>Quick check</h3><div class="block__body rich"><p>When you are ready, take the short quiz. It covers the parts of the window, entering and formatting data, writing a SUM formula, and saving your work.</p>
+<p>I'll add the quiz link here once it is built. It opens in a new tab.</p></div></div></section></div></div></div></article></main><footer class="site-footer"><div class="container"><div class="footer-grid">
+<div><a class="brand" href="index.html"><span class="brand__mark">TH</span><span>Tutorial Hub</span></a><p style="margin-top:16px;max-width:34ch;color:#9aa0b4;">Plain-English tech lessons, written for real people. Learn at your own pace, come back any time.</p></div>
+<div><h4>Topics</h4><ul><li><a href="index.html#cat-ai">AI at Work</a></li><li><a href="index.html#cat-software">Everyday Software</a></li><li><a href="index.html#cat-devices">Devices & Digital Life</a></li></ul></div>
+<div><h4>Site</h4><ul><li><a href="index.html#all-topics">All topics</a></li><li><a href="about.html">About this site</a></li></ul></div>
+</div><div class="footer-bottom">&copy; 2026 Mr. Perez. Built for adult learners at Mt. San Antonio College.</div></div></footer>
+<script src="assets/js/main.js" defer></script></body></html>

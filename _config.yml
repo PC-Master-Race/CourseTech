@@ -1,0 +1,52 @@
+title: Tutorial Hub
+tagline: Plain-English tech lessons you can actually use
+description: >-
+  Hands-on tutorials for AI at work, Excel, and everyday devices. Written in
+  plain language for adult learners, by your instructor.
+author: Mr. Perez
+
+# --- GitHub Pages project site ---
+# Served at https://pc-master-race.github.io/CourseTech/
+# To move to a custom domain later: set `url` to your domain, blank out `baseurl`,
+# and add a CNAME file (see README).
+url: "https://pc-master-race.github.io"
+baseurl: "/CourseTech"
+
+# --- Build ---
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+permalink: /:collection/:name/
+
+# Topic pages live in their own collection so adding a topic is one content file.
+collections:
+  topics:
+    output: true
+    permalink: /topics/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: topics
+    values:
+      layout: topic
+
+sass:
+  style: compressed
+
+exclude:
+  - README.md
+  - DESIGN.md
+  - tutorial-hub-build-prompt.md
+  - preview
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .github
+  - node_modules
+
+# Plugins available on GitHub Pages
+plugins:
+  - jekyll-seo-tag
