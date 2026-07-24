@@ -12,6 +12,12 @@ categories:
     label: AI at Work
     icon: sparkles
     blurb: Use AI tools well, and know when not to.
+    about: >-
+      This course demystifies AI before you ever use it. You'll learn what AI
+      really is in plain English, how to prompt it well with a simple framework,
+      where it fits your actual work, how it goes wrong and how to catch it, and
+      how to use it responsibly, all the way from images to AI agents. No coding
+      and no technical background needed.
     topics:
       - title: What AI Actually Is
         slug: what-ai-is
@@ -46,6 +52,11 @@ categories:
     label: Everyday Software
     icon: grid
     blurb: The programs you meet at almost every desk job.
+    about: >-
+      Get comfortable with the everyday programs you'll meet at almost any desk
+      job. We start with the real basics, the kind nobody bothers to explain, and
+      build up one hands-on step at a time until you've made something real
+      yourself.
     topics:
       - title: "Basic Excel: Level 1"
         slug: excel-level-1
@@ -64,6 +75,10 @@ categories:
     label: Devices & Digital Life
     icon: device
     blurb: Get comfortable with the tech you use every day.
+    about: >-
+      Get confident with the technology you use every day, from the phone in your
+      pocket to the computer on your desk. These are clear, patient, step-by-step
+      lessons with no rush, no jargon, and no such thing as a silly question.
     topics:
       - title: "Mobile Tech: iPhone Basics"
         slug: iphone-basics

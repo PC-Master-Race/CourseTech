@@ -31,7 +31,7 @@ layout: default
       <nav class="breadcrumb" aria-label="Breadcrumb">
         <ol>
           <li><a href="{{ '/' | relative_url }}">Home</a></li>
-          {% if cat_id != "" %}<li><a href="{{ '/#cat-' | append: cat_id | relative_url }}">{{ cat_label }}</a></li>{% endif %}
+          {% if cat_id != "" %}<li><a href="{{ '/courses/' | append: cat_id | append: '/' | relative_url }}">{{ cat_label }}</a></li>{% endif %}
           <li><span aria-current="page">{{ page.title }}</span></li>
         </ol>
       </nav>
@@ -60,16 +60,41 @@ layout: default
 
   <div class="container section--tight">
     <div class="topic-body">
-      {% comment %} ---- Within-page table of contents ---- {% endcomment %}
-      <nav class="toc" aria-label="On this page">
-        <h2>On this page</h2>
-        <ol>
-          {% for part in page.parts %}
-          {% assign pid = part.id | default: part.title | slugify %}
-          <li><a href="#{{ pid }}">{{ part.title }}</a></li>
-          {% endfor %}
-        </ol>
-      </nav>
+      {% comment %} ---- Sidebar: course contents + on-this-page ---- {% endcomment %}
+      <aside class="lesson-sidebar">
+        {%- assign course = "" -%}
+        {%- for c in site.data.topics.categories -%}{%- if c.id == page.category -%}{%- assign course = c -%}{%- endif -%}{%- endfor -%}
+        {% if course != "" %}
+        <nav class="course-nav" aria-label="Lessons in this course">
+          <a class="course-nav__back" href="{{ '/courses/' | append: course.id | append: '/' | relative_url }}">
+            <svg class="icon" aria-hidden="true"><use href="#icon-arrow-left"></use></svg> {{ course.label }}
+          </a>
+          <ol class="course-nav__list">
+            {% for t in course.topics %}
+            {% if t.status == "live" %}
+              {% if t.slug == page.slug %}
+              <li><span class="course-nav__link is-current" aria-current="page"><span class="n">{{ forloop.index }}</span>{{ t.title }}</span></li>
+              {% else %}
+              <li><a class="course-nav__link" href="{{ '/topics/' | append: t.slug | append: '/' | relative_url }}"><span class="n">{{ forloop.index }}</span>{{ t.title }}</a></li>
+              {% endif %}
+            {% else %}
+              <li><span class="course-nav__link is-soon"><span class="n">{{ forloop.index }}</span>{{ t.title }} <span class="soon-tag">Soon</span></span></li>
+            {% endif %}
+            {% endfor %}
+          </ol>
+        </nav>
+        {% endif %}
+
+        <nav class="toc" aria-label="On this page">
+          <h2>On this page</h2>
+          <ol>
+            {% for part in page.parts %}
+            {% assign pid = part.id | default: part.title | slugify %}
+            <li><a href="#{{ pid }}">{{ part.title }}</a></li>
+            {% endfor %}
+          </ol>
+        </nav>
+      </aside>
 
       <div class="topic-parts rich">
         {% if page.lead_in %}<p class="lesson-intro">{{ page.lead_in }}</p>{% endif %}

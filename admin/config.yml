@@ -129,7 +129,8 @@ collections:
                 label: "Icon"
                 widget: select
                 options: [sparkles, grid, device, book]
-              - { name: blurb, label: "Short description", widget: string }
+              - { name: blurb, label: "Short description (one line, for cards and menu)", widget: string }
+              - { name: about, label: "Course overview (paragraph, shown on the course page)", widget: text, required: false }
               - name: topics
                 label: "Topics in this category"
                 widget: list

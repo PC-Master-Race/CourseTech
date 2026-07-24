@@ -1,0 +1,53 @@
+---
+layout: default
+---
+{%- comment -%} Course landing page. Reads page.course_id, renders from _data/topics.yml. {%- endcomment -%}
+{%- assign course = "" -%}
+{%- for c in site.data.topics.categories -%}
+  {%- if c.id == page.course_id -%}{%- assign course = c -%}{%- endif -%}
+{%- endfor -%}
+{%- assign live_count = 0 -%}
+{%- for t in course.topics -%}{%- if t.status == "live" -%}{%- assign live_count = live_count | plus: 1 -%}{%- endif -%}{%- endfor -%}
+
+<div class="band">
+  <div class="container course-hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li><span aria-current="page">{{ course.label }}</span></li>
+      </ol>
+    </nav>
+    <span class="course-hero__eyebrow">
+      <svg class="icon" aria-hidden="true"><use href="#icon-{{ course.icon }}"></use></svg>
+      Course
+    </span>
+    <h1>{{ course.label }}</h1>
+    {% if course.about %}<p class="lead course-hero__about">{{ course.about }}</p>{% endif %}
+    <p class="course-hero__meta">{{ live_count }} lesson{% if live_count != 1 %}s{% endif %} ready
+      {% assign soon = course.topics | size | minus: live_count %}{% if soon > 0 %}· {{ soon }} more coming soon{% endif %}</p>
+  </div>
+</div>
+
+<div class="container section--tight">
+  <h2 class="section-title">Course lessons</h2>
+  <ol class="lesson-list">
+    {% for t in course.topics %}
+    <li class="lesson-row {% if t.status != 'live' %}is-soon{% endif %}">
+      <span class="lesson-row__num" aria-hidden="true">{{ forloop.index }}</span>
+      <div class="lesson-row__body">
+        <h3>{{ t.title }}</h3>
+        {% if t.blurb %}<p>{{ t.blurb }}</p>{% endif %}
+      </div>
+      <div class="lesson-row__action">
+        {% if t.status == "live" %}
+        <a class="btn" href="{{ '/topics/' | append: t.slug | append: '/' | relative_url }}">
+          Start lesson <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg>
+        </a>
+        {% else %}
+        <span class="soon-pill">Coming soon</span>
+        {% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+</div>

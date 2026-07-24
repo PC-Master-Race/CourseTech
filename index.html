@@ -5,55 +5,44 @@ title: null
 <section class="hero">
   <div class="container">
     <p class="hero__eyebrow">
-      <svg class="icon" aria-hidden="true" style="width:18px;height:18px"><use href="#icon-sparkles"></use></svg>
+      <svg class="icon" aria-hidden="true"><use href="#icon-sparkles"></use></svg>
       Learn tech, in plain English
     </p>
     <h1>Tech skills that <span class="u">actually stick</span>.</h1>
     <p class="hero__lead">
-      Short, hands-on lessons on AI at work, Excel, and the devices you use every
+      Short, hands-on courses on AI at work, Excel, and the devices you use every
       day. No jargon, no rush. Start anywhere, come back any time.
     </p>
     <div class="hero__actions">
-      <a class="btn" href="#all-topics">
-        Browse the topics
+      <a class="btn" href="#courses">
+        Explore the courses
         <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg>
       </a>
-      <a class="btn btn--ghost" href="{{ '/topics/what-ai-is/' | relative_url }}">Start with the basics</a>
+      <a class="btn btn--ghost" href="{{ '/courses/ai/' | relative_url }}">Start with AI at Work</a>
     </div>
   </div>
 </section>
 
-<section class="section" id="all-topics">
+<section class="section" id="courses">
   <div class="container">
-    {% for cat in site.data.topics.categories %}
-    <div id="cat-{{ cat.id }}" style="scroll-margin-top:96px; {% if forloop.index > 1 %}margin-top:var(--s-9);{% endif %}">
-      <div class="cat-header reveal">
-        <svg class="cat-icon" aria-hidden="true"><use href="#icon-{{ cat.icon }}"></use></svg>
-        <div>
-          <h2>{{ cat.label }}</h2>
-          <p>{{ cat.blurb }}</p>
-        </div>
-      </div>
-      <div class="card-grid">
-        {% for t in cat.topics %}
-          {% if t.status == "soon" %}
-          <div class="topic-card is-soon reveal">
-            <div class="topic-card__icon"><svg class="icon" aria-hidden="true"><use href="#icon-{{ cat.icon }}"></use></svg></div>
-            <span class="soon-pill">Coming soon</span>
-            <h3>{{ t.title }}</h3>
-            <p>{{ t.blurb }}</p>
-          </div>
-          {% else %}
-          <a class="topic-card reveal" href="{{ '/topics/' | append: t.slug | append: '/' | relative_url }}">
-            <div class="topic-card__icon"><svg class="icon" aria-hidden="true"><use href="#icon-{{ cat.icon }}"></use></svg></div>
-            <h3>{{ t.title }}</h3>
-            <p>{{ t.blurb }}</p>
-            <span class="topic-card__meta">Open lesson <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg></span>
-          </a>
-          {% endif %}
-        {% endfor %}
-      </div>
+    <div class="section-head reveal">
+      <h2 class="section-title mt-0">Courses</h2>
+      <p class="lead">Each course is a set of short lessons you can take in order or dip into as you need.</p>
     </div>
-    {% endfor %}
+    <div class="course-grid">
+      {% for cat in site.data.topics.categories %}
+      {%- assign live = 0 -%}
+      {%- for t in cat.topics -%}{%- if t.status == "live" -%}{%- assign live = live | plus: 1 -%}{%- endif -%}{%- endfor -%}
+      <a class="course-card reveal" href="{{ '/courses/' | append: cat.id | append: '/' | relative_url }}">
+        <div class="course-card__icon"><svg class="icon" aria-hidden="true"><use href="#icon-{{ cat.icon }}"></use></svg></div>
+        <h3>{{ cat.label }}</h3>
+        <p>{{ cat.blurb }}</p>
+        <div class="course-card__foot">
+          <span class="course-card__count">{{ live }} lesson{% if live != 1 %}s{% endif %} ready</span>
+          <span class="course-card__cta">Explore course <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg></span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
   </div>
 </section>
