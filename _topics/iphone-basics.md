@@ -3,11 +3,11 @@ title: 'Mobile Tech: iPhone Basics'
 slug: iphone-basics
 category: devices
 description: Your iPhone's controls, home screen, and how to make it yours. Written for beginners, in large, plain language. We'll go slow.
-lead_in: Your phone can feel like a mystery, and I want to change that today. In this lesson we will walk through the buttons, the home screen, and the settings that make the phone truly yours, one small step at a time. There is no rush and no wrong questions, and by the end you will feel much more in charge of that little device.
+lead_in: Your phone can feel like a mystery, and I want to change that. In this lesson we will walk through the buttons, the home screen, and the settings that make the phone truly yours, one small step at a time. There is no rush and no wrong questions, and by the end you will feel much more in charge of that little device.
 video_url: ''
 parts:
 - title: Before we begin
-  intro: Welcome. I am so glad you are here. Before we dive in, let's get ready so today goes smoothly.
+  intro: Welcome. I am so glad you are here. Before we dive in, let's get ready so this goes smoothly.
   blocks:
   - type: lesson
     title: Check these four things
@@ -17,7 +17,7 @@ parts:
       - **This guide is open** in front of you. You are reading it, so that one is done. Great start.
       - **Your sound is on.** Look at the left side of your phone. If you see a tiny switch showing orange, the sound is off. We will come back to that.
 
-      > There are no silly questions today. If something is confusing, ask. Chances are someone else is wondering the same thing. Go at your own pace. This is not a race, and we will wait for everyone.
+      > There are no silly questions here. If something is confusing, read it again slowly, or come back to it later. Go at your own pace. This is not a race.
 
       You are all set. Let's have some fun.
 - title: 'Section 1: your iPhone''s physical controls'
@@ -109,7 +109,7 @@ parts:
 
       **Your passcode** always works as a backup. Wake the screen, swipe up (or tap the screen on older iPhones) to bring up the number pad, and tap in your code.
 
-      > Forgot your passcode? Do not keep guessing. After 10 wrong tries the iPhone locks you out completely. Come find me and we will reset it safely.
+      > Forgot your passcode? Do not keep guessing. After 10 wrong tries the iPhone locks you out completely. If that happens, you can reset it through Apple's account recovery, so it is not the end of the world.
   - type: activity
     title: 'Let''s try it together: unlock three times'
     body: |
@@ -137,7 +137,7 @@ parts:
       - A gray square with gears is **Settings**.
       - A white envelope on blue is **Mail**.
 
-      > You do not need to memorize the icons today. Just know that each picture opens something when you tap it.
+      > You do not need to memorize the icons right now. Just know that each picture opens something when you tap it.
 
       **The Dock** is the row of 4 apps at the very bottom. It stays put no matter which page you are on. Most phones start with Phone, Messages, Safari, and Music there, and you can change them (Section 6).
 
@@ -354,8 +354,8 @@ parts:
       **Control which apps can notify you:** open **Settings**, tap **Notifications**, tap any app (for example, Messages), and use the **Allow Notifications** toggle. Green allows notifications, gray silences them.
 
       > Keep notifications on for Phone, Messages, and any health or reminder apps. Those are the ones you probably always want to hear from.
-- title: Your Week 1 challenge and a word glossary
-  intro: You learned so much today. Before next class, try these three things at home. Flip back to any section if you need a reminder. You have got this.
+- title: A practice challenge and a word glossary
+  intro: You learned a lot in this lesson. Try these three things on your own to make it all stick. Flip back to any section if you need a reminder. You have got this.
   blocks:
   - type: activity
     title: 'Try this at home: three challenges'
@@ -364,7 +364,7 @@ parts:
       2. **Set a new Lock Screen wallpaper.** Change it to a photo of someone you love, or a color or image from Apple's built-in options. Success: you see your chosen photo or color when you press the Side Button.
       3. **Add a widget to your Home Screen.** Add the Weather or Calendar widget so you see helpful information without opening an app. Success: the widget shows live information on your Home Screen.
 
-      A personal note: you did not have to be here today, but you showed up, and that takes real courage. Look at everything you learned in one session. You can turn your phone on and off, unlock it, navigate the Home Screen, personalize the Lock Screen, add a widget, control the flashlight, and more. Use your phone this week. The more you use it, the more comfortable it gets.
+      A personal note: you did not have to start learning this, but you did, and that takes real courage. Look at everything you picked up. You can turn your phone on and off, unlock it, navigate the Home Screen, personalize the Lock Screen, add a widget, control the flashlight, and more. Use your phone as often as you can. The more you use it, the more comfortable it gets.
   - type: lesson
     title: 'Glossary: words used in this guide'
     body: |

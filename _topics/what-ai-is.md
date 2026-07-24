@@ -55,7 +55,7 @@ parts:
   - type: activity
     title: AI already in your work life
     body: |
-      Estimated time: 10 to 12 minutes. Best done on your own first, then shared with the class.
+      Estimated time: 10 to 12 minutes.
 
       **Purpose:** to ground the ideas you just read in your own experience, and to notice how much AI you already navigate every day.
 
@@ -63,7 +63,7 @@ parts:
 
       1. List at least **3 examples** of AI, or what might be AI, that you run into in your trade, your daily tasks, or your personal life. Think about apps, software, devices, or services you use often.
       2. Next to each one, take your best guess at which of the four categories it fits: Language, Vision, Prediction, or Recommendation.
-      3. Be ready to share at least one example with the class.
+      3. Pick the one example that surprised you most.
 
       Examples to get you thinking:
 

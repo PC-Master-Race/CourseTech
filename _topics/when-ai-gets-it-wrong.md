@@ -85,7 +85,7 @@ parts:
 
       In your work, this means every time AI produces something that will leave your hands, an email, a report, a patient message, take 60 seconds to ask: are there any specific claims here that I have not verified? That minute is your professional protection.
 - title: A first look at what else can go wrong
-  intro: Hallucination is the most immediate risk, but not the only one. Here is a short preview of three more limits. You will go much deeper on all of these in Week 3.
+  intro: Hallucination is the most immediate risk, but not the only one. Here is a short preview of three more limits, with more on each in a later lesson.
   blocks:
   - type: lesson
     title: Bias, privacy, and outdated information
@@ -96,7 +96,7 @@ parts:
 
       **Outdated information.** LLMs have a training cutoff, a point after which they know nothing. They cannot tell you about a law passed last month, a current drug interaction update, or today's prices. This matters most in fast-changing fields like healthcare regulation and compliance. Always confirm time-sensitive information against a current, primary source.
 
-      > **Coming in Week 3.** An entire week on responsible use: real case studies of AI bias causing harm, your organization's privacy obligations, the ethical frameworks used to govern AI, and a personal checklist for responsible use on the job. Today's preview is just the first label.
+      > **More to come.** A later lesson goes deeper on responsible use: real case studies of AI bias causing harm, your organization's privacy obligations, the ethical frameworks used to govern AI, and a personal checklist for responsible use on the job. This is just the first label.
 - title: Practice and go deeper
   blocks:
   - type: activity
@@ -110,7 +110,7 @@ parts:
       2. Using a search engine, spend 10 to 15 minutes fact-checking the specific claims. Look for anything that seems off, invented, or impossible to verify.
       3. Mark any claims you could not confirm or found to be wrong.
       4. Note what you found for each claim: real, wrong, or can't verify.
-      5. Be ready to share: how easy was it to spot the errors, and what would have happened if this had gone to a supervisor unverified?
+      5. Afterward, ask yourself: how easy was it to spot the errors, and what would have happened if this had gone to a supervisor unverified?
 
       **The passage to fact-check:**
 
@@ -136,9 +136,9 @@ parts:
       - Recognize the types of hallucination most likely to show up in real workplace output.
       - Apply the human-in-the-loop principle: AI proposes, human verifies, human decides, every time.
       - Match your verification effort to the stakes: light review for low-risk drafts, rigorous checking for anything patient-facing, legally relevant, or going to leadership.
-      - Name three other limits, bias, privacy risks, and outdated information, and know that Week 3 goes deeper on all of them.
+      - Name three other limits, bias, privacy risks, and outdated information, and know that a later lesson goes deeper on all of them.
 
-      You made it through the Day 1 foundations. Between now and next time, try one AI tool for a real task and save the result. You will bring it back.
+      Now that you have these foundations, try one AI tool for a real task and see how it goes.
   - type: lesson
     title: 'Dig deeper: recommended reading'
     body: |

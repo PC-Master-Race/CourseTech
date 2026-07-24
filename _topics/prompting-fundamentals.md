@@ -133,7 +133,7 @@ parts:
 
       1. Open ChatGPT or Gemini in your browser.
       2. For each prompt below, first run the original vague version and note the result. Then rewrite it using RTCF and run your improved version. Record both.
-      3. Be ready to share: what changed, why it mattered, and which version you would actually use at work.
+      3. Notice what changed, why it mattered, and which version you would actually use at work.
 
       **Prompt 1, general professional.** Original: "Write a report." Ask yourself: what report? What is its purpose? Who will read it? What format? Then write your complete RTCF version.
 

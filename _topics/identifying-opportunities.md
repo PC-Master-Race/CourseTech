@@ -75,7 +75,7 @@ parts:
 - title: Practice and go deeper
   blocks:
   - type: activity
-    title: 'Anchor activity: baseline chat session'
+    title: 'Activity: baseline chat session'
     body: |
       **Purpose:** to find out firsthand what AI thinks about your specific field, and to start a personal list of tasks where AI could add real value.
 

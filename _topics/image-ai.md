@@ -14,7 +14,7 @@ parts:
     body: |
       Everything so far, RTCF, chain-of-thought, persona and constraint, iterative refinement, has been about text. Text is where most workplace value lives right now. But there is a second kind of tool worth understanding, because it is already showing up in your field: image generation.
 
-      **Image AI** tools create original visuals from a written description. Marketing teams mock up campaigns in minutes. Healthcare educators make training diagrams without a graphic designer. Logistics companies make safety signage. Construction firms make site-layout visuals. The technology is not perfect, and this topic will be honest about what it cannot do, but it is real, it is accessible, and it is already part of professional workflows in every industry in this room.
+      **Image AI** tools create original visuals from a written description. Marketing teams mock up campaigns in minutes. Healthcare educators make training diagrams without a graphic designer. Logistics companies make safety signage. Construction firms make site-layout visuals. The technology is not perfect, and this topic will be honest about what it cannot do, but it is real, it is accessible, and it is already part of professional workflows in just about every industry, including yours.
 
       This is a short introduction. You will learn how these tools work, where they fit, which ones to use, their limits, and how to write an image prompt that gives you something usable. Then you will generate one.
 - title: How image generation actually works

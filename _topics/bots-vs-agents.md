@@ -12,7 +12,7 @@ parts:
   - type: lesson
     title: Bot or agent?
     body: |
-      You have been building your AI vocabulary since Week 1. You know what a large language model does. You know how to structure a prompt with RTCF. You know how to filter tasks with the four-question test. Here is one more distinction for your toolkit, and it is one you will hear more and more as AI tools keep evolving at work.
+      By now you have built up a working AI vocabulary. You know what a large language model does, how to structure a prompt with RTCF, and how to filter tasks with the four-question test. Here is one more distinction for your toolkit, and it is one you will hear more and more as AI tools keep evolving at work.
 
       The question: what is the difference between a bot and an AI agent?
 
@@ -114,17 +114,17 @@ parts:
       | Produces confident output that contains errors or invented facts. | Do not skip fact-checking just because it looks polished. Apply the same skepticism from "When AI Gets It Wrong." |
       | Takes actions affecting real people without a human review step. | Build a human-in-the-loop checkpoint for any agent action with outside impact. |
 
-      > **Coming in Week 3, the ethics questions agents raise.** When an agent makes a decision that harms someone, who is responsible: the user, the organization, or the developer? How do you audit a chain of AI decisions you did not personally make? What should always stay with a human, no matter how capable agents become? And how do you write policy for a tool that can act on its own?
+      > **Worth thinking about: the ethics questions agents raise.** When an agent makes a decision that harms someone, who is responsible: the person who ran it, the organization, or the developer? How do you audit a chain of AI decisions you did not personally make? What should always stay with a human, no matter how capable agents become? And how do you write policy for a tool that can act on its own?
 - title: Practice and go deeper
   blocks:
   - type: activity
     title: Bot or agent? Classify and defend
     body: |
-      Estimated time: 12 to 15 minutes. Best done as a discussion.
+      Estimated time: 12 to 15 minutes.
 
       **Purpose:** to apply the bot-versus-agent distinction to real tools, and to think critically about what level of autonomy fits a given task.
 
-      **Instructions:** for each scenario, decide whether it is a **bot (B)**, an **agent (A)**, or **mixed (M)**, and write one sentence explaining why. Then compare with a partner. Where do you disagree?
+      **Instructions:** for each scenario, decide whether it is a **bot (B)**, an **agent (A)**, or **mixed (M)**, and write one sentence explaining why.
 
       1. A tool that watches your inbox and files emails into folders based on keywords you set.
       2. A tool you give a research goal to. It searches the web, reads articles, and writes a three-paragraph summary.
@@ -133,7 +133,7 @@ parts:
       5. A system that monitors social media for brand mentions, identifies negative sentiment, drafts a response, and submits it for your approval before posting.
       6. A Zapier automation that sends you a Slack message every time a new row is added to a Google Sheet.
 
-      **What to watch for in the debrief:**
+      **What to watch for:**
 
       - The "mixed" answer is not a cop-out. It is often the most accurate. Many real tools sit on a spectrum.
       - Scenario 4 is interesting: you triggered it, but it made decisions about word choice, tone, and structure. Where does your control end?
