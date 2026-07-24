@@ -3,6 +3,7 @@ title: When AI Gets It Wrong
 slug: when-ai-gets-it-wrong
 category: ai
 description: The warning label. How AI makes things up, and the one habit that protects you, your employer, and the people you serve.
+lead_in: This is the most important safety lesson in the course, so I am giving it to you early on purpose. You will learn how AI can be confidently, fluently wrong, and the one simple habit that protects you from it. I am not trying to scare you away from these tools, I am making sure a wrong answer never leaves your hands and causes a real problem.
 video_url: ''
 parts:
 - title: The warning label, and why it comes first

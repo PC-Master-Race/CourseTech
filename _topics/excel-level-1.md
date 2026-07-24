@@ -3,6 +3,7 @@ title: 'Basic Excel: Level 1'
 slug: excel-level-1
 category: software
 description: Let's open Excel together and get comfortable with cells, formatting, and your first real formula.
+lead_in: 'Excel scares a lot of people, and I promise you it does not need to. In this lesson we will open it together and get comfortable with the basics: the cells, a little formatting, and your very first formula. By the end you will have built a real, working table with your own hands.'
 video_url: ''
 parts:
 - title: Getting to know the Excel window

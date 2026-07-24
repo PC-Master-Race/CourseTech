@@ -72,6 +72,7 @@ layout: default
       </nav>
 
       <div class="topic-parts rich">
+        {% if page.lead_in %}<p class="lesson-intro">{{ page.lead_in }}</p>{% endif %}
         {% for part in page.parts %}
         {% assign pid = part.id | default: part.title | slugify %}
         <section class="part reveal" id="{{ pid }}" aria-labelledby="{{ pid }}-h">

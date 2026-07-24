@@ -3,6 +3,7 @@ title: What AI Actually Is
 slug: what-ai-is
 category: ai
 description: Demystifying the technology before you touch it. By the end you'll be able to explain AI in plain English to anyone.
+lead_in: Before we touch a single tool, I want you to really understand what AI is, because that is what makes everything else in this course click into place. In this lesson I will show you how to tell AI apart from ordinary software, where it came from, and what it is actually doing when it answers you. Get this straight and you will use these tools with confidence instead of guesswork.
 video_url: ''
 parts:
 - title: Three things that are not the same

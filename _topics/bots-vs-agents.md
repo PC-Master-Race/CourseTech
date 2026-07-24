@@ -3,6 +3,7 @@ title: Bots vs. AI Agents
 slug: bots-vs-agents
 category: ai
 description: 'What the difference means for you at work: what you can delegate, how much to trust a tool on its own, and what to keep for yourself.'
+lead_in: You will hear the words bot and agent more and more, and the difference between them matters more than it sounds. In this lesson I will show you what each one can do on its own, and how much you can trust it to work without you watching. Knowing this shapes what you are willing to hand off and what you keep for yourself.
 video_url: ''
 parts:
 - title: The question that shapes what you can delegate

@@ -3,6 +3,7 @@ title: Image AI, A Practical Intro
 slug: image-ai
 category: ai
 description: Expanding beyond text. What image AI can do at work, where it falls short, and how to prompt it well.
+lead_in: So far everything has been about words, but AI can make pictures too, and it is already showing up in workplaces like yours. In this lesson you will learn what image AI can do, where it falls short, and how to write a prompt that gives you something you can actually use. I will be honest with you about the limits so you do not get burned.
 video_url: ''
 parts:
 - title: 'Beyond text: a new tool in your kit'

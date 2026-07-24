@@ -3,6 +3,7 @@ title: 'Mobile Tech: iPhone Basics'
 slug: iphone-basics
 category: devices
 description: Your iPhone's controls, home screen, and how to make it yours. Written for beginners, in large, plain language. We'll go slow.
+lead_in: Your phone can feel like a mystery, and I want to change that today. In this lesson we will walk through the buttons, the home screen, and the settings that make the phone truly yours, one small step at a time. There is no rush and no wrong questions, and by the end you will feel much more in charge of that little device.
 video_url: ''
 parts:
 - title: Before we begin

@@ -3,6 +3,7 @@ title: Advanced Prompting Techniques
 slug: advanced-prompting
 category: ai
 description: From framework to fluency. Four techniques that turn good prompts into professional-grade output.
+lead_in: Once the basics feel natural, a few extra moves take your results from good to genuinely professional. In this lesson I will show you four techniques the best AI users lean on every day, and just as important, how to tell when to put the tool down and handle something yourself. None of it needs any technical background.
 video_url: ''
 parts:
 - title: From RTCF to fluency

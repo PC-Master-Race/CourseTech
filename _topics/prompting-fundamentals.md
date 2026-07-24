@@ -3,6 +3,7 @@ title: Prompting Fundamentals
 slug: prompting-fundamentals
 category: ai
 description: The foundational skill everything else builds on. Learn to ask an AI tool for exactly what you need.
+lead_in: If I could only teach you one skill in this whole course, this would be it. In this lesson you will learn how to ask an AI tool for exactly what you want, using a simple four-part checklist I call RTCF. The same tool hands one person junk and another person gold, and the difference is almost always the prompt. Let me show you how to be that second person.
 video_url: ''
 parts:
 - title: The single skill that changes everything

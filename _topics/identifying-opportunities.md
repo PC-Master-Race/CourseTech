@@ -3,6 +3,7 @@ title: Spotting AI Opportunities at Work
 slug: identifying-opportunities
 category: ai
 description: Connecting AI to your actual work. Which tasks are worth handing to AI, and which still need a human.
+lead_in: Knowing how to use AI only helps once you know where to use it. In this lesson I will give you two quick tests for deciding which tasks are worth handing to AI and which ones still need you in the lead. That judgment is exactly what turns AI into real time saved instead of time wasted.
 video_url: ''
 parts:
 - title: From understanding AI to using it on purpose
