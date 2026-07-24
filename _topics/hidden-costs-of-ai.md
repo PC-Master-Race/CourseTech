@@ -15,9 +15,11 @@ parts:
 
       | The cost | Why it matters |
       |---|---|
-      | **Water:** AI data centers need massive amounts of water to cool their servers. Some projections estimate hundreds of billions of gallons per year across U.S. data centers by 2028. | That water comes from the same sources local communities rely on for drinking and agriculture, often in drought-prone regions. |
-      | **Electricity:** training a single large AI model can use as much electricity as dozens of homes use in a full year. Running AI at scale adds far more. | As AI spreads into more tasks, its energy footprint grows. Claims of environmental responsibility from AI-heavy companies deserve close examination. |
-      | **Carbon:** most U.S. electricity still comes from sources that produce emissions. More electricity for AI means more emissions, unless the energy sources change. | This connects AI adoption to climate change in a direct, measurable way that mainstream coverage rarely mentions. |
+      | **Electricity:** a single modern AI data center can use as much power as 100,000 homes, and many of the largest ones being built now are expected to use up to 20 times that. By one estimate, data centers could reach up to 12% of all U.S. electricity use by 2028. | This demand is already pushing power bills up. In 2025, U.S. electricity rate increases topped $60 billion, with average prices up almost 10% from 2024. |
+      | **Water:** data centers need huge amounts of water to keep their servers cool. A mid-sized facility can use up to 300,000 gallons a day, and a large one up to 5 million, about what a small town uses. By 2028, AI-related U.S. data centers could need up to 32 billion gallons of water a year, enough for roughly 360,000 households. | That water often comes from the same supplies local communities rely on. Two-thirds of U.S. data centers built or in development since 2022 sit in water-stressed areas. |
+      | **Carbon and air:** data centers need constant power, so many rely on gas generation for daily use and diesel generators for backup. Both release greenhouse gases and health-harming pollutants. | This ties AI's growth directly to climate change, and to local air quality in communities that often already face pollution. |
+
+      > These figures come from the World Resources Institute, "From Energy Use to Air Quality, the Many Ways Data Centers Affect US Communities" (wri.org, 2026), which draws on the International Energy Agency, Lawrence Berkeley National Laboratory, and others.
 
       *Magnifica Humanitas* touches this in its fourth chapter with the idea of "the universal destination of goods," the principle that the earth's resources belong to all people, not just those who can build the largest data centers. The communities bearing the environmental cost are often not the ones receiving the economic benefit. (Source: Pope Leo XIV, *Magnifica Humanitas*, Ch. 4, vatican.va, May 15, 2026.)
 - title: The knowledge problem
@@ -50,7 +52,7 @@ parts:
     body: |
       Before you move to the capstone, make sure at least one fact from this lesson has actually landed.
 
-      Write one sentence: the fact that surprised you most, and why. Be specific. Not "AI uses a lot of water," but something like "I did not know that training one AI model can use as much electricity as dozens of homes in a full year, and that surprises me because..."
+      Write one sentence: the fact that surprised you most, and why. Be specific. Not "AI uses a lot of water," but something like "I did not know that a single AI data center can use as much power as 100,000 homes, and that surprises me because..."
 - title: 'Capstone: your ethics layer'
   intro: This pulls together everything from these ethics lessons and applies it to your own work. If you started an AI Workplace Framework in "Choosing the Right Task for AI," open it and find the AI-ready task you identified. That task is what you are examining now.
   blocks:
