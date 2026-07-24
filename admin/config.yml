@@ -51,7 +51,7 @@ collections:
         widget: select
         options:
           - { label: "AI at Work", value: ai }
-          - { label: "Everyday Software", value: software }
+          - { label: "Office Productivity", value: software }
           - { label: "Devices & Digital Life", value: devices }
       - { name: description, label: "One-line description", widget: text, hint: "A short sentence under the title." }
       - name: video_url

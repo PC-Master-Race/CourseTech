@@ -49,9 +49,9 @@ categories:
         status: live
 
   - id: software
-    label: Everyday Software
+    label: Office Productivity
     icon: grid
-    blurb: The programs you meet at almost every desk job.
+    blurb: Master the everyday office programs, from Excel to Word.
     about: >-
       Get comfortable with the everyday programs you'll meet at almost any desk
       job. We start with the real basics, the kind nobody bothers to explain, and
