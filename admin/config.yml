@@ -108,7 +108,31 @@ collections:
                   - { name: caption, label: "Caption (optional)", widget: string, required: false }
 
   # ---------------------------------------------------------------------------
-  # 2) SITE NAVIGATION — edit the mega menu / home catalog (_data/topics.yml)
+  # 2) NEWS / BLOG — one file per post
+  # ---------------------------------------------------------------------------
+  - name: news
+    label: "News / blog"
+    label_singular: "Post"
+    folder: "_news"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: title
+    summary: "{{title}}  ·  {{date}}"
+    sortable_fields: [date, title]
+    fields:
+      - { name: title, label: "Post title", widget: string }
+      - { name: date, label: "Date", widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+      - { name: author, label: "Author", widget: string, default: "Mr. Perez" }
+      - { name: summary, label: "Short summary (shows on the news list)", widget: text }
+      - name: image
+        label: "Header image (optional)"
+        widget: image
+        required: false
+      - { name: image_alt, label: "Image alt text", widget: string, required: false, hint: "Required if you add an image. Describe the picture for screen-reader users." }
+      - { name: body, label: "Post body", widget: markdown, hint: "Write your post here. Use headings, bullets, and links as you like." }
+
+  # ---------------------------------------------------------------------------
+  # 3) SITE NAVIGATION — edit the mega menu / home catalog (_data/topics.yml)
   # ---------------------------------------------------------------------------
   - name: navigation
     label: "Site navigation (menu)"

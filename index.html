@@ -46,3 +46,31 @@ title: null
     </div>
   </div>
 </section>
+
+{% assign recent = site.news | sort: 'date' | reverse %}
+{% if recent.size > 0 %}
+<section class="section band" id="latest-news">
+  <div class="container">
+    <div class="news-head reveal">
+      <div>
+        <h2 class="section-title mt-0">Latest news</h2>
+        <p class="lead">New lessons, tips, and updates.</p>
+      </div>
+      <a class="btn btn--ghost" href="{{ '/news/' | relative_url }}">All news
+        <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg></a>
+    </div>
+    <ul class="post-list post-list--home">
+      {% for post in recent limit: 3 %}
+      <li class="post-card reveal">
+        <a class="post-card__link" href="{{ post.url | relative_url }}">
+          <p class="post-card__date">{% if post.date %}<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>{% endif %}</p>
+          <h3>{{ post.title }}</h3>
+          {% if post.summary %}<p class="post-card__summary">{{ post.summary }}</p>{% endif %}
+          <span class="post-card__cta">Read post <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg></span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}

@@ -1,0 +1,45 @@
+---
+layout: default
+title: News
+permalink: /news/
+description: Updates, tips, and new lessons from Tutorial Hub.
+---
+<div class="band">
+  <div class="container course-hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li><span aria-current="page">News</span></li>
+      </ol>
+    </nav>
+    <span class="course-hero__eyebrow">
+      <svg class="icon" aria-hidden="true"><use href="#icon-list"></use></svg>
+      News &amp; updates
+    </span>
+    <h1>News</h1>
+    <p class="lead course-hero__about">Short posts on new lessons, handy tips, and what's changing around here. Check back now and then.</p>
+  </div>
+</div>
+
+<div class="container section--tight">
+  {% assign posts = site.news | sort: 'date' | reverse %}
+  {% if posts.size > 0 %}
+  <ul class="post-list">
+    {% for post in posts %}
+    <li class="post-card reveal">
+      <a class="post-card__link" href="{{ post.url | relative_url }}">
+        <p class="post-card__date">
+          {% if post.date %}<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>{% endif %}
+          {% if post.author %}<span aria-hidden="true"> · </span>{{ post.author }}{% endif %}
+        </p>
+        <h2>{{ post.title }}</h2>
+        {% if post.summary %}<p class="post-card__summary">{{ post.summary }}</p>{% endif %}
+        <span class="post-card__cta">Read post <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg></span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p class="lead">No posts yet. Check back soon.</p>
+  {% endif %}
+</div>

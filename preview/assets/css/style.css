@@ -536,6 +536,36 @@ a.course-nav__link:hover { color: var(--ink); border-left-color: var(--border-st
   .lesson-row__action .btn { width: 100%; justify-content: center; }
 }
 
+/* ---------- News / blog ---------- */
+.post-meta { color: var(--ink-faint); font-weight: 600; margin: 0 0 var(--s-3); }
+.post-layout { max-width: var(--reading); }
+.post-body { font-size: 1.12rem; }
+.post-body h2 { font-family: var(--font-display); font-weight: 600; margin-top: var(--s-7); }
+.post-body h3 { margin-top: var(--s-6); }
+.post-back { margin-top: var(--s-7); }
+.post-back a { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; text-decoration: none; }
+.post-back a:hover { text-decoration: underline; }
+
+.news-head { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--s-5); margin-bottom: var(--s-6); flex-wrap: wrap; }
+.news-head .lead { margin: 0; }
+
+.post-list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-5); }
+.post-list--home { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.post-card { }
+.post-card__link {
+  display: flex; flex-direction: column; gap: var(--s-2); height: 100%;
+  padding: var(--s-6); background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--r-md); text-decoration: none; color: var(--ink); box-shadow: var(--shadow-sm);
+  transition: transform var(--t) var(--ease), box-shadow var(--t) var(--ease), border-color var(--t) var(--ease);
+}
+.post-card__link:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--border-strong); color: var(--ink); }
+.post-card__date { margin: 0; font-size: .92rem; font-weight: 600; color: var(--brand); text-transform: uppercase; letter-spacing: .03em; }
+.post-card h2, .post-card h3 { margin: 0; font-size: 1.35rem; }
+.post-card__summary { margin: 0; color: var(--ink-soft); }
+.post-card__cta { margin-top: auto; padding-top: var(--s-3); display: inline-flex; align-items: center; gap: 6px; font-weight: 700; color: var(--brand); }
+.post-card__cta .icon { width: 18px; height: 18px; transition: transform var(--t) var(--ease); }
+.post-card__link:hover .post-card__cta .icon { transform: translateX(3px); }
+
 /* ---------- Reveal on scroll ---------- */
 .reveal { opacity: 0; transform: translateY(14px); transition: opacity var(--t-slow) var(--ease), transform var(--t-slow) var(--ease); }
 .reveal.is-in { opacity: 1; transform: none; }

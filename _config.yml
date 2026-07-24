@@ -25,6 +25,9 @@ collections:
   topics:
     output: true
     permalink: /topics/:name/
+  news:
+    output: true
+    permalink: /news/:name/
 
 defaults:
   - scope:
@@ -32,6 +35,11 @@ defaults:
       type: topics
     values:
       layout: topic
+  - scope:
+      path: ""
+      type: news
+    values:
+      layout: post
 
 sass:
   style: compressed
