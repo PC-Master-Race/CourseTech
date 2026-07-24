@@ -91,6 +91,18 @@ categories:
         slug: hidden-costs-of-ai
         blurb: What AI costs the world, plus the ethics capstone.
         status: live
+      - title: The Future of Work with AI
+        slug: future-of-work
+        blurb: How work is really changing, and how to stay ahead.
+        status: live
+      - title: AI Tools Already in Your Field
+        slug: ai-in-your-field
+        blurb: The real tools employers use, field by field.
+        status: live
+      - title: Local AI vs. Hosted AI
+        slug: local-vs-hosted-ai
+        blurb: Runs on their computer or yours? Privacy, cost, and setup.
+        status: live
 
   - id: software
     label: Office Productivity

@@ -1,0 +1,213 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<title>Local AI vs. Hosted AI · Tutorial Hub</title></head><body><a class="skip-link" href="#main">Skip to main content</a>
+  Inline SVG symbol sprite. Reference with:
+  <svg class="icon" aria-hidden="true"><use href="#icon-NAME"></use></svg>
+  Icons are decorative; always give the surrounding element a text label.
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="icon-sparkles" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3l1.9 4.6L18.5 9.5 13.9 11.4 12 16l-1.9-4.6L5.5 9.5 10.1 7.6z"/><path d="M19 14l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/>
+  </symbol>
+  <symbol id="icon-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>
+  </symbol>
+  <symbol id="icon-device" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="6" y="2.5" width="12" height="19" rx="3"/><line x1="10.5" y1="18.5" x2="13.5" y2="18.5"/>
+  </symbol>
+  <symbol id="icon-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H12v16H5.5A1.5 1.5 0 0 0 4 20.5z"/><path d="M20 4.5A1.5 1.5 0 0 0 18.5 3H12v16h6.5A1.5 1.5 0 0 1 20 20.5z"/>
+  </symbol>
+  <symbol id="icon-pencil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/><line x1="14" y1="6" x2="18" y2="10"/>
+  </symbol>
+  <symbol id="icon-badge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="10" r="7"/><path d="M9 10l2 2 4-4"/><path d="M8.5 16.5L7 22l5-2.5L17 22l-1.5-5.5"/>
+  </symbol>
+  <symbol id="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="4" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/>
+  </symbol>
+  <symbol id="icon-arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="20" y1="12" x2="5" y2="12"/><polyline points="11 6 5 12 11 18"/>
+  </symbol>
+  <symbol id="icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="6 9 12 15 18 9"/>
+  </symbol>
+  <symbol id="icon-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v4.5A1.5 1.5 0 0 1 16.5 20h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10"/>
+  </symbol>
+  <symbol id="icon-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="9"/><polygon points="10 8.5 16 12 10 15.5" fill="currentColor" stroke="none"/>
+  </symbol>
+  <symbol id="icon-list" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="9" y1="6" x2="20" y2="6"/><line x1="9" y1="12" x2="20" y2="12"/><line x1="9" y1="18" x2="20" y2="18"/><circle cx="4.5" cy="6" r="1.2" fill="currentColor" stroke="none"/><circle cx="4.5" cy="12" r="1.2" fill="currentColor" stroke="none"/><circle cx="4.5" cy="18" r="1.2" fill="currentColor" stroke="none"/>
+  </symbol>
+  <symbol id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+  </symbol>
+  <symbol id="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="9" y="9" width="12" height="12" rx="2"/><path d="M6 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1"/>
+  </symbol>
+  <symbol id="icon-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3v12"/><polyline points="7 11 12 16 17 11"/><path d="M5 21h14"/>
+  </symbol>
+  <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="4 12 10 18 20 6"/>
+  </symbol>
+</svg>
+
+<header class="site-header"><div class="container site-header__bar">
+<a class="brand" href="index.html"><span class="brand__mark" aria-hidden="true">TH</span><span>Tutorial Hub</span></a>
+<nav class="primary-nav" aria-label="Primary"><ul>
+<li><button type="button" class="nav-link" id="megaToggle" aria-expanded="false" aria-controls="megaPanel" aria-haspopup="true"><svg class="icon" aria-hidden="true"><use href="#icon-list"></use></svg> Courses <svg class="chev" aria-hidden="true"><use href="#icon-chevron"></use></svg></button></li>
+<li><a class="nav-link" href="tools-job-search-pipeline.html">Job Search</a></li>
+<li><a class="nav-link" href="news.html">News</a></li>
+<li><a class="nav-link" href="about.html">About</a></li>
+</ul></nav></div>
+<div class="mega" id="megaPanel" data-open="false" role="region" aria-label="All courses" hidden><div class="mega__inner"><div class="mega__col"><a class="mega__col-head" href="courses-ai.html"><svg class="cat-icon" aria-hidden="true"><use href="#icon-sparkles"></use></svg><div><h3 id="mc-ai">AI at Work</h3><p>Use AI tools well, and know when not to.</p></div></a><ul class="mega__list" aria-labelledby="mc-ai"><li><a class="mega__link" href="topics-what-ai-is.html"><span class="t">What AI Actually Is</span></a></li><li><a class="mega__link" href="topics-prompting-fundamentals.html"><span class="t">Prompting Fundamentals</span></a></li><li><a class="mega__link" href="topics-identifying-opportunities.html"><span class="t">Spotting AI Opportunities at Work</span></a></li><li><a class="mega__link" href="topics-when-ai-gets-it-wrong.html"><span class="t">When AI Gets It Wrong</span></a></li><li><a class="mega__link" href="topics-advanced-prompting.html"><span class="t">Advanced Prompting Techniques</span></a></li><li><a class="mega__link" href="topics-image-ai.html"><span class="t">Image AI, A Practical Intro</span></a></li><li><a class="mega__link" href="topics-bots-vs-agents.html"><span class="t">Bots vs. AI Agents</span></a></li><li><a class="mega__link" href="topics-five-categories-of-ai.html"><span class="t">The 5 Categories of AI at Work</span></a></li><li><a class="mega__link" href="topics-audio-ai.html"><span class="t">Audio AI, A Practical Intro</span></a></li><li><a class="mega__link" href="topics-choosing-the-right-task.html"><span class="t">Choosing the Right Task for AI</span></a></li><li><a class="mega__link" href="topics-scoped-vs-autonomous-agents.html"><span class="t">Scoped vs. Autonomous Agents</span></a></li><li><a class="mega__link" href="topics-beat-the-resume-screener.html"><span class="t">Use AI to Beat the Resume Screener</span></a></li><li><a class="mega__link" href="topics-who-is-responsible.html"><span class="t">Who's Responsible When AI Gets It Wrong?</span></a></li><li><a class="mega__link" href="topics-real-harm-cases.html"><span class="t">When AI Has Caused Real Harm</span></a></li><li><a class="mega__link" href="topics-bias-and-fairness.html"><span class="t">Bias and Fairness in AI</span></a></li><li><a class="mega__link" href="topics-when-ai-pretends-to-care.html"><span class="t">When AI Pretends to Care</span></a></li><li><a class="mega__link" href="topics-human-dignity.html"><span class="t">Human Dignity and the Right to an Explanation</span></a></li><li><a class="mega__link" href="topics-hidden-costs-of-ai.html"><span class="t">The Hidden Costs of AI</span></a></li><li><a class="mega__link" href="topics-future-of-work.html"><span class="t">The Future of Work with AI</span></a></li><li><a class="mega__link" href="topics-ai-in-your-field.html"><span class="t">AI Tools Already in Your Field</span></a></li><li><a class="mega__link" href="topics-local-vs-hosted-ai.html"><span class="t">Local AI vs. Hosted AI</span></a></li></ul></div><div class="mega__col"><a class="mega__col-head" href="courses-software.html"><svg class="cat-icon" aria-hidden="true"><use href="#icon-grid"></use></svg><div><h3 id="mc-software">Office Productivity</h3><p>Master the everyday office programs, from Excel to Word.</p></div></a><ul class="mega__list" aria-labelledby="mc-software"><li><a class="mega__link" href="topics-excel-level-1.html"><span class="t">Basic Excel: Level 1</span></a></li><li><span class="mega__link is-soon"><span class="t">Basic Excel: Level 2</span><span class="soon-tag">Coming soon</span></span></li><li><span class="mega__link is-soon"><span class="t">Writing with Word</span><span class="soon-tag">Coming soon</span></span></li></ul></div><div class="mega__col"><a class="mega__col-head" href="courses-devices.html"><svg class="cat-icon" aria-hidden="true"><use href="#icon-device"></use></svg><div><h3 id="mc-devices">Devices & Digital Life</h3><p>Get comfortable with the tech you use every day.</p></div></a><ul class="mega__list" aria-labelledby="mc-devices"><li><a class="mega__link" href="topics-iphone-basics.html"><span class="t">Mobile Tech: iPhone Basics</span></a></li><li><span class="mega__link is-soon"><span class="t">Mobile Tech: Android Basics</span><span class="soon-tag">Coming soon</span></span></li><li><span class="mega__link is-soon"><span class="t">Getting Around Windows 11</span><span class="soon-tag">Coming soon</span></span></li><li><span class="mega__link is-soon"><span class="t">Staying Safe Online</span><span class="soon-tag">Coming soon</span></span></li></ul></div></div></div>
+</header><div class="mega-overlay" id="megaOverlay" data-open="false" hidden></div><main id="main"><article class="topic"><div class="band"><div class="container topic-hero">
+<nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li><a href="courses-ai.html">AI at Work</a></li><li><span aria-current="page">Local AI vs. Hosted AI</span></li></ol></nav>
+<h1>Local AI vs. Hosted AI</h1><p class="lead">Runs on their computer or yours? The difference in privacy, cost, and what your machine needs.</p><div class="video-wrap"><div class="video-placeholder"><svg class="icon" aria-hidden="true"><use href="#icon-play"></use></svg><strong>A video walkthrough is coming for this lesson.</strong><span>You can work through everything below right now. No video needed.</span></div></div></div></div>
+<div class="container section--tight"><div class="topic-body">
+<aside class="lesson-sidebar"><nav class="course-nav" aria-label="Lessons in this course"><a class="course-nav__back" href="courses-ai.html"><svg class="icon" aria-hidden="true"><use href="#icon-arrow-left"></use></svg> AI at Work</a><ol class="course-nav__list"><li><a class="course-nav__link" href="topics-what-ai-is.html"><span class="n">1</span>What AI Actually Is</a></li><li><a class="course-nav__link" href="topics-prompting-fundamentals.html"><span class="n">2</span>Prompting Fundamentals</a></li><li><a class="course-nav__link" href="topics-identifying-opportunities.html"><span class="n">3</span>Spotting AI Opportunities at Work</a></li><li><a class="course-nav__link" href="topics-when-ai-gets-it-wrong.html"><span class="n">4</span>When AI Gets It Wrong</a></li><li><a class="course-nav__link" href="topics-advanced-prompting.html"><span class="n">5</span>Advanced Prompting Techniques</a></li><li><a class="course-nav__link" href="topics-image-ai.html"><span class="n">6</span>Image AI, A Practical Intro</a></li><li><a class="course-nav__link" href="topics-bots-vs-agents.html"><span class="n">7</span>Bots vs. AI Agents</a></li><li><a class="course-nav__link" href="topics-five-categories-of-ai.html"><span class="n">8</span>The 5 Categories of AI at Work</a></li><li><a class="course-nav__link" href="topics-audio-ai.html"><span class="n">9</span>Audio AI, A Practical Intro</a></li><li><a class="course-nav__link" href="topics-choosing-the-right-task.html"><span class="n">10</span>Choosing the Right Task for AI</a></li><li><a class="course-nav__link" href="topics-scoped-vs-autonomous-agents.html"><span class="n">11</span>Scoped vs. Autonomous Agents</a></li><li><a class="course-nav__link" href="topics-beat-the-resume-screener.html"><span class="n">12</span>Use AI to Beat the Resume Screener</a></li><li><a class="course-nav__link" href="topics-who-is-responsible.html"><span class="n">13</span>Who's Responsible When AI Gets It Wrong?</a></li><li><a class="course-nav__link" href="topics-real-harm-cases.html"><span class="n">14</span>When AI Has Caused Real Harm</a></li><li><a class="course-nav__link" href="topics-bias-and-fairness.html"><span class="n">15</span>Bias and Fairness in AI</a></li><li><a class="course-nav__link" href="topics-when-ai-pretends-to-care.html"><span class="n">16</span>When AI Pretends to Care</a></li><li><a class="course-nav__link" href="topics-human-dignity.html"><span class="n">17</span>Human Dignity and the Right to an Explanation</a></li><li><a class="course-nav__link" href="topics-hidden-costs-of-ai.html"><span class="n">18</span>The Hidden Costs of AI</a></li><li><a class="course-nav__link" href="topics-future-of-work.html"><span class="n">19</span>The Future of Work with AI</a></li><li><a class="course-nav__link" href="topics-ai-in-your-field.html"><span class="n">20</span>AI Tools Already in Your Field</a></li><li><span class="course-nav__link is-current" aria-current="page"><span class="n">21</span>Local AI vs. Hosted AI</span></li></ol></nav><nav class="toc" aria-label="On this page"><h2>On this page</h2><ol><li><a href="#the-two-kinds-of-ai">The two kinds of AI</a></li><li><a href="#privacy-the-biggest-practical-difference">Privacy: the biggest practical difference</a></li><li><a href="#what-it-takes-to-run-local-ai">What it takes to run local AI</a></li><li><a href="#local-vs-hosted-at-a-glance">Local vs. hosted at a glance</a></li><li><a href="#where-you-go-from-here">Where you go from here</a></li></ol></nav></aside>
+<div class="topic-parts rich"><p class="lesson-intro">Every AI tool you use runs in one of two places: on someone else's computer, or on your own. Most people use the first kind every day without realizing it. The second kind is newer and comes with very different rules about privacy, cost, and what your computer needs to handle. This lesson breaks down the difference, especially the privacy side, which matters a lot if you work with sensitive information. It's also the final lesson, so I'll close with where to go from here.</p><section class="part reveal" id="the-two-kinds-of-ai"><p class="part__label">Part 1</p><h2>The two kinds of AI</h2><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>Hosted and local, defined</h3><div class="block__body rich"><blockquote>
+<p><strong>Hosted AI</strong> runs on a company's servers and you reach it through a website or app. ChatGPT, Gemini, Claude, and Microsoft Copilot are all hosted. Your prompt travels over the internet to their computers, gets processed there, and the response comes back. You do not need a powerful computer, because the heavy work happens on their end.</p>
+<p><strong>Local AI</strong> runs entirely on your own computer, with no internet needed. The model is downloaded and stored on your hard drive. When you send a prompt, it is processed right on your machine and the response comes back without any data leaving your device. This needs a computer with enough power to run the model, which we will get to.</p>
+</blockquote></div></div></section><section class="part reveal" id="privacy-the-biggest-practical-difference"><p class="part__label">Part 2</p><h2>Privacy: the biggest practical difference</h2><p class="lead">The most important difference, especially for your job, is what happens to the information you type in.</p><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>Where your data goes</h3><div class="block__body rich"><table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Hosted AI</th>
+<th>Local AI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Where does my data go?</td>
+<td>Your prompt goes to the company's servers. Logs are often saved even if you would rather they were not, partly for legal reasons, and your chats may be used to improve their model unless you opt out.</td>
+<td>Nowhere. Your data never leaves your computer. It is processed locally and stays on your device.</td>
+</tr>
+<tr>
+<td>Can my employer or a client see what I type?</td>
+<td>Possibly. With an enterprise version like Copilot, admins usually have access to logs. Free consumer versions vary by provider.</td>
+<td>No. Nothing is transmitted. Only someone with physical access to your computer could see it.</td>
+</tr>
+<tr>
+<td>Is it safe for sensitive data (patient or financial records)?</td>
+<td>Generally not recommended without an enterprise contract and a data agreement. Consumer versions should never receive confidential client data.</td>
+<td>Yes. This is one of the main reasons people run local AI. Sensitive data stays on your machine.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Free vs. enterprise accounts.</strong> Free accounts on ChatGPT, Gemini, and Claude are consumer products, and the companies may use your conversations to improve their models. Never type patient names, Social Security numbers, client financial details, student records, or any confidential information into a free consumer AI account. Enterprise accounts have different terms that usually prohibit training on your data, but always read the policy before you type anything sensitive.</p>
+</blockquote></div></div></section><section class="part reveal" id="what-it-takes-to-run-local-ai"><p class="part__label">Part 3</p><h2>What it takes to run local AI</h2><p class="lead">Running AI locally means your computer does all the work. Think of the difference between streaming a movie (hosted) and playing a video game stored on your computer (local). The game needs a machine powerful enough to run it. Local AI is the same. Here is what the key terms mean.</p><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>Memory, GPU, storage, and processor</h3><div class="block__body rich"><ul>
+<li><strong>Memory (RAM):</strong> your computer's short-term memory, the space it uses for what it is actively working on. Running a local model needs a lot of it. A small model might run comfortably in 8 GB, while a larger one might need 32 GB or more. Most everyday laptops have 8 to 16 GB, enough for smaller local models.</li>
+<li><strong>GPU (graphics processing unit):</strong> a chip originally built for video games. The same math it is good at is exactly what AI models need, so a dedicated GPU (like NVIDIA's) is much faster than the main processor alone. It can be the difference between a 30-second response and a 2-second one. The GPU's own memory is called <strong>VRAM</strong>, and bigger models need more of it.</li>
+<li><strong>Storage (hard drive or SSD):</strong> model files are large, from 4 to 8 GB for a small model up to 20 to 70 GB or more for a big one. You need free space to store them, and a faster SSD or NVMe drive loads them more quickly.</li>
+<li><strong>CPU (central processing unit):</strong> your main processor. Without a dedicated GPU, the CPU does all the AI work. That still works, just slower, unless your computer has newer "unified memory," which many Macs and some newer PCs have. On a budget, a modern CPU can get smaller models done. It just takes more patience.</li>
+</ul></div></div><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>Model size: what 3B vs 30B means</h3><div class="block__body rich"><p>You will often see numbers like 3B, 7B, 13B, or 30B. The B stands for billion, meaning the number of <strong>parameters</strong>, the internal settings adjusted during training. More parameters generally means the model handles more complex questions and gives more nuanced answers, but it is also bigger, slower, and needs more powerful hardware.</p>
+<table>
+<thead>
+<tr>
+<th>Model size</th>
+<th>Good at</th>
+<th>Limits</th>
+<th>Hardware needed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>3B</strong></td>
+<td>Simple tasks: basic questions, short summaries, casual conversation, light writing help.</td>
+<td>Struggles with complex reasoning or multi-step tasks. More factual errors.</td>
+<td>Most modern laptops with 8 GB RAM. No GPU required.</td>
+</tr>
+<tr>
+<td><strong>7B</strong></td>
+<td>A solid everyday model: drafting emails, summarizing documents, basic coding help.</td>
+<td>Limited on highly technical topics. Slower without a GPU.</td>
+<td>8 to 16 GB RAM. Better with a GPU, but works on CPU.</td>
+</tr>
+<tr>
+<td><strong>13B to 30B</strong></td>
+<td>Noticeably smarter: complex instructions, longer accurate content, reasoning through problems.</td>
+<td>Needs more powerful hardware. Slow without a dedicated GPU or unified memory.</td>
+<td>16 to 32 GB RAM. A dedicated GPU (8 GB+ VRAM) strongly recommended.</td>
+</tr>
+<tr>
+<td><strong>70B and above</strong></td>
+<td>Approaches the quality of top hosted models. Excellent reasoning and analysis.</td>
+<td>Needs very powerful, expensive hardware most people do not have at home.</td>
+<td>64 GB+ RAM. A high-end GPU (24 GB+ VRAM).</td>
+</tr>
+</tbody>
+</table></div></div></section><section class="part reveal" id="local-vs-hosted-at-a-glance"><p class="part__label">Part 4</p><h2>Local vs. hosted at a glance</h2><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>Side by side</h3><div class="block__body rich"><table>
+<thead>
+<tr>
+<th></th>
+<th>Local AI</th>
+<th>Hosted AI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Privacy</strong></td>
+<td>Strong. Data never leaves your device. Ideal for confidential work.</td>
+<td>Free accounts may use your data for training. Enterprise offers more protection, but your data still sits with a third party and can be subject to legal discovery.</td>
+</tr>
+<tr>
+<td><strong>Cost</strong></td>
+<td>Free after setup. No subscription. You pay for hardware once.</td>
+<td>Free tiers exist but are limited. Stronger features usually need a subscription ($20 to $200+ a month).</td>
+</tr>
+<tr>
+<td><strong>Internet</strong></td>
+<td>Not required. Works fully offline once downloaded (you can enable web search if you want).</td>
+<td>Required. No internet, no access.</td>
+</tr>
+<tr>
+<td><strong>Ease of setup</strong></td>
+<td>More technical. You download software and model files. Not plug-and-play, and it can be finicky to fix.</td>
+<td>Very easy. Visit a website, make an account, start typing.</td>
+</tr>
+<tr>
+<td><strong>Capability</strong></td>
+<td>Depends on model size and your hardware. Smaller models are less capable, but quality is consistent and fully under your control.</td>
+<td>Access to the most capable models available, though quality can vary with the provider's infrastructure and settings you do not control.</td>
+</tr>
+<tr>
+<td><strong>Updates</strong></td>
+<td>Manual. You choose when to download a new version.</td>
+<td>Automatic. You always get the latest version your plan allows.</td>
+</tr>
+<tr>
+<td><strong>Best for</strong></td>
+<td>Privacy-sensitive work and people who want full control.</td>
+<td>Beginners and most everyday workplace tasks, and teams that want high-quality output with no setup.</td>
+</tr>
+</tbody>
+</table></div></div></section><section class="part reveal" id="where-you-go-from-here"><p class="part__label">Part 5</p><h2>Where you go from here</h2><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>You came in curious, you are leaving capable</h3><div class="block__body rich"><p>That is the whole course. You now know what AI actually is, how to use it, where it falls short, when to be careful, and how it fits your specific field. Most people have not done that work. Five things to carry forward:</p>
+<ul>
+<li><strong>Keep using the tools.</strong> The only way to get better is to keep going. Pick one task from your plan and try it with AI this week. If it works, great. If not, adjust and try again.</li>
+<li><strong>Stay current.</strong> AI moves fast. Following one or two people who cover AI in your industry keeps you informed without being overwhelmed.</li>
+<li><strong>Know your workplace's policy.</strong> Before using AI at work with real client or patient data, find out if your employer has an AI use policy. If they do not, that is an opportunity: you now know enough to help write one.</li>
+<li><strong>Teach someone else.</strong> The best way to lock in what you learned is to explain it to someone who does not know it yet.</li>
+<li><strong>Come back to your commitment.</strong> If you wrote down how you intend to use AI, keep it somewhere visible. In a few months, look again and ask: am I actually doing this?</li>
+</ul>
+<p>The workers who shape how AI is used in their workplaces will be the ones who understood it early, asked the hard questions, and kept the human at the center. That is exactly what you did here. Go do something great with it.</p></div></div><div class="block block--activity"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-pencil"></use></svg></span> Activity · try it</p><h3>Make your plan real</h3><div class="block__body rich"><p>One last step to turn everything into action.</p>
+<ol>
+<li>Pick the single AI task from your field you are most ready to try.</li>
+<li>Write the tool you will use, and the first prompt you will type.</li>
+<li>Name the one check you will always do before the output is used, your human-in-the-loop step.</li>
+<li>Do it once this week. Then note what worked and what you would change.</li>
+</ol></div></div><div class="block block--quiz"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-badge"></use></svg></span> Check your understanding</p><h3>Quick check</h3><div class="block__body rich"><p>When you are ready, take the short quiz on hosted vs. local AI, privacy, and what it takes to run a model on your own computer.</p>
+<p>I'll add the quiz link here once it is built. It opens in a new tab.</p></div></div></section><nav class="pager" aria-label="More lessons"><a class="pager__link pager__link--prev" href="topics-ai-in-your-field.html"><span class="pager__dir"><svg class="icon" aria-hidden="true"><use href="#icon-arrow-left"></use></svg> Previous</span><span class="pager__title">AI Tools Already in Your Field</span></a><span></span></nav></div></div></div></article></main><footer class="site-footer"><div class="container"><div class="footer-grid">
+<div><a class="brand" href="index.html"><span class="brand__mark">TH</span><span>Tutorial Hub</span></a><p style="margin-top:16px;max-width:34ch;color:#9aa0b4;">Plain-English tech lessons, written for real people. Learn at your own pace, come back any time.</p></div>
+<div><h4>Courses</h4><ul><li><a href="courses-ai.html">AI at Work</a></li><li><a href="courses-software.html">Office Productivity</a></li><li><a href="courses-devices.html">Devices & Digital Life</a></li></ul></div>
+<div><h4>Site</h4><ul><li><a href="index.html#courses">All courses</a></li><li><a href="tools-job-search-pipeline.html">Job Search Pipeline</a></li><li><a href="news.html">News</a></li><li><a href="about.html">About this site</a></li></ul></div>
+</div><div class="footer-bottom">&copy; 2026 Mr. Perez. Built for adult learners at Mt. San Antonio College.</div></div></footer>
+<script src="assets/js/main.js" defer></script></body></html>
