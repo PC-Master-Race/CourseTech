@@ -536,6 +536,45 @@ a.course-nav__link:hover { color: var(--ink); border-left-color: var(--border-st
   .lesson-row__action .btn { width: 100%; justify-content: center; }
 }
 
+/* ---------- Job Search pipeline tool ---------- */
+.pipeline-grid { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: var(--s-7); align-items: start; }
+@media (max-width: 860px) { .pipeline-grid { grid-template-columns: 1fr; } }
+.pipeline-pitch ul { padding-left: 1.3em; }
+.pipeline-pitch li { margin-bottom: 10px; }
+.pipeline-pitch li::marker { color: var(--brand); }
+
+.signup-card {
+  position: sticky; top: 88px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg);
+  padding: var(--s-6); box-shadow: var(--shadow-md);
+}
+@media (max-width: 860px) { .signup-card { position: static; } }
+.signup-card h2 { font-size: 1.35rem; margin-bottom: var(--s-2); }
+.signup-card > p { color: var(--ink-soft); font-size: 1rem; }
+.signup-form { display: grid; gap: 6px; margin-top: var(--s-4); }
+.signup-form label { font-weight: 600; font-size: .95rem; margin-top: var(--s-2); }
+.signup-form input {
+  width: 100%; padding: 12px 14px; font-size: 1.05rem; font-family: var(--font-ui);
+  border: 1px solid var(--border-strong); border-radius: var(--r-sm); background: var(--surface);
+}
+.signup-form input:focus-visible { outline: 3px solid var(--focus); outline-offset: 1px; border-color: var(--brand); }
+.signup-form .btn { margin-top: var(--s-4); }
+.signup-fineprint { font-size: .88rem; color: var(--ink-faint); margin: var(--s-3) 0 0; }
+.signup-error { color: var(--accent-ink); font-weight: 600; margin-top: var(--s-3); }
+
+.pipeline-access { margin-top: var(--s-8); padding-top: var(--s-7); border-top: 2px solid var(--border); scroll-margin-top: 88px; }
+.pipeline-access__bar { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--s-5); flex-wrap: wrap; margin-bottom: var(--s-6); }
+.pipeline-access__bar .lead { margin: 0; }
+.pipeline-access__actions { display: flex; gap: var(--s-3); flex-wrap: wrap; }
+.pipeline-doc {
+  max-width: var(--reading); background: var(--surface-alt); border: 1px solid var(--border);
+  border-radius: var(--r-md); padding: var(--s-6) var(--s-7);
+}
+.pipeline-doc h1 { font-size: 1.9rem; }
+.pipeline-doc h2 { font-family: var(--font-display); font-weight: 600; margin-top: var(--s-7); padding-top: var(--s-5); border-top: 1px solid var(--border); }
+.pipeline-doc h1 + p, .pipeline-doc h2 + p { margin-top: var(--s-2); }
+.pipeline-doc hr { border: 0; border-top: 1px solid var(--border); margin: var(--s-6) 0; }
+
 /* ---------- News / blog ---------- */
 .post-meta { color: var(--ink-faint); font-weight: 600; margin: 0 0 var(--s-3); }
 .post-layout { max-width: var(--reading); }

@@ -1,0 +1,86 @@
+---
+layout: default
+title: The Automated Job Search Pipeline
+permalink: /tools/job-search-pipeline/
+description: A free AI-powered system that finds matching jobs, scores them, and drafts tailored, ATS-ready resumes and cover letters. Sign up to get it.
+---
+<div class="band">
+  <div class="container course-hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li><span aria-current="page">Job Search Pipeline</span></li>
+      </ol>
+    </nav>
+    <span class="course-hero__eyebrow">
+      <svg class="icon" aria-hidden="true"><use href="#icon-sparkles"></use></svg>
+      Free tool
+    </span>
+    <h1>The Automated Job Search Pipeline</h1>
+    <p class="lead course-hero__about">
+      Hand your job search to an AI assistant. It finds openings that fit you, scores each one,
+      and drafts tailored resumes and cover letters built to get past the resume screener, while
+      you stay in control and apply yourself. It's a template: fill in your own details and run it.
+    </p>
+  </div>
+</div>
+
+<div class="container section--tight">
+  <div class="pipeline-grid">
+    <div class="pipeline-pitch rich">
+      <h2 class="section-title">What it does for you</h2>
+      <ul>
+        <li><strong>Finds the right openings.</strong> Searches the job boards and company career pages you choose, using your keywords.</li>
+        <li><strong>Scores every job 0 to 100</strong> against your background, so you focus on the best fits first.</li>
+        <li><strong>Writes ATS-ready resumes.</strong> Mirrors each posting's exact keywords, uses proven bullet formulas, and runs a red-flag checklist so a real person actually sees your resume.</li>
+        <li><strong>Drafts a tailored cover letter</strong> for each strong match, in your own voice.</li>
+        <li><strong>Keeps a running log</strong> of everything it finds, so nothing slips through the cracks.</li>
+        <li><strong>Stays safe and honest.</strong> It never invents credentials, never auto-applies, and treats web pages as data, not instructions.</li>
+      </ul>
+      <p>You will need an AI assistant that can read your files and browse the web to run the full version. A lighter copy-and-paste version works too: paste in a posting, and it scores it and drafts your materials.</p>
+    </div>
+
+    <aside class="signup-card" id="signupCard">
+      <h2>Get the pipeline, free</h2>
+      <p>Enter your email and I'll unlock the full pipeline for you to view, copy, and download.</p>
+      <form id="signupForm" class="signup-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+        <label for="su-name">Name (optional)</label>
+        <input type="text" id="su-name" name="name" autocomplete="name">
+        <label for="su-email">Email</label>
+        <input type="email" id="su-email" name="email" required autocomplete="email" placeholder="you@example.com">
+        <button type="submit" class="btn" style="width:100%;justify-content:center">
+          Unlock the pipeline
+          <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg>
+        </button>
+        <p class="signup-fineprint">Free. No spam. Just the tool and the occasional update.</p>
+      </form>
+      <p class="signup-error" id="signupError" hidden>Please enter a valid email address.</p>
+    </aside>
+  </div>
+
+  <section class="pipeline-access" id="pipelineAccess" hidden>
+    <div class="pipeline-access__bar">
+      <div>
+        <h2 class="section-title mt-0">You're in. Here's your pipeline.</h2>
+        <p class="lead">Copy it or download it, then fill in the bracketed details and run it in your AI assistant.</p>
+      </div>
+      <div class="pipeline-access__actions">
+        <button type="button" class="btn" id="copyPipeline">
+          <svg class="icon" aria-hidden="true"><use href="#icon-copy"></use></svg>
+          Copy all
+        </button>
+        <a class="btn btn--ghost" href="{{ '/assets/downloads/job-search-pipeline.md' | relative_url }}" download>
+          <svg class="icon" aria-hidden="true"><use href="#icon-download"></use></svg>
+          Download (.md)
+        </a>
+      </div>
+    </div>
+
+    <div class="pipeline-doc rich">
+      {% capture pipe %}{% include job-search-pipeline.md %}{% endcapture %}
+      {{ pipe | markdownify }}
+    </div>
+  </section>
+
+  <script type="text/plain" id="pipelineRaw">{% include job-search-pipeline.md %}</script>
+</div>

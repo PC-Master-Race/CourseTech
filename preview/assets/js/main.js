@@ -74,6 +74,66 @@
     revealEls.forEach(function (el) { io.observe(el); });
   }
 
+  /* ---------- Job Search pipeline gate ---------- */
+  var signupForm = document.getElementById("signupForm");
+  var pipelineAccess = document.getElementById("pipelineAccess");
+  if (signupForm && pipelineAccess) {
+    var signupCard = document.getElementById("signupCard");
+    var signupError = document.getElementById("signupError");
+    var KEY = "th_pipeline_unlocked";
+
+    var unlock = function (scroll) {
+      pipelineAccess.hidden = false;
+      if (signupCard) { signupCard.hidden = true; }
+      if (scroll) { pipelineAccess.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" }); }
+    };
+
+    // Returning visitor who already signed up.
+    try { if (window.localStorage && localStorage.getItem(KEY) === "1") { unlock(false); } } catch (e) {}
+
+    signupForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var emailEl = document.getElementById("su-email");
+      var email = (emailEl && emailEl.value || "").trim();
+      var valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      if (!valid) { if (signupError) { signupError.hidden = false; } if (emailEl) { emailEl.focus(); } return; }
+      if (signupError) { signupError.hidden = true; }
+
+      // Try to record the email if a Formspree endpoint is configured. The unlock
+      // happens either way so the tool works before the form backend is set up.
+      var action = signupForm.getAttribute("action") || "";
+      if (action.indexOf("YOUR_FORM_ID") === -1 && action.indexOf("formspree.io") !== -1) {
+        try {
+          fetch(action, { method: "POST", body: new FormData(signupForm), headers: { Accept: "application/json" } });
+        } catch (e2) {}
+      }
+      try { if (window.localStorage) { localStorage.setItem(KEY, "1"); } } catch (e3) {}
+      unlock(true);
+    });
+  }
+
+  /* ---------- Copy pipeline text ---------- */
+  var copyBtn = document.getElementById("copyPipeline");
+  var pipelineRaw = document.getElementById("pipelineRaw");
+  if (copyBtn && pipelineRaw) {
+    copyBtn.addEventListener("click", function () {
+      var text = pipelineRaw.textContent || "";
+      var done = function () {
+        var original = copyBtn.innerHTML;
+        copyBtn.innerHTML = '<svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg> Copied';
+        setTimeout(function () { copyBtn.innerHTML = original; }, 2000);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, function () {});
+      } else {
+        var ta = document.createElement("textarea");
+        ta.value = text; document.body.appendChild(ta); ta.select();
+        try { document.execCommand("copy"); done(); } catch (e) {}
+        document.body.removeChild(ta);
+      }
+    });
+  }
+
   /* ---------- TOC active state ---------- */
   var tocLinks = Array.prototype.slice.call(document.querySelectorAll(".toc a[href^='#']"));
   if (tocLinks.length && "IntersectionObserver" in window) {
