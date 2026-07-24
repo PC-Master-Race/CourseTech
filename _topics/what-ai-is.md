@@ -22,12 +22,12 @@ parts:
   - type: activity
     title: Sort three tools
     body: |
-      Think about the apps you touched this week. Pick three and write down, for each one:
+      We just sorted three kinds of tool: plain software, automation, and AI. Let's try that with tools from your own life. Pick three apps or gadgets you have used recently, and for each one write down:
 
-      1. What is its job?
-      2. Does it follow fixed rules, or does it seem to learn and adapt?
+      1. What is its main job?
+      2. Does it follow fixed rules, or does it seem to learn from examples and adapt?
 
-      You do not need to be right on the first try. The goal is to start noticing the difference.
+      You do not need to get these exactly right. The point is to start noticing the difference we just talked about.
 - title: How we got here, a short history
   blocks:
   - type: lesson
@@ -40,6 +40,39 @@ parts:
       - **Large language models (2017 to now).** These are the systems behind ChatGPT, Gemini, and Claude. For the first time, you can just type a plain-English request and get a useful response. No coding required. That is exactly why this course exists.
 
       > A quick note on terms. A **large language model**, or LLM, is an AI trained on a huge amount of text so it can read and write human language.
+- title: What generative AI is
+  blocks:
+  - type: lesson
+    title: The kind of AI that makes new things
+    body: |
+      You have probably heard the phrase "generative AI" a lot lately. It is worth two minutes, because it is the family that today's most talked-about tools belong to.
+
+      Here is the plain version. For a long time, most AI did one job: it sorted or scored things that already existed. Is this email spam, yes or no? Which of these photos has a cat in it? Useful work, but the AI was picking from options, not making anything.
+
+      Generative AI flipped that. It creates brand-new content that did not exist a moment ago, based on a request you type in. Ask for a thank-you note and it writes one. Ask for a picture of a calm waiting room and it paints one. The word "generative" just means it *generates*, it produces.
+
+      > A quick note on terms. **Generative AI** is AI that creates new content, like text, images, or audio, from a plain-language request you give it.
+  - type: lesson
+    title: It shows up in more than text
+    body: |
+      Text is where most workplace value lives right now, and it is where this course spends most of its time. But generative AI is not only about writing. The same basic idea powers a few different kinds of tools.
+
+      | You ask for... | The tool makes... | Examples you may have heard of |
+      |---|---|---|
+      | Writing or answers | Text | ChatGPT, Gemini, Claude |
+      | A picture from a description | An image | Gemini, Canva, Adobe Firefly |
+      | A voice or a bit of music | Audio | Various voice and music tools |
+
+      One thing to hold onto: because these tools *make* something new every time, you can ask the same thing twice and get two different results. That is normal. It is also why the quality of your request matters so much, which is the whole point of the next topic on prompting.
+  - type: activity
+    title: Spot the generative tool
+    body: |
+      Think back over the last week or two. See if you can name one time you used, or watched someone use, a tool that *made* something new for them.
+
+      1. What did it create? Text, a picture, audio, or something else?
+      2. What did the person ask for to get it?
+
+      If nothing comes to mind yet, that is fine. You will be using one before this course is over.
 - title: What a language model actually does
   blocks:
   - type: lesson

@@ -28,16 +28,13 @@ layout: default
 <article class="topic">
   <div class="band">
     <div class="container topic-hero">
-      <p class="breadcrumb">
-        <a href="{{ '/' | relative_url }}">Home</a> ·
-        <a href="{{ '/#cat-' | append: cat_id | relative_url }}">{{ cat_label }}</a>
-      </p>
-      {% if cat_id != "" %}
-      <span class="cat-chip">
-        {% for c in site.data.topics.categories %}{% if c.id == cat_id %}<svg class="icon" aria-hidden="true"><use href="#icon-{{ c.icon }}"></use></svg>{% endif %}{% endfor %}
-        {{ cat_label }}
-      </span>
-      {% endif %}
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="{{ '/' | relative_url }}">Home</a></li>
+          {% if cat_id != "" %}<li><a href="{{ '/#cat-' | append: cat_id | relative_url }}">{{ cat_label }}</a></li>{% endif %}
+          <li><span aria-current="page">{{ page.title }}</span></li>
+        </ol>
+      </nav>
       <h1>{{ page.title }}</h1>
       {% if page.description %}<p class="lead">{{ page.description }}</p>{% endif %}
 
@@ -121,6 +118,49 @@ layout: default
           {% endfor %}
         </section>
         {% endfor %}
+
+        {%- comment -%} Previous / Next within the same category (live topics only). {%- endcomment -%}
+        {%- assign items = "" -%}
+        {%- for cat in site.data.topics.categories -%}
+          {%- if cat.id == page.category -%}
+            {%- for t in cat.topics -%}
+              {%- if t.status == "live" -%}
+                {%- assign items = items | append: t.slug | append: "::" | append: t.title | append: ",," -%}
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endif -%}
+        {%- endfor -%}
+        {%- assign arr = items | split: ",," -%}
+        {%- assign curidx = -1 -%}
+        {%- for it in arr -%}
+          {%- assign s = it | split: "::" | first -%}
+          {%- if s == page.slug -%}{%- assign curidx = forloop.index0 -%}{%- endif -%}
+        {%- endfor -%}
+        {%- assign lastidx = arr.size | minus: 1 -%}
+        {%- assign previdx = curidx | minus: 1 -%}
+        {%- assign nextidx = curidx | plus: 1 -%}
+        {%- if curidx >= 0 and arr.size > 1 -%}
+        <nav class="pager" aria-label="More lessons in {{ cat_label }}">
+          {%- if curidx > 0 -%}
+            {%- assign prev = arr[previdx] -%}
+            {%- assign pslug = prev | split: "::" | first -%}
+            {%- assign ptitle = prev | split: "::" | last -%}
+            <a class="pager__link pager__link--prev" href="{{ '/topics/' | append: pslug | append: '/' | relative_url }}" rel="prev">
+              <span class="pager__dir"><svg class="icon" aria-hidden="true"><use href="#icon-arrow-left"></use></svg> Previous</span>
+              <span class="pager__title">{{ ptitle }}</span>
+            </a>
+          {%- else -%}<span></span>{%- endif -%}
+          {%- if curidx < lastidx -%}
+            {%- assign nxt = arr[nextidx] -%}
+            {%- assign nslug = nxt | split: "::" | first -%}
+            {%- assign ntitle = nxt | split: "::" | last -%}
+            <a class="pager__link pager__link--next" href="{{ '/topics/' | append: nslug | append: '/' | relative_url }}" rel="next">
+              <span class="pager__dir">Next <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg></span>
+              <span class="pager__title">{{ ntitle }}</span>
+            </a>
+          {%- else -%}<span></span>{%- endif -%}
+        </nav>
+        {%- endif -%}
       </div>
     </div>
   </div>

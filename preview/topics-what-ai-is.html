@@ -30,6 +30,9 @@
   <symbol id="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <line x1="4" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/>
   </symbol>
+  <symbol id="icon-arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="20" y1="12" x2="5" y2="12"/><polyline points="11 6 5 12 11 18"/>
+  </symbol>
   <symbol id="icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
     <polyline points="6 9 12 15 18 9"/>
   </symbol>
@@ -56,11 +59,10 @@
 </ul></nav></div>
 <div class="mega" id="megaPanel" data-open="false" role="region" aria-label="All topics" hidden><div class="mega__inner"><div class="mega__col"><div class="mega__col-head"><svg class="cat-icon" aria-hidden="true"><use href="#icon-sparkles"></use></svg><div><h3 id="mc-ai">AI at Work</h3><p>Use AI tools well, and know when not to.</p></div></div><ul class="mega__list" aria-labelledby="mc-ai"><li><a class="mega__link" href="topics-what-ai-is.html"><span><span class="t">What AI Actually Is</span><br><span class="d">Plain-English basics before you touch a single tool.</span></span></a></li><li><a class="mega__link" href="topics-prompting-fundamentals.html"><span><span class="t">Prompting Fundamentals</span><br><span class="d">The one skill that changes everything. Meet RTCF.</span></span></a></li><li><a class="mega__link" href="topics-identifying-opportunities.html"><span><span class="t">Spotting AI Opportunities at Work</span><br><span class="d">Which tasks are worth handing to AI, and which are not.</span></span></a></li><li><a class="mega__link" href="topics-when-ai-gets-it-wrong.html"><span><span class="t">When AI Gets It Wrong</span><br><span class="d">Hallucinations, verification, and staying in the loop.</span></span></a></li><li><a class="mega__link" href="topics-advanced-prompting.html"><span><span class="t">Advanced Prompting Techniques</span><br><span class="d">Four moves that turn good prompts into great ones.</span></span></a></li><li><a class="mega__link" href="topics-image-ai.html"><span><span class="t">Image AI, A Practical Intro</span><br><span class="d">Make useful visuals from words, and spot the limits.</span></span></a></li><li><a class="mega__link" href="topics-bots-vs-agents.html"><span><span class="t">Bots vs. AI Agents</span><br><span class="d">What each one can do, and what to keep for yourself.</span></span></a></li></ul></div><div class="mega__col"><div class="mega__col-head"><svg class="cat-icon" aria-hidden="true"><use href="#icon-grid"></use></svg><div><h3 id="mc-software">Everyday Software</h3><p>The programs you meet at almost every desk job.</p></div></div><ul class="mega__list" aria-labelledby="mc-software"><li><a class="mega__link" href="topics-excel-level-1.html"><span><span class="t">Basic Excel: Level 1</span><br><span class="d">Cells, formatting, and your first real formulas.</span></span></a></li><li><span class="mega__link is-soon"><span class="t">Basic Excel: Level 2</span><span class="soon-tag">Coming soon</span></span></li><li><span class="mega__link is-soon"><span class="t">Writing with Word</span><span class="soon-tag">Coming soon</span></span></li></ul></div><div class="mega__col"><div class="mega__col-head"><svg class="cat-icon" aria-hidden="true"><use href="#icon-device"></use></svg><div><h3 id="mc-devices">Devices & Digital Life</h3><p>Get comfortable with the tech you use every day.</p></div></div><ul class="mega__list" aria-labelledby="mc-devices"><li><a class="mega__link" href="topics-iphone-basics.html"><span><span class="t">Mobile Tech: iPhone Basics</span><br><span class="d">Buttons, home screen, and making it yours.</span></span></a></li><li><span class="mega__link is-soon"><span class="t">Mobile Tech: Android Basics</span><span class="soon-tag">Coming soon</span></span></li><li><span class="mega__link is-soon"><span class="t">Getting Around Windows 11</span><span class="soon-tag">Coming soon</span></span></li><li><span class="mega__link is-soon"><span class="t">Staying Safe Online</span><span class="soon-tag">Coming soon</span></span></li></ul></div></div></div>
 </header><div class="mega-overlay" id="megaOverlay" data-open="false" hidden></div><main id="main"><article class="topic"><div class="band"><div class="container topic-hero">
-<p class="breadcrumb"><a href="index.html">Home</a> · <a href="index.html#cat-ai">AI at Work</a></p>
-<span class="cat-chip"><svg class="icon" aria-hidden="true"><use href="#icon-sparkles"></use></svg> AI at Work</span><h1>What AI Actually Is</h1><p class="lead">Before you use AI at work, let's get clear on what it really is, in plain language.</p>
+<nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li><a href="index.html#cat-ai">AI at Work</a></li><li><span aria-current="page">What AI Actually Is</span></li></ol></nav><h1>What AI Actually Is</h1><p class="lead">Before you use AI at work, let's get clear on what it really is, in plain language.</p>
 <div class="video-wrap"><div class="video-placeholder"><svg class="icon" aria-hidden="true"><use href="#icon-play"></use></svg><strong>A video walkthrough is coming for this lesson.</strong><span>You can work through everything below right now. No video needed.</span></div></div></div></div>
 <div class="container section--tight"><div class="topic-body">
-<nav class="toc" aria-label="On this page"><h2>On this page</h2><ol><li><a href="#three-things-people-mix-up">Three things people mix up</a></li><li><a href="#how-we-got-here-a-short-history">How we got here, a short history</a></li><li><a href="#what-a-language-model-actually-does">What a language model actually does</a></li></ol></nav>
+<nav class="toc" aria-label="On this page"><h2>On this page</h2><ol><li><a href="#three-things-people-mix-up">Three things people mix up</a></li><li><a href="#how-we-got-here-a-short-history">How we got here, a short history</a></li><li><a href="#what-generative-ai-is">What generative AI is</a></li><li><a href="#what-a-language-model-actually-does">What a language model actually does</a></li></ol></nav>
 <div class="topic-parts rich"><section class="part reveal" id="three-things-people-mix-up" aria-labelledby="three-things-people-mix-up-h"><p class="part__label">Part 1</p><h2 id="three-things-people-mix-up-h">Three things people mix up</h2><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>Software, automation, and AI are not the same</h3><div class="block__body rich"><p>Let's clear the air before we touch a single tool. People throw around the word "AI" for almost anything a computer does, and that mix-up is where a lot of confusion starts. Here is how I want you to keep three ideas apart.</p>
 <table>
 <thead>
@@ -88,12 +90,12 @@
 </tr>
 </tbody>
 </table>
-<p>The heart of it: software and automation follow rules. AI learns from examples. A plain spell-checker looks words up in a list. An AI writing assistant learned from billions of sentences what good writing looks like. That is a different kind of machine, and it behaves differently.</p></div></div><div class="block block--activity"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-pencil"></use></svg></span> Activity · try it</p><h3>Sort three tools</h3><div class="block__body rich"><p>Think about the apps you touched this week. Pick three and write down, for each one:</p>
+<p>The heart of it: software and automation follow rules. AI learns from examples. A plain spell-checker looks words up in a list. An AI writing assistant learned from billions of sentences what good writing looks like. That is a different kind of machine, and it behaves differently.</p></div></div><div class="block block--activity"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-pencil"></use></svg></span> Activity · try it</p><h3>Sort three tools</h3><div class="block__body rich"><p>We just sorted three kinds of tool: plain software, automation, and AI. Let's try that with tools from your own life. Pick three apps or gadgets you have used recently, and for each one write down:</p>
 <ol>
-<li>What is its job?</li>
-<li>Does it follow fixed rules, or does it seem to learn and adapt?</li>
+<li>What is its main job?</li>
+<li>Does it follow fixed rules, or does it seem to learn from examples and adapt?</li>
 </ol>
-<p>You do not need to be right on the first try. The goal is to start noticing the difference.</p></div></div></section><section class="part reveal" id="how-we-got-here-a-short-history" aria-labelledby="how-we-got-here-a-short-history-h"><p class="part__label">Part 2</p><h2 id="how-we-got-here-a-short-history-h">How we got here, a short history</h2><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>From rule books to conversation</h3><div class="block__body rich"><p>You do not need the full history of AI to use it well. But knowing the arc helps you understand why today's tools work the way they do, and why they sometimes fail.</p>
+<p>You do not need to get these exactly right. The point is to start noticing the difference we just talked about.</p></div></div></section><section class="part reveal" id="how-we-got-here-a-short-history" aria-labelledby="how-we-got-here-a-short-history-h"><p class="part__label">Part 2</p><h2 id="how-we-got-here-a-short-history-h">How we got here, a short history</h2><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>From rule books to conversation</h3><div class="block__body rich"><p>You do not need the full history of AI to use it well. But knowing the arc helps you understand why today's tools work the way they do, and why they sometimes fail.</p>
 <ul>
 <li><strong>Rules-based AI (1950s to 1980s).</strong> Early systems were giant "if this, then that" rule books written by hand. Smart inside their narrow lane, but they broke the moment something new came up. They could not learn.</li>
 <li><strong>Machine learning (1980s to 2010s).</strong> Instead of coding every rule, we started showing the system lots of examples and letting it find the patterns itself. Show it a million emails, some spam and some not, and it learns the difference. That is how your spam filter works today.</li>
@@ -101,7 +103,44 @@
 </ul>
 <blockquote>
 <p>A quick note on terms. A <strong>large language model</strong>, or LLM, is an AI trained on a huge amount of text so it can read and write human language.</p>
-</blockquote></div></div></section><section class="part reveal" id="what-a-language-model-actually-does" aria-labelledby="what-a-language-model-actually-does-h"><p class="part__label">Part 3</p><h2 id="what-a-language-model-actually-does-h">What a language model actually does</h2><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>It predicts the next word</h3><div class="block__body rich"><p>This part surprises most people, and understanding it will make you a sharper user right away.</p>
+</blockquote></div></div></section><section class="part reveal" id="what-generative-ai-is" aria-labelledby="what-generative-ai-is-h"><p class="part__label">Part 3</p><h2 id="what-generative-ai-is-h">What generative AI is</h2><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>The kind of AI that makes new things</h3><div class="block__body rich"><p>You have probably heard the phrase "generative AI" a lot lately. It is worth two minutes, because it is the family that today's most talked-about tools belong to.</p>
+<p>Here is the plain version. For a long time, most AI did one job: it sorted or scored things that already existed. Is this email spam, yes or no? Which of these photos has a cat in it? Useful work, but the AI was picking from options, not making anything.</p>
+<p>Generative AI flipped that. It creates brand-new content that did not exist a moment ago, based on a request you type in. Ask for a thank-you note and it writes one. Ask for a picture of a calm waiting room and it paints one. The word "generative" just means it <em>generates</em>, it produces.</p>
+<blockquote>
+<p>A quick note on terms. <strong>Generative AI</strong> is AI that creates new content, like text, images, or audio, from a plain-language request you give it.</p>
+</blockquote></div></div><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>It shows up in more than text</h3><div class="block__body rich"><p>Text is where most workplace value lives right now, and it is where this course spends most of its time. But generative AI is not only about writing. The same basic idea powers a few different kinds of tools.</p>
+<table>
+<thead>
+<tr>
+<th>You ask for...</th>
+<th>The tool makes...</th>
+<th>Examples you may have heard of</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Writing or answers</td>
+<td>Text</td>
+<td>ChatGPT, Gemini, Claude</td>
+</tr>
+<tr>
+<td>A picture from a description</td>
+<td>An image</td>
+<td>Gemini, Canva, Adobe Firefly</td>
+</tr>
+<tr>
+<td>A voice or a bit of music</td>
+<td>Audio</td>
+<td>Various voice and music tools</td>
+</tr>
+</tbody>
+</table>
+<p>One thing to hold onto: because these tools <em>make</em> something new every time, you can ask the same thing twice and get two different results. That is normal. It is also why the quality of your request matters so much, which is the whole point of the next topic on prompting.</p></div></div><div class="block block--activity"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-pencil"></use></svg></span> Activity · try it</p><h3>Spot the generative tool</h3><div class="block__body rich"><p>Think back over the last week or two. See if you can name one time you used, or watched someone use, a tool that <em>made</em> something new for them.</p>
+<ol>
+<li>What did it create? Text, a picture, audio, or something else?</li>
+<li>What did the person ask for to get it?</li>
+</ol>
+<p>If nothing comes to mind yet, that is fine. You will be using one before this course is over.</p></div></div></section><section class="part reveal" id="what-a-language-model-actually-does" aria-labelledby="what-a-language-model-actually-does-h"><p class="part__label">Part 4</p><h2 id="what-a-language-model-actually-does-h">What a language model actually does</h2><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>It predicts the next word</h3><div class="block__body rich"><p>This part surprises most people, and understanding it will make you a sharper user right away.</p>
 <p>When you send a message to ChatGPT or Gemini, here is what really happens: the model reads your text and predicts, one word at a time, what is most likely to come next. It learned those patterns from an enormous amount of writing.</p>
 <p>A few things follow from that:</p>
 <ul>
@@ -110,7 +149,7 @@
 <li>It produces text that is <em>likely</em> to be correct. Most of the time that is genuinely useful. Sometimes it is confidently wrong. We cover that in "When AI Gets It Wrong."</li>
 </ul></div></div><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>A way to picture it</h3><div class="block__body rich"><p>Picture a coworker who has read almost everything ever published, in dozens of languages, and can talk about nearly any subject. Incredibly well-read. Very helpful.</p>
 <p>But that coworker was not in the room for your last policy change, and they cannot see your files or your customer records. So they are a great collaborator, not an all-knowing oracle. Bring that mindset to every chat with an AI tool and you will already be ahead of most people.</p></div></div><div class="block block--quiz"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-badge"></use></svg></span> Check your understanding</p><h3>Quick check</h3><div class="block__body rich"><p>When you are ready, take the short quiz to lock in the big ideas from this topic: what AI is, the three-way difference, and what a language model is really doing.</p>
-<p>I'll add the quiz link right here once it is built. It opens in a new tab so you keep your place.</p></div></div></section></div></div></div></article></main><footer class="site-footer"><div class="container"><div class="footer-grid">
+<p>I'll add the quiz link right here once it is built. It opens in a new tab so you keep your place.</p></div></div></section><nav class="pager" aria-label="More lessons in AI at Work"><span></span><a class="pager__link pager__link--next" href="topics-prompting-fundamentals.html" rel="next"><span class="pager__dir">Next <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg></span><span class="pager__title">Prompting Fundamentals</span></a></nav></div></div></div></article></main><footer class="site-footer"><div class="container"><div class="footer-grid">
 <div><a class="brand" href="index.html"><span class="brand__mark">TH</span><span>Tutorial Hub</span></a><p style="margin-top:16px;max-width:34ch;color:#9aa0b4;">Plain-English tech lessons, written for real people. Learn at your own pace, come back any time.</p></div>
 <div><h4>Topics</h4><ul><li><a href="index.html#cat-ai">AI at Work</a></li><li><a href="index.html#cat-software">Everyday Software</a></li><li><a href="index.html#cat-devices">Devices & Digital Life</a></li></ul></div>
 <div><h4>Site</h4><ul><li><a href="index.html#all-topics">All topics</a></li><li><a href="about.html">About this site</a></li></ul></div>
