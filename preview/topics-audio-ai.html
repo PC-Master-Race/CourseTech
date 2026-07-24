@@ -1,0 +1,228 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<title>Audio AI, A Practical Intro · Tutorial Hub</title></head><body><a class="skip-link" href="#main">Skip to main content</a>
+  Inline SVG symbol sprite. Reference with:
+  <svg class="icon" aria-hidden="true"><use href="#icon-NAME"></use></svg>
+  Icons are decorative; always give the surrounding element a text label.
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="icon-sparkles" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3l1.9 4.6L18.5 9.5 13.9 11.4 12 16l-1.9-4.6L5.5 9.5 10.1 7.6z"/><path d="M19 14l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/>
+  </symbol>
+  <symbol id="icon-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>
+  </symbol>
+  <symbol id="icon-device" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="6" y="2.5" width="12" height="19" rx="3"/><line x1="10.5" y1="18.5" x2="13.5" y2="18.5"/>
+  </symbol>
+  <symbol id="icon-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H12v16H5.5A1.5 1.5 0 0 0 4 20.5z"/><path d="M20 4.5A1.5 1.5 0 0 0 18.5 3H12v16h6.5A1.5 1.5 0 0 1 20 20.5z"/>
+  </symbol>
+  <symbol id="icon-pencil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/><line x1="14" y1="6" x2="18" y2="10"/>
+  </symbol>
+  <symbol id="icon-badge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="10" r="7"/><path d="M9 10l2 2 4-4"/><path d="M8.5 16.5L7 22l5-2.5L17 22l-1.5-5.5"/>
+  </symbol>
+  <symbol id="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="4" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/>
+  </symbol>
+  <symbol id="icon-arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="20" y1="12" x2="5" y2="12"/><polyline points="11 6 5 12 11 18"/>
+  </symbol>
+  <symbol id="icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="6 9 12 15 18 9"/>
+  </symbol>
+  <symbol id="icon-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v4.5A1.5 1.5 0 0 1 16.5 20h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10"/>
+  </symbol>
+  <symbol id="icon-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="9"/><polygon points="10 8.5 16 12 10 15.5" fill="currentColor" stroke="none"/>
+  </symbol>
+  <symbol id="icon-list" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="9" y1="6" x2="20" y2="6"/><line x1="9" y1="12" x2="20" y2="12"/><line x1="9" y1="18" x2="20" y2="18"/><circle cx="4.5" cy="6" r="1.2" fill="currentColor" stroke="none"/><circle cx="4.5" cy="12" r="1.2" fill="currentColor" stroke="none"/><circle cx="4.5" cy="18" r="1.2" fill="currentColor" stroke="none"/>
+  </symbol>
+  <symbol id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+  </symbol>
+</svg>
+
+<header class="site-header"><div class="container site-header__bar">
+<a class="brand" href="index.html"><span class="brand__mark" aria-hidden="true">TH</span><span>Tutorial Hub</span></a>
+<nav class="primary-nav" aria-label="Primary"><ul>
+<li><button type="button" class="nav-link" id="megaToggle" aria-expanded="false" aria-controls="megaPanel" aria-haspopup="true"><svg class="icon" aria-hidden="true"><use href="#icon-list"></use></svg> Courses <svg class="chev" aria-hidden="true"><use href="#icon-chevron"></use></svg></button></li>
+<li><a class="nav-link" href="about.html">About</a></li>
+</ul></nav></div>
+<div class="mega" id="megaPanel" data-open="false" role="region" aria-label="All courses" hidden><div class="mega__inner"><div class="mega__col"><a class="mega__col-head" href="courses-ai.html"><svg class="cat-icon" aria-hidden="true"><use href="#icon-sparkles"></use></svg><div><h3 id="mc-ai">AI at Work</h3><p>Use AI tools well, and know when not to.</p></div></a><ul class="mega__list" aria-labelledby="mc-ai"><li><a class="mega__link" href="topics-what-ai-is.html"><span class="t">What AI Actually Is</span></a></li><li><a class="mega__link" href="topics-prompting-fundamentals.html"><span class="t">Prompting Fundamentals</span></a></li><li><a class="mega__link" href="topics-identifying-opportunities.html"><span class="t">Spotting AI Opportunities at Work</span></a></li><li><a class="mega__link" href="topics-when-ai-gets-it-wrong.html"><span class="t">When AI Gets It Wrong</span></a></li><li><a class="mega__link" href="topics-advanced-prompting.html"><span class="t">Advanced Prompting Techniques</span></a></li><li><a class="mega__link" href="topics-image-ai.html"><span class="t">Image AI, A Practical Intro</span></a></li><li><a class="mega__link" href="topics-bots-vs-agents.html"><span class="t">Bots vs. AI Agents</span></a></li><li><a class="mega__link" href="topics-five-categories-of-ai.html"><span class="t">The 5 Categories of AI at Work</span></a></li><li><a class="mega__link" href="topics-audio-ai.html"><span class="t">Audio AI, A Practical Intro</span></a></li><li><a class="mega__link" href="topics-choosing-the-right-task.html"><span class="t">Choosing the Right Task for AI</span></a></li><li><a class="mega__link" href="topics-scoped-vs-autonomous-agents.html"><span class="t">Scoped vs. Autonomous Agents</span></a></li><li><a class="mega__link" href="topics-beat-the-resume-screener.html"><span class="t">Use AI to Beat the Resume Screener</span></a></li></ul></div><div class="mega__col"><a class="mega__col-head" href="courses-software.html"><svg class="cat-icon" aria-hidden="true"><use href="#icon-grid"></use></svg><div><h3 id="mc-software">Office Productivity</h3><p>Master the everyday office programs, from Excel to Word.</p></div></a><ul class="mega__list" aria-labelledby="mc-software"><li><a class="mega__link" href="topics-excel-level-1.html"><span class="t">Basic Excel: Level 1</span></a></li><li><span class="mega__link is-soon"><span class="t">Basic Excel: Level 2</span><span class="soon-tag">Coming soon</span></span></li><li><span class="mega__link is-soon"><span class="t">Writing with Word</span><span class="soon-tag">Coming soon</span></span></li></ul></div><div class="mega__col"><a class="mega__col-head" href="courses-devices.html"><svg class="cat-icon" aria-hidden="true"><use href="#icon-device"></use></svg><div><h3 id="mc-devices">Devices & Digital Life</h3><p>Get comfortable with the tech you use every day.</p></div></a><ul class="mega__list" aria-labelledby="mc-devices"><li><a class="mega__link" href="topics-iphone-basics.html"><span class="t">Mobile Tech: iPhone Basics</span></a></li><li><span class="mega__link is-soon"><span class="t">Mobile Tech: Android Basics</span><span class="soon-tag">Coming soon</span></span></li><li><span class="mega__link is-soon"><span class="t">Getting Around Windows 11</span><span class="soon-tag">Coming soon</span></span></li><li><span class="mega__link is-soon"><span class="t">Staying Safe Online</span><span class="soon-tag">Coming soon</span></span></li></ul></div></div></div>
+</header><div class="mega-overlay" id="megaOverlay" data-open="false" hidden></div><main id="main"><article class="topic"><div class="band"><div class="container topic-hero">
+<nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li><a href="courses-ai.html">AI at Work</a></li><li><span aria-current="page">Audio AI, A Practical Intro</span></li></ol></nav>
+<h1>Audio AI, A Practical Intro</h1><p class="lead">The category most people overlook, and the fastest to save you time. Transcription, meeting summaries, and copyright-free music.</p><div class="video-wrap"><div class="video-placeholder"><svg class="icon" aria-hidden="true"><use href="#icon-play"></use></svg><strong>A video walkthrough is coming for this lesson.</strong><span>You can work through everything below right now. No video needed.</span></div></div></div></div>
+<div class="container section--tight"><div class="topic-body">
+<aside class="lesson-sidebar"><nav class="course-nav" aria-label="Lessons in this course"><a class="course-nav__back" href="courses-ai.html"><svg class="icon" aria-hidden="true"><use href="#icon-arrow-left"></use></svg> AI at Work</a><ol class="course-nav__list"><li><a class="course-nav__link" href="topics-what-ai-is.html"><span class="n">1</span>What AI Actually Is</a></li><li><a class="course-nav__link" href="topics-prompting-fundamentals.html"><span class="n">2</span>Prompting Fundamentals</a></li><li><a class="course-nav__link" href="topics-identifying-opportunities.html"><span class="n">3</span>Spotting AI Opportunities at Work</a></li><li><a class="course-nav__link" href="topics-when-ai-gets-it-wrong.html"><span class="n">4</span>When AI Gets It Wrong</a></li><li><a class="course-nav__link" href="topics-advanced-prompting.html"><span class="n">5</span>Advanced Prompting Techniques</a></li><li><a class="course-nav__link" href="topics-image-ai.html"><span class="n">6</span>Image AI, A Practical Intro</a></li><li><a class="course-nav__link" href="topics-bots-vs-agents.html"><span class="n">7</span>Bots vs. AI Agents</a></li><li><a class="course-nav__link" href="topics-five-categories-of-ai.html"><span class="n">8</span>The 5 Categories of AI at Work</a></li><li><span class="course-nav__link is-current" aria-current="page"><span class="n">9</span>Audio AI, A Practical Intro</span></li><li><a class="course-nav__link" href="topics-choosing-the-right-task.html"><span class="n">10</span>Choosing the Right Task for AI</a></li><li><a class="course-nav__link" href="topics-scoped-vs-autonomous-agents.html"><span class="n">11</span>Scoped vs. Autonomous Agents</a></li><li><a class="course-nav__link" href="topics-beat-the-resume-screener.html"><span class="n">12</span>Use AI to Beat the Resume Screener</a></li></ol></nav><nav class="toc" aria-label="On this page"><h2>On this page</h2><ol><li><a href="#what-audio-ai-does">What audio AI does</a></li><li><a href="#the-tools-for-transcription-and-capture">The tools for transcription and capture</a></li><li><a href="#the-other-side-ai-music-and-audio-generation">The other side: AI music and audio generation</a></li><li><a href="#why-audio-is-such-a-good-fit-for-ai">Why audio is such a good fit for AI</a></li><li><a href="#try-it">Try it</a></li></ol></nav></aside>
+<div class="topic-parts rich"><p class="lesson-intro">You have seen what AI does with words and with pictures. Audio is the third kind, and it is the one most people skip right past, even though it may save you the most time of all. In this lesson I will show you the two sides of audio AI, turning speech into text and generating original music, which real tools to use, and how your own field can put them to work. I will also be straight with you about the one rule you cannot skip: getting someone's permission before you record them.</p><section class="part reveal" id="what-audio-ai-does"><p class="part__label">Part 1</p><h2>What audio AI does</h2><p class="lead">Audio AI is the category most people overlook, and the one that saves time fastest. It works on your phone, in your browser, and in tools you may already use.</p><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>Four things it does for you</h3><div class="block__body rich"><table>
+<thead>
+<tr>
+<th>What it does</th>
+<th>In plain English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Speech-to-text transcription</strong></td>
+<td>You speak, the AI types. Every word turned into text automatically. No more retyping notes from a conversation you just had.</td>
+</tr>
+<tr>
+<td><strong>Meeting summarization</strong></td>
+<td>The AI listens to a recorded or live meeting and produces a written summary: key points, action items, decisions made.</td>
+</tr>
+<tr>
+<td><strong>Voice note automation</strong></td>
+<td>Speak a quick memo after a client visit or session. The AI turns it into a structured, readable note you can save or file.</td>
+</tr>
+<tr>
+<td><strong>Note-taking on the go</strong></td>
+<td>No laptop needed. Open the app, press record, talk through what just happened, and the AI handles the write-up while you move on.</td>
+</tr>
+</tbody>
+</table></div></div><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>How your field uses it</h3><div class="block__body rich"><p>Nearly every field has at least one task that audio AI handles better, and faster, than typing.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>What audio AI handles for you</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Real estate agent</strong></td>
+<td>Dictate showing notes into your phone the moment you leave the property. The AI transcribes and formats them into a client file. No more typing at 10 PM.</td>
+</tr>
+<tr>
+<td><strong>Educator / teacher</strong></td>
+<td>Record a parent-teacher meeting (with consent), then let the AI produce a written summary of the discussion, the concerns raised, and the agreed next steps.</td>
+</tr>
+<tr>
+<td><strong>Accountant / bookkeeper</strong></td>
+<td>After a client call, speak a quick memo: what they asked, what you advised, the next step. The AI turns 60 seconds of talking into a clean log entry.</td>
+</tr>
+<tr>
+<td><strong>Behavioral tech / therapist</strong></td>
+<td>Narrate session observations right after, before details fade. The AI transcribes your note into a structured record you can review and sign off on.</td>
+</tr>
+<tr>
+<td><strong>Entrepreneur / small business</strong></td>
+<td>Brainstorm out loud. Dictate ideas, product descriptions, client feedback. The AI captures it all so you can sort and use it later.</td>
+</tr>
+</tbody>
+</table></div></div></section><section class="part reveal" id="the-tools-for-transcription-and-capture"><p class="part__label">Part 2</p><h2>The tools for transcription and capture</h2><p class="lead">All three of these have free tiers that are good enough to get started, no credit card required.</p><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>Three easy places to start</h3><div class="block__body rich"><table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>What it does</th>
+<th>How to get it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Otter.ai</strong></td>
+<td>Records and transcribes meetings and voice notes in real time. Gives you a searchable transcript with speaker labels and highlights.</td>
+<td>Free tier at otter.ai, in your browser or the mobile app.</td>
+</tr>
+<tr>
+<td><strong>Whisper via ChatGPT voice mode</strong></td>
+<td>Speak a question or note in the ChatGPT app. It hears you, transcribes, and responds or summarizes on the spot.</td>
+<td>Free in the ChatGPT app. Tap the headphone icon to turn on voice mode.</td>
+</tr>
+<tr>
+<td><strong>Google Meet transcription</strong></td>
+<td>If your meeting is in Google Meet, turn on transcription and a written transcript lands in your Google Drive after the call.</td>
+<td>Available in free Google accounts. Turn it on in Meet settings before the call.</td>
+</tr>
+</tbody>
+</table></div></div></section><section class="part reveal" id="the-other-side-ai-music-and-audio-generation"><p class="part__label">Part 3</p><h2>The other side: AI music and audio generation</h2><p class="lead">Transcription is one half of audio AI. The other half is creation: generating original music from a text prompt, with no instruments, no studio, and no royalty fees.</p><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>Why this matters for your business</h3><div class="block__body rich"><p>If you have ever posted a reel, a property walkthrough, a classroom tutorial, or a promo clip and added music from Spotify or YouTube, you may have been flagged, muted, or had the video taken down. That is copyright law working exactly as intended.</p>
+<p>AI-generated music is different. Because the AI made it from scratch, there is no original artist to claim ownership, so you can use it in your videos, posts, and client presentations without worrying about a takedown, as long as you follow the site's licensing rules (which usually means a subscription).</p>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>What it does</th>
+<th>Best for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Suno</strong> (suno.com)</td>
+<td>Describe the mood, genre, and style in a text prompt, and it generates a full song with vocals, melody, and instruments in under 30 seconds.</td>
+<td>Background tracks for reels, promo videos, and presentations, anything needing a full produced sound.</td>
+</tr>
+<tr>
+<td><strong>Udio</strong> (udio.com)</td>
+<td>Similar to Suno but known for more polished, studio-quality output. Describe the vibe in plain English and get a complete original track.</td>
+<td>Higher-quality audio for professional-facing content like listing videos and business pitches.</td>
+</tr>
+<tr>
+<td><strong>Sonauto</strong> (sonauto.ai)</td>
+<td>Focused on commercial use. Generates royalty-free music for business content, with controls for tempo, mood, and length.</td>
+<td>Owners and creators who want a consistent, brandable sound without hiring a composer.</td>
+</tr>
+</tbody>
+</table></div></div><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>What a music prompt looks like</h3><div class="block__body rich"><p>You do not need to know anything about music. Just describe what you want in plain English:</p>
+<ul>
+<li><strong>For a real estate video:</strong> "Calm, upbeat instrumental, light piano and acoustic guitar, warm and welcoming, 60 seconds."</li>
+<li><strong>For a florist promo:</strong> "Cheerful spring-feeling background track, no vocals, light and airy, suitable for a flower shop social post."</li>
+<li><strong>For a business pitch:</strong> "Professional, confident background music, subtle electronic rhythm, modern and clean, for a 2-minute presentation."</li>
+</ul>
+<p>That is the whole prompt. The AI handles the genre, tempo, key, and instruments. You get a downloadable audio file in seconds.</p>
+<p>A few field examples of where this helps: a real estate agent generating a calm track for a walkthrough with no copyright risk, a florist making a seasonal promo reel with a custom soundtrack, an educator adding music to a recorded lesson without getting flagged on YouTube, and an entrepreneur building a consistent audio identity that plays in every video.</p></div></div></section><section class="part reveal" id="why-audio-is-such-a-good-fit-for-ai"><p class="part__label">Part 4</p><h2>Why audio is such a good fit for AI</h2><p class="lead">Remember the four-question task filter? Audio transcription passes it better than almost any task type.</p><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>It passes all four questions</h3><div class="block__body rich"><table>
+<thead>
+<tr>
+<th>Filter question</th>
+<th>Answer for audio tasks</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Is it repetitive?</strong></td>
+<td>Yes</td>
+<td>Every client call, meeting, and session note follows the same basic pattern, again and again.</td>
+</tr>
+<tr>
+<td><strong>Is it language or data-based?</strong></td>
+<td>Yes</td>
+<td>Spoken words are exactly what AI is built to process. This is the core strength of language models.</td>
+</tr>
+<tr>
+<td><strong>Is a mistake recoverable?</strong></td>
+<td>Yes, with one condition</td>
+<td>You always review the transcript before filing or sending it. A human catches the mistakes.</td>
+</tr>
+<tr>
+<td><strong>Is there a clear "good enough"?</strong></td>
+<td>Yes</td>
+<td>A usable transcript captures the key points accurately. It does not need to be perfect word-for-word, just useful.</td>
+</tr>
+</tbody>
+</table></div></div><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>One caution: consent is not optional</h3><div class="block__body rich"><p>This is the rule you cannot skip. Before you record anyone with an AI tool, a client, a student, a patient, or a colleague, you must tell them and get their agreement. This is not just good manners. In many fields it is the law.</p>
+<ul>
+<li><strong>Healthcare and behavioral health:</strong> HIPAA applies. Recording without consent in a clinical setting can create serious legal exposure.</li>
+<li><strong>Education:</strong> FERPA protects student information. Any AI tool handling student data needs an institutional review first.</li>
+<li><strong>Real estate and business:</strong> some states, like California, require every person on a call to agree to being recorded.</li>
+</ul>
+<p>The rule is simple. Say: "I am going to use an AI tool to take notes on our conversation. Is that okay?" If they say yes, go ahead. If they say no, take notes the old-fashioned way.</p></div></div></section><section class="part reveal" id="try-it"><p class="part__label">Part 5</p><h2>Try it</h2><div class="block block--activity"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-pencil"></use></svg></span> Activity · try it</p><h3>Turn a voice note into a written note</h3><div class="block__body rich"><p>Let's make audio AI real with something small.</p>
+<ol>
+<li>Think of a short work update, a summary of a call, a to-do list, or an idea you have been meaning to write down.</li>
+<li>Open the ChatGPT app and tap the headphone icon to start voice mode (or open Otter.ai and press record).</li>
+<li>Talk through it naturally for 30 to 60 seconds, the way you would explain it to a coworker.</li>
+<li>Read what it captured. Ask it to "turn this into a short, organized note with a few bullet points."</li>
+</ol>
+<p>Then reflect: how close was it to what you meant? Would this save you time on a task you do often? And if you record other people for this in real life, how will you ask for their okay first?</p></div></div><div class="block block--quiz"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-badge"></use></svg></span> Check your understanding</p><h3>Quick check</h3><div class="block__body rich"><p>When you are ready, take the short quiz on what audio AI does, the tools, copyright-free music, and the consent rule.</p>
+<p>I'll add the quiz link here once it is built. It opens in a new tab.</p></div></div></section><nav class="pager" aria-label="More lessons"><a class="pager__link pager__link--prev" href="topics-five-categories-of-ai.html"><span class="pager__dir"><svg class="icon" aria-hidden="true"><use href="#icon-arrow-left"></use></svg> Previous</span><span class="pager__title">The 5 Categories of AI at Work</span></a><a class="pager__link pager__link--next" href="topics-choosing-the-right-task.html"><span class="pager__dir">Next <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg></span><span class="pager__title">Choosing the Right Task for AI</span></a></nav></div></div></div></article></main><footer class="site-footer"><div class="container"><div class="footer-grid">
+<div><a class="brand" href="index.html"><span class="brand__mark">TH</span><span>Tutorial Hub</span></a><p style="margin-top:16px;max-width:34ch;color:#9aa0b4;">Plain-English tech lessons, written for real people. Learn at your own pace, come back any time.</p></div>
+<div><h4>Courses</h4><ul><li><a href="courses-ai.html">AI at Work</a></li><li><a href="courses-software.html">Office Productivity</a></li><li><a href="courses-devices.html">Devices & Digital Life</a></li></ul></div>
+<div><h4>Site</h4><ul><li><a href="index.html#courses">All courses</a></li><li><a href="about.html">About this site</a></li></ul></div>
+</div><div class="footer-bottom">&copy; 2026 Mr. Perez. Built for adult learners at Mt. San Antonio College.</div></div></footer>
+<script src="assets/js/main.js" defer></script></body></html>

@@ -47,6 +47,26 @@ categories:
         slug: bots-vs-agents
         blurb: What each one can do, and what to keep for yourself.
         status: live
+      - title: The 5 Categories of AI at Work
+        slug: five-categories-of-ai
+        blurb: "The whole map: the five kinds of AI tools and what each does."
+        status: live
+      - title: Audio AI, A Practical Intro
+        slug: audio-ai
+        blurb: Transcription, meeting notes, and copyright-free music.
+        status: live
+      - title: Choosing the Right Task for AI
+        slug: choosing-the-right-task
+        blurb: A 30-second filter for which tasks to hand to AI.
+        status: live
+      - title: Scoped vs. Autonomous Agents
+        slug: scoped-vs-autonomous-agents
+        blurb: Scope and autonomy, how much a tool can do on its own.
+        status: live
+      - title: Use AI to Beat the Resume Screener
+        slug: beat-the-resume-screener
+        blurb: Get past applicant tracking software with AI.
+        status: live
 
   - id: software
     label: Office Productivity

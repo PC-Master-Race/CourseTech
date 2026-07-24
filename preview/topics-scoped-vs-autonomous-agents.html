@@ -1,0 +1,303 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<title>Scoped vs. Autonomous Agents · Tutorial Hub</title></head><body><a class="skip-link" href="#main">Skip to main content</a>
+  Inline SVG symbol sprite. Reference with:
+  <svg class="icon" aria-hidden="true"><use href="#icon-NAME"></use></svg>
+  Icons are decorative; always give the surrounding element a text label.
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="icon-sparkles" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3l1.9 4.6L18.5 9.5 13.9 11.4 12 16l-1.9-4.6L5.5 9.5 10.1 7.6z"/><path d="M19 14l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/>
+  </symbol>
+  <symbol id="icon-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>
+  </symbol>
+  <symbol id="icon-device" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="6" y="2.5" width="12" height="19" rx="3"/><line x1="10.5" y1="18.5" x2="13.5" y2="18.5"/>
+  </symbol>
+  <symbol id="icon-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H12v16H5.5A1.5 1.5 0 0 0 4 20.5z"/><path d="M20 4.5A1.5 1.5 0 0 0 18.5 3H12v16h6.5A1.5 1.5 0 0 1 20 20.5z"/>
+  </symbol>
+  <symbol id="icon-pencil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/><line x1="14" y1="6" x2="18" y2="10"/>
+  </symbol>
+  <symbol id="icon-badge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="10" r="7"/><path d="M9 10l2 2 4-4"/><path d="M8.5 16.5L7 22l5-2.5L17 22l-1.5-5.5"/>
+  </symbol>
+  <symbol id="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="4" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/>
+  </symbol>
+  <symbol id="icon-arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="20" y1="12" x2="5" y2="12"/><polyline points="11 6 5 12 11 18"/>
+  </symbol>
+  <symbol id="icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="6 9 12 15 18 9"/>
+  </symbol>
+  <symbol id="icon-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v4.5A1.5 1.5 0 0 1 16.5 20h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10"/>
+  </symbol>
+  <symbol id="icon-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="9"/><polygon points="10 8.5 16 12 10 15.5" fill="currentColor" stroke="none"/>
+  </symbol>
+  <symbol id="icon-list" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="9" y1="6" x2="20" y2="6"/><line x1="9" y1="12" x2="20" y2="12"/><line x1="9" y1="18" x2="20" y2="18"/><circle cx="4.5" cy="6" r="1.2" fill="currentColor" stroke="none"/><circle cx="4.5" cy="12" r="1.2" fill="currentColor" stroke="none"/><circle cx="4.5" cy="18" r="1.2" fill="currentColor" stroke="none"/>
+  </symbol>
+  <symbol id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+  </symbol>
+</svg>
+
+<header class="site-header"><div class="container site-header__bar">
+<a class="brand" href="index.html"><span class="brand__mark" aria-hidden="true">TH</span><span>Tutorial Hub</span></a>
+<nav class="primary-nav" aria-label="Primary"><ul>
+<li><button type="button" class="nav-link" id="megaToggle" aria-expanded="false" aria-controls="megaPanel" aria-haspopup="true"><svg class="icon" aria-hidden="true"><use href="#icon-list"></use></svg> Courses <svg class="chev" aria-hidden="true"><use href="#icon-chevron"></use></svg></button></li>
+<li><a class="nav-link" href="about.html">About</a></li>
+</ul></nav></div>
+<div class="mega" id="megaPanel" data-open="false" role="region" aria-label="All courses" hidden><div class="mega__inner"><div class="mega__col"><a class="mega__col-head" href="courses-ai.html"><svg class="cat-icon" aria-hidden="true"><use href="#icon-sparkles"></use></svg><div><h3 id="mc-ai">AI at Work</h3><p>Use AI tools well, and know when not to.</p></div></a><ul class="mega__list" aria-labelledby="mc-ai"><li><a class="mega__link" href="topics-what-ai-is.html"><span class="t">What AI Actually Is</span></a></li><li><a class="mega__link" href="topics-prompting-fundamentals.html"><span class="t">Prompting Fundamentals</span></a></li><li><a class="mega__link" href="topics-identifying-opportunities.html"><span class="t">Spotting AI Opportunities at Work</span></a></li><li><a class="mega__link" href="topics-when-ai-gets-it-wrong.html"><span class="t">When AI Gets It Wrong</span></a></li><li><a class="mega__link" href="topics-advanced-prompting.html"><span class="t">Advanced Prompting Techniques</span></a></li><li><a class="mega__link" href="topics-image-ai.html"><span class="t">Image AI, A Practical Intro</span></a></li><li><a class="mega__link" href="topics-bots-vs-agents.html"><span class="t">Bots vs. AI Agents</span></a></li><li><a class="mega__link" href="topics-five-categories-of-ai.html"><span class="t">The 5 Categories of AI at Work</span></a></li><li><a class="mega__link" href="topics-audio-ai.html"><span class="t">Audio AI, A Practical Intro</span></a></li><li><a class="mega__link" href="topics-choosing-the-right-task.html"><span class="t">Choosing the Right Task for AI</span></a></li><li><a class="mega__link" href="topics-scoped-vs-autonomous-agents.html"><span class="t">Scoped vs. Autonomous Agents</span></a></li><li><a class="mega__link" href="topics-beat-the-resume-screener.html"><span class="t">Use AI to Beat the Resume Screener</span></a></li></ul></div><div class="mega__col"><a class="mega__col-head" href="courses-software.html"><svg class="cat-icon" aria-hidden="true"><use href="#icon-grid"></use></svg><div><h3 id="mc-software">Office Productivity</h3><p>Master the everyday office programs, from Excel to Word.</p></div></a><ul class="mega__list" aria-labelledby="mc-software"><li><a class="mega__link" href="topics-excel-level-1.html"><span class="t">Basic Excel: Level 1</span></a></li><li><span class="mega__link is-soon"><span class="t">Basic Excel: Level 2</span><span class="soon-tag">Coming soon</span></span></li><li><span class="mega__link is-soon"><span class="t">Writing with Word</span><span class="soon-tag">Coming soon</span></span></li></ul></div><div class="mega__col"><a class="mega__col-head" href="courses-devices.html"><svg class="cat-icon" aria-hidden="true"><use href="#icon-device"></use></svg><div><h3 id="mc-devices">Devices & Digital Life</h3><p>Get comfortable with the tech you use every day.</p></div></a><ul class="mega__list" aria-labelledby="mc-devices"><li><a class="mega__link" href="topics-iphone-basics.html"><span class="t">Mobile Tech: iPhone Basics</span></a></li><li><span class="mega__link is-soon"><span class="t">Mobile Tech: Android Basics</span><span class="soon-tag">Coming soon</span></span></li><li><span class="mega__link is-soon"><span class="t">Getting Around Windows 11</span><span class="soon-tag">Coming soon</span></span></li><li><span class="mega__link is-soon"><span class="t">Staying Safe Online</span><span class="soon-tag">Coming soon</span></span></li></ul></div></div></div>
+</header><div class="mega-overlay" id="megaOverlay" data-open="false" hidden></div><main id="main"><article class="topic"><div class="band"><div class="container topic-hero">
+<nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li><a href="courses-ai.html">AI at Work</a></li><li><span aria-current="page">Scoped vs. Autonomous Agents</span></li></ol></nav>
+<h1>Scoped vs. Autonomous Agents</h1><p class="lead">The real difference is not smart versus dumb. It is scope and autonomy. Here's how to tell.</p><div class="video-wrap"><div class="video-placeholder"><svg class="icon" aria-hidden="true"><use href="#icon-play"></use></svg><strong>A video walkthrough is coming for this lesson.</strong><span>You can work through everything below right now. No video needed.</span></div></div></div></div>
+<div class="container section--tight"><div class="topic-body">
+<aside class="lesson-sidebar"><nav class="course-nav" aria-label="Lessons in this course"><a class="course-nav__back" href="courses-ai.html"><svg class="icon" aria-hidden="true"><use href="#icon-arrow-left"></use></svg> AI at Work</a><ol class="course-nav__list"><li><a class="course-nav__link" href="topics-what-ai-is.html"><span class="n">1</span>What AI Actually Is</a></li><li><a class="course-nav__link" href="topics-prompting-fundamentals.html"><span class="n">2</span>Prompting Fundamentals</a></li><li><a class="course-nav__link" href="topics-identifying-opportunities.html"><span class="n">3</span>Spotting AI Opportunities at Work</a></li><li><a class="course-nav__link" href="topics-when-ai-gets-it-wrong.html"><span class="n">4</span>When AI Gets It Wrong</a></li><li><a class="course-nav__link" href="topics-advanced-prompting.html"><span class="n">5</span>Advanced Prompting Techniques</a></li><li><a class="course-nav__link" href="topics-image-ai.html"><span class="n">6</span>Image AI, A Practical Intro</a></li><li><a class="course-nav__link" href="topics-bots-vs-agents.html"><span class="n">7</span>Bots vs. AI Agents</a></li><li><a class="course-nav__link" href="topics-five-categories-of-ai.html"><span class="n">8</span>The 5 Categories of AI at Work</a></li><li><a class="course-nav__link" href="topics-audio-ai.html"><span class="n">9</span>Audio AI, A Practical Intro</a></li><li><a class="course-nav__link" href="topics-choosing-the-right-task.html"><span class="n">10</span>Choosing the Right Task for AI</a></li><li><span class="course-nav__link is-current" aria-current="page"><span class="n">11</span>Scoped vs. Autonomous Agents</span></li><li><a class="course-nav__link" href="topics-beat-the-resume-screener.html"><span class="n">12</span>Use AI to Beat the Resume Screener</a></li></ol></nav><nav class="toc" aria-label="On this page"><h2>On this page</h2><ol><li><a href="#scope-and-autonomy">Scope and autonomy</a></li><li><a href="#scoped-ai-helpful-but-it-stays-in-its-lane">Scoped AI: helpful, but it stays in its lane</a></li><li><a href="#autonomous-agents-you-give-the-goal-it-does-the-work">Autonomous agents: you give the goal, it does the work</a></li><li><a href="#more-power-means-more-responsibility">More power means more responsibility</a></li><li><a href="#practice-and-go-deeper">Practice and go deeper</a></li></ol></nav></aside>
+<div class="topic-parts rich"><p class="lesson-intro">You already know the basic difference between a bot and an agent. Now I want to sharpen it, because the old line, "chatbots follow rules, agents think," no longer holds up. These days even the chat box on a store website might run on the same AI as ChatGPT. In this lesson I will show you the two things that actually matter, scope and autonomy, walk you through where real tools land on that spectrum, and help you judge how much any tool can do on its own. That judgment is what keeps you in control.</p><section class="part reveal" id="scope-and-autonomy"><p class="part__label">Part 1</p><h2>Scope and autonomy</h2><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>Why the old answer stopped working</h3><div class="block__body rich"><p>People used to say, "Chatbots just follow rules. Agents can think." That answer is no longer good enough. Today, many chatbots, like the ones on company websites, run on the same kind of AI as ChatGPT. They can understand your question even if you phrase it in an unusual way.</p>
+<p>So what is the real difference? It comes down to two things:</p>
+<ul>
+<li><strong>Scope:</strong> what is the tool allowed to do?</li>
+<li><strong>Autonomy:</strong> can it do things on its own, without you telling it every step?</li>
+</ul>
+<p>Hold onto those two words. They matter more than whether a tool seems "smart."</p></div></div><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>Think of it as a spectrum, not an on/off switch</h3><div class="block__body rich"><p>Most people picture AI tools as either smart or dumb. It is more useful to picture a line, from tools that stay inside a box to tools that go wherever the job takes them.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Old-style chatbot</th>
+<th>Modern AI chat</th>
+<th>AI agent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>What it uses</strong></td>
+<td>Preset scripts and rules</td>
+<td>A real AI language model</td>
+<td>A real AI that can also use tools and take actions</td>
+</tr>
+<tr>
+<td><strong>Understands normal talk?</strong></td>
+<td>No, only exact keywords</td>
+<td>Yes, the way you naturally speak</td>
+<td>Yes, and it can act on it</td>
+</tr>
+<tr>
+<td><strong>Stays in its lane?</strong></td>
+<td>Yes, very strict</td>
+<td>Yes, limited to one topic</td>
+<td>No, it goes where the task requires</td>
+</tr>
+<tr>
+<td><strong>Real examples</strong></td>
+<td>Old phone menus, basic FAQ pages</td>
+<td>Intercom, Zendesk AI</td>
+<td>Microsoft Copilot Agent, AutoGPT</td>
+</tr>
+<tr>
+<td><strong>Who is in control?</strong></td>
+<td>The rules its creator wrote</td>
+<td>The topic it was set up for</td>
+<td>You give a goal, it decides the steps</td>
+</tr>
+<tr>
+<td><strong>Risk level</strong></td>
+<td>Very low, totally predictable</td>
+<td>Low to medium, check the output</td>
+<td>Higher, it can take real actions</td>
+</tr>
+</tbody>
+</table>
+<p>The simple version to remember: a <strong>scoped</strong> tool stays inside a defined area and waits for you to start. An <strong>autonomous</strong> agent gets a goal and figures out the steps itself. The key question is not "is it smart?" It is "how much can it do by itself, and what can it reach?"</p></div></div></section><section class="part reveal" id="scoped-ai-helpful-but-it-stays-in-its-lane"><p class="part__label">Part 2</p><h2>Scoped AI: helpful, but it stays in its lane</h2><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>Set up for a specific job, on purpose</h3><div class="block__body rich"><p>Have you ever used a chat box on a company website to track a package or find store hours, then asked something a little different and gotten "I don't understand" or a handoff to a human? That is a scoped AI. It is set up to handle a specific set of topics, and it will not go outside that area, even if a smart AI model is running underneath.</p>
+<p>That limit is a design choice, not a weakness.</p>
+<blockquote>
+<p><strong>Scoped AI:</strong> a tool that stays inside a set area, a topic, a product, a company's rules. It waits for you to start, answers your question, and then stops. It does not go looking for other problems to solve or connect to other tools on its own. Modern examples: Intercom, Zendesk AI, and bots built on Playlab.ai.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>What it can do</th>
+<th>Where it stops</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Store website chat box</td>
+<td>Answer questions about your order, returns, and hours</td>
+<td>Cannot pick the right product or send a follow-up email unless it was specifically set up to</td>
+</tr>
+<tr>
+<td>AI customer service (Intercom, Zendesk)</td>
+<td>Understand your question and find the right answer from company info</td>
+<td>Cannot look up anything outside what it was given; off-topic questions get escalated</td>
+</tr>
+<tr>
+<td>Playlab.ai custom bot</td>
+<td>Answer questions about the topic its creator set up</td>
+<td>Cannot go outside that topic, even if it knows the answer</td>
+</tr>
+<tr>
+<td>Scheduling assistant</td>
+<td>Find open times on two calendars and suggest a slot</td>
+<td>Cannot weigh what is more important or juggle three people's preferences</td>
+</tr>
+<tr>
+<td>Auto-reply email</td>
+<td>Send a thank-you every time a form is submitted</td>
+<td>Cannot read what the person wrote or change the reply, unless built to</td>
+</tr>
+</tbody>
+</table>
+<p>Scoped AI is still genuinely useful: it is fast, consistent, safe, and predictable. Because it stays in its lane, it is easy to check and control.</p></div></div></section><section class="part reveal" id="autonomous-agents-you-give-the-goal-it-does-the-work"><p class="part__label">Part 3</p><h2>Autonomous agents: you give the goal, it does the work</h2><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>Like handing a capable coworker a project</h3><div class="block__body rich"><p>Picture a really capable coworker. On Monday you say, "Find the three best vendors for our supply order, compare their prices, write a one-page summary, and email it to the team by noon." Then you walk away. A good coworker figures out the steps, uses whatever tools they need, handles small problems, and comes back with the finished result.</p>
+<p>An AI agent works the same way. You give it a goal. It plans the steps, uses tools, and finishes the job. You review the result at the end. This is not a future idea. Microsoft Copilot, tools built on OpenAI's technology, and platforms like AutoGPT are being used in real workplaces right now, in healthcare, marketing, and HR.</p>
+<blockquote>
+<p><strong>Autonomous agent:</strong> an AI tool that receives a goal and then plans and completes the steps on its own. It can use several tools in one task, like search, email, and a document editor, and adjust its plan if something goes wrong. You review the final result, not every single step.</p>
+</blockquote></div></div><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>How an agent gets a task done, step by step</h3><div class="block__body rich"><table>
+<thead>
+<tr>
+<th>Step</th>
+<th>What the agent does</th>
+<th>Why it is different</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. Get the goal</strong></td>
+<td>You tell it what you need in plain language</td>
+<td>No code, no rules to set up. You just talk to it.</td>
+</tr>
+<tr>
+<td><strong>2. Make a plan</strong></td>
+<td>It breaks your goal into smaller steps</td>
+<td>It figures out the steps itself.</td>
+</tr>
+<tr>
+<td><strong>3. Choose tools</strong></td>
+<td>It picks what to use: search, email, a spreadsheet, a document</td>
+<td>One agent can use many tools in one task.</td>
+</tr>
+<tr>
+<td><strong>4. Do the work</strong></td>
+<td>It completes each step and checks its own result</td>
+<td>It reviews its own work as it goes.</td>
+</tr>
+<tr>
+<td><strong>5. Fix problems</strong></td>
+<td>If something goes wrong, it tries another approach</td>
+<td>A scoped tool would just stop. An agent keeps going.</td>
+</tr>
+<tr>
+<td><strong>6. Give you the result</strong></td>
+<td>It brings you the finished output</td>
+<td>You review the final result, not every step.</td>
+</tr>
+</tbody>
+</table></div></div><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>What this looks like in your field</h3><div class="block__body rich"><p>The same job can be done very differently depending on which kind of AI you use.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Scoped AI, stays in its lane</th>
+<th>Autonomous agent, handles the whole task</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Healthcare admin</strong></td>
+<td>A chat answers patient questions about appointments and insurance</td>
+<td>An agent finds people who missed appointments, writes each a personal message, and builds a list for the coordinator to review, unprompted</td>
+</tr>
+<tr>
+<td><strong>HR / recruiting</strong></td>
+<td>A chatbot answers questions about a job and confirms applications</td>
+<td>An agent reads every application, scores them, ranks the best, and sets up interviews</td>
+</tr>
+<tr>
+<td><strong>Marketing</strong></td>
+<td>A tool posts approved content on a schedule</td>
+<td>An agent checks how each post performs, rewrites the weak ones, tests them, and reports back</td>
+</tr>
+<tr>
+<td><strong>Customer service</strong></td>
+<td>An AI answers common questions and hands off when stuck</td>
+<td>An agent reads the complaint, checks account history, drafts a solution, checks it against policy, and flags legal risk</td>
+</tr>
+<tr>
+<td><strong>Office / admin</strong></td>
+<td>A tool emails a weekly report from one spreadsheet</td>
+<td>An agent pulls from three systems, spots anomalies, writes a plain-language summary, and emails the right people</td>
+</tr>
+</tbody>
+</table></div></div></section><section class="part reveal" id="more-power-means-more-responsibility"><p class="part__label">Part 4</p><h2>More power means more responsibility</h2><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>The more it can do alone, the more you watch it</h3><div class="block__body rich"><p>Here is the important part: the more an AI tool can do on its own, the more carefully you need to watch it. A scoped AI that sends the wrong message does it once, and you can see and fix it. An autonomous agent might send emails, update records, and trigger other actions before you ever look. A small mistake early can turn into a bigger problem by the end.</p>
+<p>This does not make agents bad. It means they need more careful oversight. More power needs more attention, not less.</p>
+<table>
+<thead>
+<tr>
+<th>What can go wrong</th>
+<th>How to stay in control</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A small mistake in step 2 affects every later step</td>
+<td>Always check the final result. A clean-looking output does not mean every step was right.</td>
+</tr>
+<tr>
+<td>A vague goal makes the agent guess, and it might guess wrong</td>
+<td>Be specific. RTCF still works, use it with agents too.</td>
+</tr>
+<tr>
+<td>It takes an action you did not expect, like sending an email or changing a file</td>
+<td>Start with read-only access. Grant real actions only once you trust it.</td>
+</tr>
+<tr>
+<td>The output sounds confident but contains mistakes</td>
+<td>Check the facts. Good writing does not mean correct information.</td>
+</tr>
+<tr>
+<td>It affects real people before any human reviews</td>
+<td>Build in a review step before any agent action reaches real people.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Worth thinking about.</strong> If an agent makes a decision that hurts someone, who is responsible: you, your company, or the people who built the tool? What tasks should always keep a human in charge, no matter how good the AI gets? And how should workplaces write rules for tools that can act on their own?</p>
+</blockquote></div></div></section><section class="part reveal" id="practice-and-go-deeper"><p class="part__label">Part 5</p><h2>Practice and go deeper</h2><div class="block block--activity"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-pencil"></use></svg></span> Activity · try it</p><h3>Scoped or autonomous? Classify and defend</h3><div class="block__body rich"><p>For each scenario, decide whether it is <strong>scoped (S)</strong>, an <strong>autonomous agent (A)</strong>, or <strong>mixed (M)</strong>, and write one sentence explaining why.</p>
+<ol>
+<li>A clothing store's chat box. It runs on real AI and understands how you talk, but it only knows that store's products, shipping, and returns.</li>
+<li>You type into Microsoft Copilot: "Look at last week's sales emails, find the three biggest open deals, and write a follow-up for each." It does all three without you doing anything else.</li>
+<li>You use ChatGPT to draft a performance review. You type your notes, it writes a draft, and you copy and paste it into your HR system yourself.</li>
+<li>A Zapier automation watches a Google Sheet. Every time someone adds a row with the word "Urgent," it messages your team's Slack.</li>
+<li>A hospital system reads incoming referrals, checks room availability across three departments, schedules the intake, and confirms with the referring doctor, all before a staff member sees it.</li>
+<li>Claude set up for customer service at one company, connected only to that company's information and told to hand off to a human when it cannot help.</li>
+</ol>
+<p><strong>Watch for these:</strong> Scenario 1 is scoped, being smart does not make it an agent. Scenario 3 is scoped or mixed, because <em>you</em> moved the draft, so you were the agent, not the tool. Scenario 5 is a clear autonomous agent, and worth asking what rules you would want in place first. Scenario 6 is a very capable AI kept scoped on purpose, a policy choice, not a technical limit. If you cannot easily classify something, that is a signal to ask more questions before you trust it.</p></div></div><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>What you can do now</h3><div class="block__body rich"><p>After this lesson, you should be able to:</p>
+<ul>
+<li>Explain why "chatbots just follow rules" is no longer accurate, and give the better explanation.</li>
+<li>Describe what makes a tool scoped, even when a real AI model runs underneath.</li>
+<li>Walk through the six steps an autonomous agent uses to reach a goal.</li>
+<li>Name two things that can go wrong with agents, and one way to reduce each.</li>
+<li>Look at a real tool from your field and say whether it is scoped, autonomous, or mixed, and why.</li>
+</ul></div></div><div class="block block--lesson"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg></span> Lesson</p><h3>Dig deeper: recommended reading</h3><div class="block__body rich"><p>Each of these is written in plain English and takes 5 to 15 minutes.</p>
+<ul>
+<li><strong>IBM, "What Are AI Agents?"</strong> A clear explanation of how agents work and how they differ from other tools.</li>
+<li><strong>McKinsey, "AI Agents: The Next Frontier."</strong> How real businesses are using agents today.</li>
+<li><strong>Intercom, "How AI Customer Service Actually Works."</strong> A look from inside a big chat platform at working within a defined scope.</li>
+<li><strong>MIT Technology Review, "Why AI Agents Are More Dangerous Than Chatbots."</strong> A short, thoughtful piece on what changes when AI can act, not just answer.</li>
+</ul></div></div><div class="block block--quiz"><p class="block__tag"><span class="chip"><svg class="icon" aria-hidden="true"><use href="#icon-badge"></use></svg></span> Check your understanding</p><h3>Quick check</h3><div class="block__body rich"><p>When you are ready, take the short quiz on scope, autonomy, the six-step agent loop, and staying in control.</p>
+<p>I'll add the quiz link here once it is built. It opens in a new tab.</p></div></div></section><nav class="pager" aria-label="More lessons"><a class="pager__link pager__link--prev" href="topics-choosing-the-right-task.html"><span class="pager__dir"><svg class="icon" aria-hidden="true"><use href="#icon-arrow-left"></use></svg> Previous</span><span class="pager__title">Choosing the Right Task for AI</span></a><a class="pager__link pager__link--next" href="topics-beat-the-resume-screener.html"><span class="pager__dir">Next <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg></span><span class="pager__title">Use AI to Beat the Resume Screener</span></a></nav></div></div></div></article></main><footer class="site-footer"><div class="container"><div class="footer-grid">
+<div><a class="brand" href="index.html"><span class="brand__mark">TH</span><span>Tutorial Hub</span></a><p style="margin-top:16px;max-width:34ch;color:#9aa0b4;">Plain-English tech lessons, written for real people. Learn at your own pace, come back any time.</p></div>
+<div><h4>Courses</h4><ul><li><a href="courses-ai.html">AI at Work</a></li><li><a href="courses-software.html">Office Productivity</a></li><li><a href="courses-devices.html">Devices & Digital Life</a></li></ul></div>
+<div><h4>Site</h4><ul><li><a href="index.html#courses">All courses</a></li><li><a href="about.html">About this site</a></li></ul></div>
+</div><div class="footer-bottom">&copy; 2026 Mr. Perez. Built for adult learners at Mt. San Antonio College.</div></div></footer>
+<script src="assets/js/main.js" defer></script></body></html>
