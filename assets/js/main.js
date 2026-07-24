@@ -77,7 +77,7 @@
   /* ---------- Job Search pipeline gate ---------- */
   var signupForm = document.getElementById("signupForm");
   var pipelineAccess = document.getElementById("pipelineAccess");
-  if (signupForm && pipelineAccess) {
+  if (signupForm && pipelineAccess && pipelineAccess.getAttribute("data-gate") !== "off") {
     var signupCard = document.getElementById("signupCard");
     var signupError = document.getElementById("signupError");
     var KEY = "th_pipeline_unlocked";

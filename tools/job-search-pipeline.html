@@ -2,7 +2,7 @@
 layout: default
 title: The Automated Job Search Pipeline
 permalink: /tools/job-search-pipeline/
-description: A free AI-powered system that finds matching jobs, scores them, and drafts tailored, ATS-ready resumes and cover letters. Sign up to get it.
+description: A free AI-powered helper that finds matching jobs, scores them, and writes tailored, screener-ready resumes and cover letters for you.
 ---
 <div class="band">
   <div class="container course-hero">
@@ -18,51 +18,71 @@ description: A free AI-powered system that finds matching jobs, scores them, and
     </span>
     <h1>The Automated Job Search Pipeline</h1>
     <p class="lead course-hero__about">
-      Hand your job search to an AI assistant. It finds openings that fit you, scores each one,
-      and drafts tailored resumes and cover letters built to get past the resume screener, while
-      you stay in control and apply yourself. It's a template: fill in your own details and run it.
+      Let an AI do the heavy lifting of your job search. It finds openings that fit you, ranks the
+      best ones, and writes a tailored resume and cover letter for each, the kind built to get past
+      the software that screens resumes. You stay in charge and do the applying yourself.
     </p>
   </div>
 </div>
 
 <div class="container section--tight">
-  <div class="pipeline-grid">
-    <div class="pipeline-pitch rich">
-      <h2 class="section-title">What it does for you</h2>
-      <ul>
-        <li><strong>Finds the right openings.</strong> Searches the job boards and company career pages you choose, using your keywords.</li>
-        <li><strong>Scores every job 0 to 100</strong> against your background, so you focus on the best fits first.</li>
-        <li><strong>Writes ATS-ready resumes.</strong> Mirrors each posting's exact keywords, uses proven bullet formulas, and runs a red-flag checklist so a real person actually sees your resume.</li>
-        <li><strong>Drafts a tailored cover letter</strong> for each strong match, in your own voice.</li>
-        <li><strong>Keeps a running log</strong> of everything it finds, so nothing slips through the cracks.</li>
-        <li><strong>Stays safe and honest.</strong> It never invents credentials, never auto-applies, and treats web pages as data, not instructions.</li>
-      </ul>
-      <p>You will need an AI assistant that can read your files and browse the web to run the full version. A lighter copy-and-paste version works too: paste in a posting, and it scores it and drafts your materials.</p>
-    </div>
+  <div class="tool-intro rich">
 
-    <aside class="signup-card" id="signupCard">
-      <h2>Get the pipeline, free</h2>
-      <p>Enter your email and I'll unlock the full pipeline for you to view, copy, and download.</p>
-      <form id="signupForm" class="signup-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
-        <label for="su-name">Name (optional)</label>
-        <input type="text" id="su-name" name="name" autocomplete="name">
-        <label for="su-email">Email</label>
-        <input type="email" id="su-email" name="email" required autocomplete="email" placeholder="you@example.com">
-        <button type="submit" class="btn" style="width:100%;justify-content:center">
-          Unlock the pipeline
-          <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg>
-        </button>
-        <p class="signup-fineprint">Free. No spam. Just the tool and the occasional update.</p>
-      </form>
-      <p class="signup-error" id="signupError" hidden>Please enter a valid email address.</p>
-    </aside>
+    <h2 class="section-title">What this is, in plain terms</h2>
+    <p>Think of this as a set of instructions you hand to an AI assistant. You fill in a few blanks about yourself, paste it in, and the AI goes to work: it searches the job sites you pick, scores each opening against your background, and writes you a resume and cover letter for the best matches. It never applies for you. It gets everything ready so you can review it and hit send yourself.</p>
+
+    <h3>What it does for you</h3>
+    <ul>
+      <li><strong>Finds the right openings</strong> on the job sites and company pages you choose.</li>
+      <li><strong>Ranks each job from 0 to 100</strong> so you spend your time on the best fits.</li>
+      <li><strong>Writes resumes that get read.</strong> It matches the exact words from each posting, so the resume-screening software does not toss you out before a person ever sees it.</li>
+      <li><strong>Drafts a cover letter</strong> for each strong match, in your own voice.</li>
+      <li><strong>Keeps a running list</strong> of everything it finds, so nothing gets lost.</li>
+      <li><strong>Plays it safe and honest.</strong> It never makes up experience and never applies on your behalf.</li>
+    </ul>
+
+    <h2 class="section-title">How to use it</h2>
+    <ol class="tool-steps">
+      <li><strong>Get an AI helper.</strong> You need an AI assistant that can read your files and go online, then give it these instructions. If you just want to try it, you can also paste in a single job posting and let the AI work on that one.</li>
+      <li><strong>Gather your stuff.</strong> Put your current resume, any older ones, and a note about your work history in one folder, so the AI can see your real background.</li>
+      <li><strong>Fill in the blanks.</strong> In the instructions below, anywhere you see something in [square brackets], type your own answer. It only takes a few minutes.</li>
+      <li><strong>Paste it in and let it run.</strong> Hand the instructions to your AI helper. It finds jobs, ranks them, and writes your materials. You review everything and apply yourself.</li>
+    </ol>
+
+    <h3>The blanks you'll fill in</h3>
+    <p>You do not need to understand every line below. You only need to answer a few simple things:</p>
+    <ul>
+      <li><strong>Your goal</strong> what kind of job you want, full-time or part-time, and where.</li>
+      <li><strong>Your background</strong> the folder that holds your resumes and work history.</li>
+      <li><strong>Your job sites</strong> the websites you want it to search.</li>
+      <li><strong>Anything to skip</strong> jobs or personal details you do not want included.</li>
+    </ul>
   </div>
 
-  <section class="pipeline-access" id="pipelineAccess" hidden>
+  <aside class="signup-card" id="signupCard" hidden>
+    <h2>Get the pipeline, free</h2>
+    <p>Enter your email and I'll unlock the full pipeline for you to view, copy, and download.</p>
+    <form id="signupForm" class="signup-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+      <label for="su-name">Name (optional)</label>
+      <input type="text" id="su-name" name="name" autocomplete="name">
+      <label for="su-email">Email</label>
+      <input type="email" id="su-email" name="email" required autocomplete="email" placeholder="you@example.com">
+      <button type="submit" class="btn" style="width:100%;justify-content:center">
+        Unlock the pipeline
+        <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg>
+      </button>
+      <p class="signup-fineprint">Free. No spam. Just the tool and the occasional update.</p>
+    </form>
+    <p class="signup-error" id="signupError" hidden>Please enter a valid email address.</p>
+  </aside>
+
+  {%- comment -%} Soft-wall is OFF for now. To turn it on: add `hidden` to #pipelineAccess,
+  remove `hidden` from #signupCard, and remove `data-gate="off"`. {%- endcomment -%}
+  <section class="pipeline-access" id="pipelineAccess" data-gate="off">
     <div class="pipeline-access__bar">
       <div>
-        <h2 class="section-title mt-0">You're in. Here's your pipeline.</h2>
-        <p class="lead">Copy it or download it, then fill in the bracketed details and run it in your AI assistant.</p>
+        <h2 class="section-title mt-0">The instructions for your AI</h2>
+        <p class="lead">This part is written for the AI, so some of it looks technical. That's fine, you do not need to read it. Just copy it or download it, fill in the [brackets] with your details, and paste it into your AI helper.</p>
       </div>
       <div class="pipeline-access__actions">
         <button type="button" class="btn" id="copyPipeline">
