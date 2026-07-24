@@ -47,6 +47,7 @@ sass:
 exclude:
   - README.md
   - DESIGN.md
+  - LESSON_STYLE_PROMPT.md
   - tutorial-hub-build-prompt.md
   - preview
   - Gemfile

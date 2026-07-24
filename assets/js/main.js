@@ -134,6 +134,16 @@
     });
   }
 
+  /* ---------- Print lesson ---------- */
+  var printBtn = document.getElementById("printLesson");
+  if (printBtn) {
+    printBtn.addEventListener("click", function () {
+      // Make sure any scroll-reveal content is visible before printing.
+      document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("is-in"); });
+      window.print();
+    });
+  }
+
   /* ---------- TOC active state ---------- */
   var tocLinks = Array.prototype.slice.call(document.querySelectorAll(".toc a[href^='#']"));
   if (tocLinks.length && "IntersectionObserver" in window) {

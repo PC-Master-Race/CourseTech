@@ -141,6 +141,7 @@ p { margin: 0 0 var(--s-4); }
 .btn:active { transform: translateY(0); }
 .btn--ghost { background: transparent; color: var(--brand); border-color: var(--border-strong); }
 .btn--ghost:hover { background: var(--brand-tint); color: var(--brand-ink); border-color: var(--brand); }
+.btn--sm { padding: 9px 14px; font-size: .95rem; min-height: 40px; }
 .btn--quiz { background: var(--quiz-accent); border-color: var(--quiz-accent); }
 .btn--quiz:hover { background: #5b21b6; border-color: #5b21b6; }
 .btn .icon { width: 20px; height: 20px; }
@@ -340,6 +341,7 @@ a.mega__col-head:hover h3 { color: var(--brand-ink); }
 .topic-hero h1 { font-size: var(--fs-h1); max-width: 20ch; }
 .topic-hero .lead { font-size: var(--fs-lead); color: var(--ink-soft); max-width: 60ch; margin-top: var(--s-3); }
 
+.lesson-actions { margin-top: var(--s-4); }
 .video-wrap { max-width: 900px; margin: var(--s-6) 0 0; }
 .video-frame {
   position: relative; aspect-ratio: 16 / 9; border-radius: var(--r-md); overflow: hidden;
@@ -645,6 +647,45 @@ a.course-nav__link:hover { color: var(--ink); border-left-color: var(--border-st
 /* ---------- Prose page (about/404) ---------- */
 .prose { max-width: var(--reading); }
 .prose h2 { margin-top: var(--s-7); }
+
+/* ---------- Print: lesson only ---------- */
+@media print {
+  /* Hide everything that is not the lesson body */
+  .site-header, .mega, .mega-overlay, .site-footer, .lesson-sidebar,
+  .pager, .lesson-actions, .video-wrap, .breadcrumb, .skip-link { display: none !important; }
+
+  html, body { background: #fff !important; color: #000; font-size: 12pt; }
+  .band { background: #fff !important; }
+  .hero::before, .band { background-image: none !important; }
+
+  /* Content fills the page */
+  .container { max-width: 100%; padding: 0; }
+  .topic-hero { padding: 0 0 12pt; }
+  .section--tight { padding: 0; }
+  .topic-body { display: block; }
+  .topic-parts { max-width: 100%; }
+
+  .topic-hero h1 { font-size: 22pt; }
+  .lead { color: #000; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+
+  /* Lead-in and blocks: keep structure, drop heavy fills to save ink */
+  .lesson-intro { background: #fff; border-left: 3px solid #000; color: #000; }
+  .block { background: #fff; border: 1px solid #999; border-left: 4px solid #333; break-inside: avoid; }
+  .block--lesson .block__body { background: #fff; }
+  .block__tag { color: #000; }
+  .block__tag .chip { box-shadow: none; border: 1px solid #999; }
+
+  /* Keep tables and figures whole on a page where possible */
+  .rich table, .figure, .part { break-inside: avoid; }
+  .rich th { background: #000 !important; color: #fff !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .rich table, .rich th, .rich td { border-color: #999; box-shadow: none; }
+  .rich blockquote { border-left: 3px solid #000; background: #fff; }
+
+  a { color: #000; text-decoration: underline; }
+  .part + .part { border-top: 1px solid #ccc; }
+  h1, h2, h3 { break-after: avoid; }
+}
 
 /* Utility */
 .mt-0 { margin-top: 0; }
