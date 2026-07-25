@@ -1,0 +1,29 @@
+{%- comment -%}
+  Reusable YouTube embed.
+  Usage: {% include video-embed.html url=page.video_url title="Lesson title" %}
+  Accepts a full watch link, a youtu.be short link, an /embed/ link, or a bare id.
+  Renders nothing at all when url is empty.
+{%- endcomment -%}
+{%- assign vid = "" -%}
+{%- if include.url and include.url != "" -%}
+  {%- assign u = include.url -%}
+  {%- if u contains "youtu.be/" -%}
+    {%- assign vid = u | split: "youtu.be/" | last | split: "?" | first | split: "/" | first -%}
+  {%- elsif u contains "watch?v=" -%}
+    {%- assign vid = u | split: "watch?v=" | last | split: "&" | first -%}
+  {%- elsif u contains "/embed/" -%}
+    {%- assign vid = u | split: "/embed/" | last | split: "?" | first -%}
+  {%- else -%}
+    {%- assign vid = u -%}
+  {%- endif -%}
+{%- endif -%}
+{%- if vid != "" -%}
+<div class="video-wrap">
+  <div class="video-frame">
+    <iframe src="https://www.youtube-nocookie.com/embed/{{ vid }}"
+            title="Video: {{ include.title | default: 'lesson video' }}"
+            loading="lazy" allowfullscreen
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+  </div>
+</div>
+{%- endif -%}

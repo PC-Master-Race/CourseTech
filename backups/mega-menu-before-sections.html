@@ -34,32 +34,20 @@
           </div>
         </a>
         <ul class="mega__list" aria-labelledby="mega-cat-{{ cat.id }}">
-          {% if cat.sections %}
-            {%- comment -%} Sectioned course: show sections, not every lesson. {%- endcomment -%}
-            {% for sec in cat.sections %}
-            <li>
-              <a class="mega__link" href="{{ '/courses/' | append: cat.id | append: '/#' | append: sec.id | relative_url }}">
-                <span class="t">{{ sec.label }}</span>
-                <span class="soon-tag">{{ sec.topics | size }}</span>
-              </a>
-            </li>
-            {% endfor %}
-          {% else %}
-            {% for t in cat.topics %}
-            <li>
-              {% if t.status == "soon" %}
-              <span class="mega__link is-soon">
-                <span class="t">{{ t.title }}</span>
-                <span class="soon-tag">Coming soon</span>
-              </span>
-              {% else %}
-              <a class="mega__link" href="{{ '/topics/' | append: t.slug | append: '/' | relative_url }}">
-                <span class="t">{{ t.title }}</span>
-              </a>
-              {% endif %}
-            </li>
-            {% endfor %}
-          {% endif %}
+          {% for t in cat.topics %}
+          <li>
+            {% if t.status == "soon" %}
+            <span class="mega__link is-soon">
+              <span class="t">{{ t.title }}</span>
+              <span class="soon-tag">Coming soon</span>
+            </span>
+            {% else %}
+            <a class="mega__link" href="{{ '/topics/' | append: t.slug | append: '/' | relative_url }}">
+              <span class="t">{{ t.title }}</span>
+            </a>
+            {% endif %}
+          </li>
+          {% endfor %}
         </ul>
       </div>
       {% endfor %}

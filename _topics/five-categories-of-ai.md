@@ -2,7 +2,7 @@
 title: The 5 Categories of AI at Work
 slug: five-categories-of-ai
 category: ai
-lead_in: By now you have actually used a couple of AI tools yourself, so this is the perfect moment to step back and see the whole map. AI at work is not one big thing. It is a set of five different kinds of tools, each built for a different type of task. In this lesson I will walk you through all five, show you the tools and real jobs in each, and help you spot which ones fit your work. Once you can name the categories, you will always know which tool to reach for.
+lead_in: Now that you know what AI is, let's look at the whole map before you touch anything. AI at work is not one big thing. It is a set of five different kinds of tools, each built for a different type of task. In this lesson I will walk you through all five, show you the tools and real jobs in each, and help you spot which ones fit your work. Once you can name the categories, you will always know which tool to reach for, and the rest of this course will make far more sense.
 description: AI at work is not one tool. It is a set of five capabilities. Here is the whole map.
 video_url: ''
 parts:
@@ -63,12 +63,12 @@ parts:
   - type: lesson
     title: Make a picture from a description
     body: |
-      These tools create original visuals from a written prompt. If you covered the Image AI lesson, you already have hands-on experience here.
+      These tools create original visuals from a written prompt. There is a full lesson on this later in the course, where you will make one yourself.
 
       **Key tools:**
 
       - **Canva AI (Magic Media):** generate images from text inside Canva's design platform.
-      - **Gemini (image mode):** ask Google Gemini to generate or describe images from a prompt.
+      - **Gemini (Nano Banana):** Google's image model, built into Gemini. Ask it in plain language to create or change a picture. The odd name is the one Google itself uses for it.
       - **Adobe Firefly:** Adobe's AI image tool, which works inside Photoshop and Express.
 
       | Field / role | How they use this category |

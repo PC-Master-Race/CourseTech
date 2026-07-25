@@ -1,13 +1,29 @@
 ---
 layout: default
 ---
-{%- comment -%} Course landing page. Reads page.course_id, renders from _data/topics.yml. {%- endcomment -%}
+{%- comment -%} Course landing page. Supports flat courses and sectioned courses. {%- endcomment -%}
 {%- assign course = "" -%}
 {%- for c in site.data.topics.categories -%}
   {%- if c.id == page.course_id -%}{%- assign course = c -%}{%- endif -%}
 {%- endfor -%}
+
+{%- comment -%} Count live lessons across either shape. {%- endcomment -%}
 {%- assign live_count = 0 -%}
-{%- for t in course.topics -%}{%- if t.status == "live" -%}{%- assign live_count = live_count | plus: 1 -%}{%- endif -%}{%- endfor -%}
+{%- assign total_count = 0 -%}
+{%- if course.sections -%}
+  {%- for sec in course.sections -%}
+    {%- for t in sec.topics -%}
+      {%- assign total_count = total_count | plus: 1 -%}
+      {%- if t.status == "live" -%}{%- assign live_count = live_count | plus: 1 -%}{%- endif -%}
+    {%- endfor -%}
+  {%- endfor -%}
+{%- else -%}
+  {%- for t in course.topics -%}
+    {%- assign total_count = total_count | plus: 1 -%}
+    {%- if t.status == "live" -%}{%- assign live_count = live_count | plus: 1 -%}{%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+{%- assign soon_count = total_count | minus: live_count -%}
 
 <div class="band">
   <div class="container course-hero">
@@ -23,31 +39,78 @@ layout: default
     </span>
     <h1>{{ course.label }}</h1>
     {% if course.about %}<p class="lead course-hero__about">{{ course.about }}</p>{% endif %}
-    <p class="course-hero__meta">{{ live_count }} lesson{% if live_count != 1 %}s{% endif %} ready
-      {% assign soon = course.topics | size | minus: live_count %}{% if soon > 0 %}· {{ soon }} more coming soon{% endif %}</p>
+    <p class="course-hero__meta">{{ live_count }} lesson{% if live_count != 1 %}s{% endif %} ready{% if soon_count > 0 %} &middot; {{ soon_count }} more coming soon{% endif %}{% if course.sections %} &middot; {{ course.sections | size }} sections{% endif %}</p>
   </div>
 </div>
 
 <div class="container section--tight">
-  <h2 class="section-title">Course lessons</h2>
-  <ol class="lesson-list">
-    {% for t in course.topics %}
-    <li class="lesson-row {% if t.status != 'live' %}is-soon{% endif %}">
-      <span class="lesson-row__num" aria-hidden="true">{{ forloop.index }}</span>
-      <div class="lesson-row__body">
-        <h3>{{ t.title }}</h3>
-        {% if t.blurb %}<p>{{ t.blurb }}</p>{% endif %}
+  {% if course.sections %}
+    {%- comment -%} Jump links, handy when a course has many sections. {%- endcomment -%}
+    <nav class="section-jump" aria-label="Sections in this course">
+      <h2>In this course</h2>
+      <ol>
+        {% for sec in course.sections %}
+        <li><a href="#{{ sec.id }}"><span class="n">{{ forloop.index }}</span>{{ sec.label }}</a></li>
+        {% endfor %}
+      </ol>
+    </nav>
+
+    {%- assign counter = 0 -%}
+    {% for sec in course.sections %}
+    <section class="course-section reveal" id="{{ sec.id }}">
+      <div class="course-section__head">
+        <p class="course-section__label">Section {{ forloop.index }}</p>
+        <h2>{{ sec.label }}</h2>
+        {% if sec.blurb %}<p class="lead">{{ sec.blurb }}</p>{% endif %}
       </div>
-      <div class="lesson-row__action">
-        {% if t.status == "live" %}
-        <a class="btn" href="{{ '/topics/' | append: t.slug | append: '/' | relative_url }}">
-          Start lesson <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg>
-        </a>
-        {% else %}
-        <span class="soon-pill">Coming soon</span>
-        {% endif %}
-      </div>
-    </li>
+
+      {% include video-embed.html url=sec.video_url title=sec.label %}
+
+      <ol class="lesson-list">
+        {% for t in sec.topics %}
+        {%- assign counter = counter | plus: 1 -%}
+        <li class="lesson-row {% if t.status != 'live' %}is-soon{% endif %}">
+          <span class="lesson-row__num" aria-hidden="true">{{ counter }}</span>
+          <div class="lesson-row__body">
+            <h3>{{ t.title }}</h3>
+            {% if t.blurb %}<p>{{ t.blurb }}</p>{% endif %}
+          </div>
+          <div class="lesson-row__action">
+            {% if t.status == "live" %}
+            <a class="btn" href="{{ '/topics/' | append: t.slug | append: '/' | relative_url }}">
+              Start lesson <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg>
+            </a>
+            {% else %}
+            <span class="soon-pill">Coming soon</span>
+            {% endif %}
+          </div>
+        </li>
+        {% endfor %}
+      </ol>
+    </section>
     {% endfor %}
-  </ol>
+
+  {% else %}
+    <h2 class="section-title">Course lessons</h2>
+    <ol class="lesson-list">
+      {% for t in course.topics %}
+      <li class="lesson-row {% if t.status != 'live' %}is-soon{% endif %}">
+        <span class="lesson-row__num" aria-hidden="true">{{ forloop.index }}</span>
+        <div class="lesson-row__body">
+          <h3>{{ t.title }}</h3>
+          {% if t.blurb %}<p>{{ t.blurb }}</p>{% endif %}
+        </div>
+        <div class="lesson-row__action">
+          {% if t.status == "live" %}
+          <a class="btn" href="{{ '/topics/' | append: t.slug | append: '/' | relative_url }}">
+            Start lesson <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg>
+          </a>
+          {% else %}
+          <span class="soon-pill">Coming soon</span>
+          {% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+  {% endif %}
 </div>

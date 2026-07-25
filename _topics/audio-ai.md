@@ -69,7 +69,7 @@ parts:
 
       A few field examples of where this helps: a real estate agent generating a calm track for a walkthrough with no copyright risk, a florist making a seasonal promo reel with a custom soundtrack, an educator adding music to a recorded lesson without getting flagged on YouTube, and an entrepreneur building a consistent audio identity that plays in every video.
 - title: Why audio is such a good fit for AI
-  intro: Remember the four-question task filter? Audio transcription passes it better than almost any task type.
+  intro: 'Later in this course you will learn a four-question filter for deciding whether a task is worth handing to AI. It is worth previewing here, because audio transcription passes it better than almost any task type.'
   blocks:
   - type: lesson
     title: It passes all four questions

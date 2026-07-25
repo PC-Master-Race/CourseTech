@@ -1,10 +1,17 @@
 # ==========================================================================
 # NAVIGATION SOURCE OF TRUTH
-# This single file drives the mega menu and the home page catalog.
-# To add a topic to the menu: add an entry under the right category.
-# `slug` must match the filename in _topics/ (e.g. slug "what-ai-is"
-# -> _topics/what-ai-is.md). Set status: soon for a topic not written yet.
-# Editable from /admin (see "Site Navigation" collection).
+# Drives the Courses menu, the home page, every course landing page, and the
+# in-lesson sidebar.
+#
+# A course can be organized two ways:
+#   1. Flat  -> a `topics:` list directly under the course.
+#   2. Sections -> a `sections:` list, each with its own `topics:` list.
+#      Each section may carry its own `video_url` for an intro video.
+# Both work. Use sections once a course grows past roughly eight lessons.
+#
+# `slug` must match the filename in _topics/ (slug "what-ai-is" ->
+# _topics/what-ai-is.md). Set status: soon for a lesson not written yet.
+# Editable from /admin (see "Site navigation").
 # ==========================================================================
 
 categories:
@@ -14,95 +21,136 @@ categories:
     blurb: Use AI tools well, and know when not to.
     about: >-
       This course demystifies AI before you ever use it. You'll learn what AI
-      really is in plain English, how to prompt it well with a simple framework,
-      where it fits your actual work, how it goes wrong and how to catch it, and
-      how to use it responsibly, all the way from images to AI agents. No coding
-      and no technical background needed.
-    topics:
-      - title: What AI Actually Is
-        slug: what-ai-is
-        blurb: Plain-English basics before you touch a single tool.
-        status: live
-      - title: Prompting Fundamentals
-        slug: prompting-fundamentals
-        blurb: The one skill that changes everything. Meet RTCF.
-        status: live
-      - title: Spotting AI Opportunities at Work
-        slug: identifying-opportunities
-        blurb: Which tasks are worth handing to AI, and which are not.
-        status: live
-      - title: When AI Gets It Wrong
-        slug: when-ai-gets-it-wrong
-        blurb: Hallucinations, verification, and staying in the loop.
-        status: live
-      - title: Advanced Prompting Techniques
-        slug: advanced-prompting
-        blurb: Four moves that turn good prompts into great ones.
-        status: live
-      - title: Image AI, A Practical Intro
-        slug: image-ai
-        blurb: Make useful visuals from words, and spot the limits.
-        status: live
-      - title: Bots vs. AI Agents
-        slug: bots-vs-agents
-        blurb: What each one can do, and what to keep for yourself.
-        status: live
-      - title: The 5 Categories of AI at Work
-        slug: five-categories-of-ai
-        blurb: "The whole map: the five kinds of AI tools and what each does."
-        status: live
-      - title: Audio AI, A Practical Intro
-        slug: audio-ai
-        blurb: Transcription, meeting notes, and copyright-free music.
-        status: live
-      - title: Choosing the Right Task for AI
-        slug: choosing-the-right-task
-        blurb: A 30-second filter for which tasks to hand to AI.
-        status: live
-      - title: Scoped vs. Autonomous Agents
-        slug: scoped-vs-autonomous-agents
-        blurb: Scope and autonomy, how much a tool can do on its own.
-        status: live
-      - title: Use AI to Beat the Resume Screener
-        slug: beat-the-resume-screener
-        blurb: Get past applicant tracking software with AI.
-        status: live
-      - title: Who's Responsible When AI Gets It Wrong?
-        slug: who-is-responsible
-        blurb: The accountability gap, and why it's hard to challenge AI.
-        status: live
-      - title: When AI Has Caused Real Harm
-        slug: real-harm-cases
-        blurb: Five real, documented cases, and the lesson in each.
-        status: live
-      - title: Bias and Fairness in AI
-        slug: bias-and-fairness
-        blurb: Why AI isn't automatically fair, and what to watch for.
-        status: live
-      - title: When AI Pretends to Care
-        slug: when-ai-pretends-to-care
-        blurb: When a warm-sounding AI can't actually help.
-        status: live
-      - title: Human Dignity and the Right to an Explanation
-        slug: human-dignity
-        blurb: Treating people as people, and knowing why AI decided.
-        status: live
-      - title: The Hidden Costs of AI
-        slug: hidden-costs-of-ai
-        blurb: What AI costs the world, plus the ethics capstone.
-        status: live
-      - title: The Future of Work with AI
-        slug: future-of-work
-        blurb: How work is really changing, and how to stay ahead.
-        status: live
-      - title: AI Tools Already in Your Field
-        slug: ai-in-your-field
-        blurb: The real tools employers use, field by field.
-        status: live
-      - title: Local AI vs. Hosted AI
-        slug: local-vs-hosted-ai
-        blurb: Runs on their computer or yours? Privacy, cost, and setup.
-        status: live
+      really is in plain English, how to prompt it well, where it fits your actual
+      work, how it goes wrong and how to catch it, and how to use it responsibly.
+      It runs from the very basics through ethics, agents, and what is coming next.
+      No coding and no technical background needed.
+    sections:
+      - id: foundations
+        label: Foundations
+        blurb: What AI actually is, the full map of what it can do, and the one habit that keeps you safe.
+        video_url: ''
+        topics:
+          - title: What AI Actually Is
+            slug: what-ai-is
+            blurb: Plain-English basics before you touch a single tool.
+            status: live
+          - title: The 5 Categories of AI at Work
+            slug: five-categories-of-ai
+            blurb: "The whole map: the five kinds of AI tools and what each does."
+            status: live
+          - title: When AI Gets It Wrong
+            slug: when-ai-gets-it-wrong
+            blurb: Hallucinations, verification, and staying in the loop.
+            status: live
+
+      - id: prompting
+        label: Talking to AI
+        blurb: The single most useful skill in the course, from a simple framework to professional technique.
+        video_url: ''
+        topics:
+          - title: Prompting Fundamentals
+            slug: prompting-fundamentals
+            blurb: The one skill that changes everything. Meet RTCF.
+            status: live
+          - title: Advanced Prompting Techniques
+            slug: advanced-prompting
+            blurb: Four moves that turn good prompts into great ones.
+            status: live
+
+      - id: beyond-text
+        label: Beyond Text
+        blurb: AI does not only write. Here is what it can do with pictures and sound.
+        video_url: ''
+        topics:
+          - title: Image AI, A Practical Intro
+            slug: image-ai
+            blurb: Make useful visuals from words, and spot the limits.
+            status: live
+          - title: Audio AI, A Practical Intro
+            slug: audio-ai
+            blurb: Transcription, meeting notes, and copyright-free music.
+            status: live
+
+      - id: putting-to-work
+        label: Putting AI to Work
+        blurb: Deciding which of your tasks are worth handing over, and seeing what your field already uses.
+        video_url: ''
+        topics:
+          - title: Spotting AI Opportunities at Work
+            slug: identifying-opportunities
+            blurb: Which tasks are worth handing to AI, and which are not.
+            status: live
+          - title: Choosing the Right Task for AI
+            slug: choosing-the-right-task
+            blurb: A 30-second filter, and the effort-to-value question.
+            status: live
+          - title: AI Tools Already in Your Field
+            slug: ai-in-your-field
+            blurb: The real tools employers use, field by field.
+            status: live
+          - title: Use AI to Beat the Resume Screener
+            slug: beat-the-resume-screener
+            blurb: Get past applicant tracking software with AI.
+            status: live
+
+      - id: agents
+        label: Agents and Autonomy
+        blurb: What happens when AI stops waiting for instructions and starts acting on its own.
+        video_url: ''
+        topics:
+          - title: Bots vs. AI Agents
+            slug: bots-vs-agents
+            blurb: What each one can do, and what to keep for yourself.
+            status: live
+          - title: Scoped vs. Autonomous Agents
+            slug: scoped-vs-autonomous-agents
+            blurb: Scope and autonomy, how much a tool can do alone.
+            status: live
+
+      - id: ethics
+        label: Judgment and Ethics
+        blurb: The hard questions. Who is accountable, who gets harmed, and what you owe the people your work touches.
+        video_url: ''
+        topics:
+          - title: Who's Responsible When AI Gets It Wrong?
+            slug: who-is-responsible
+            blurb: The accountability gap, and why it's hard to challenge AI.
+            status: live
+          - title: When AI Has Caused Real Harm
+            slug: real-harm-cases
+            blurb: Five real, documented cases, and the lesson in each.
+            status: live
+          - title: Bias and Fairness in AI
+            slug: bias-and-fairness
+            blurb: Why AI isn't automatically fair, and what to watch for.
+            status: live
+          - title: When AI Pretends to Care
+            slug: when-ai-pretends-to-care
+            blurb: When a warm-sounding AI can't actually help.
+            status: live
+          - title: Human Dignity and the Right to an Explanation
+            slug: human-dignity
+            blurb: Treating people as people, and knowing why AI decided.
+            status: live
+          - title: The Hidden Costs of AI
+            slug: hidden-costs-of-ai
+            blurb: What AI costs the world, plus the ethics capstone.
+            status: live
+
+      - id: whats-next
+        label: Where This Is Going
+        blurb: How work is really changing, and how to keep more control over your own tools.
+        video_url: ''
+        topics:
+          - title: The Future of Work with AI
+            slug: future-of-work
+            blurb: How work is really changing, and how to stay ahead.
+            status: live
+          - title: Local AI vs. Hosted AI
+            slug: local-vs-hosted-ai
+            blurb: Runs on their computer or yours? Privacy, cost, and setup.
+            status: live
 
   - id: software
     label: Office Productivity

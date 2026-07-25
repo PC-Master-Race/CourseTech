@@ -10,32 +10,20 @@ layout: default
   {%- endif -%}
 {%- endfor -%}
 
-{%- comment -%}
-  Build a flat, ordered list of this course's live lessons, so numbering,
-  the sidebar, and prev/next work whether the course uses sections or not.
-  Format per item: slug::title::sectionLabel
-{%- endcomment -%}
-{%- assign course = "" -%}
-{%- for c in site.data.topics.categories -%}
-  {%- if c.id == page.category -%}{%- assign course = c -%}{%- endif -%}
-{%- endfor -%}
-{%- assign items = "" -%}
-{%- if course.sections -%}
-  {%- for sec in course.sections -%}
-    {%- for t in sec.topics -%}
-      {%- if t.status == "live" -%}
-        {%- assign items = items | append: t.slug | append: "::" | append: t.title | append: "::" | append: sec.label | append: ",," -%}
-      {%- endif -%}
-    {%- endfor -%}
-  {%- endfor -%}
-{%- else -%}
-  {%- for t in course.topics -%}
-    {%- if t.status == "live" -%}
-      {%- assign items = items | append: t.slug | append: "::" | append: t.title | append: "::" | append: ",," -%}
-    {%- endif -%}
-  {%- endfor -%}
+{%- comment -%} Derive a YouTube embed id from a URL or bare id. {%- endcomment -%}
+{%- assign vid = "" -%}
+{%- if page.video_url and page.video_url != "" -%}
+  {%- assign u = page.video_url -%}
+  {%- if u contains "youtu.be/" -%}
+    {%- assign vid = u | split: "youtu.be/" | last | split: "?" | first | split: "/" | first -%}
+  {%- elsif u contains "watch?v=" -%}
+    {%- assign vid = u | split: "watch?v=" | last | split: "&" | first -%}
+  {%- elsif u contains "/embed/" -%}
+    {%- assign vid = u | split: "/embed/" | last | split: "?" | first -%}
+  {%- else -%}
+    {%- assign vid = u -%}
+  {%- endif -%}
 {%- endif -%}
-{%- assign arr = items | split: ",," -%}
 
 <article class="topic">
   <div class="band">
@@ -57,11 +45,16 @@ layout: default
         </button>
       </div>
 
-      {% comment %} Video: embeds if a URL is set, otherwise shows a slim note. {% endcomment %}
-      {% if page.video_url and page.video_url != "" %}
-        {% include video-embed.html url=page.video_url title=page.title %}
-      {% else %}
+      {% comment %} Video: renders an embed if provided, a friendly placeholder if not. {% endcomment %}
       <div class="video-wrap">
+        {% if vid != "" %}
+        <div class="video-frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/{{ vid }}"
+                  title="Video lesson: {{ page.title }}"
+                  loading="lazy" allowfullscreen
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        </div>
+        {% else %}
         <div class="video-placeholder">
           <svg class="icon" aria-hidden="true"><use href="#icon-play"></use></svg>
           <div>
@@ -69,8 +62,8 @@ layout: default
             <span>Everything you need is written out below, so you can start right now.</span>
           </div>
         </div>
+        {% endif %}
       </div>
-      {% endif %}
     </div>
   </div>
 
@@ -78,46 +71,26 @@ layout: default
     <div class="topic-body">
       {% comment %} ---- Sidebar: course contents + on-this-page ---- {% endcomment %}
       <aside class="lesson-sidebar">
+        {%- assign course = "" -%}
+        {%- for c in site.data.topics.categories -%}{%- if c.id == page.category -%}{%- assign course = c -%}{%- endif -%}{%- endfor -%}
         {% if course != "" %}
         <nav class="course-nav" aria-label="Lessons in this course">
           <a class="course-nav__back" href="{{ '/courses/' | append: course.id | append: '/' | relative_url }}">
             <svg class="icon" aria-hidden="true"><use href="#icon-arrow-left"></use></svg> {{ course.label }}
           </a>
-
-          {% if course.sections %}
-            {%- assign n = 0 -%}
-            {% for sec in course.sections %}
-            <p class="course-nav__section">{{ sec.label }}</p>
-            <ol class="course-nav__list">
-              {% for t in sec.topics %}
-                {% if t.status == "live" %}
-                  {%- assign n = n | plus: 1 -%}
-                  {% if t.slug == page.slug %}
-                  <li><span class="course-nav__link is-current" aria-current="page"><span class="n">{{ n }}</span>{{ t.title }}</span></li>
-                  {% else %}
-                  <li><a class="course-nav__link" href="{{ '/topics/' | append: t.slug | append: '/' | relative_url }}"><span class="n">{{ n }}</span>{{ t.title }}</a></li>
-                  {% endif %}
-                {% else %}
-                  <li><span class="course-nav__link is-soon"><span class="n">&middot;</span>{{ t.title }} <span class="soon-tag">Soon</span></span></li>
-                {% endif %}
-              {% endfor %}
-            </ol>
-            {% endfor %}
-          {% else %}
-            <ol class="course-nav__list">
-              {% for t in course.topics %}
-              {% if t.status == "live" %}
-                {% if t.slug == page.slug %}
-                <li><span class="course-nav__link is-current" aria-current="page"><span class="n">{{ forloop.index }}</span>{{ t.title }}</span></li>
-                {% else %}
-                <li><a class="course-nav__link" href="{{ '/topics/' | append: t.slug | append: '/' | relative_url }}"><span class="n">{{ forloop.index }}</span>{{ t.title }}</a></li>
-                {% endif %}
+          <ol class="course-nav__list">
+            {% for t in course.topics %}
+            {% if t.status == "live" %}
+              {% if t.slug == page.slug %}
+              <li><span class="course-nav__link is-current" aria-current="page"><span class="n">{{ forloop.index }}</span>{{ t.title }}</span></li>
               {% else %}
-                <li><span class="course-nav__link is-soon"><span class="n">{{ forloop.index }}</span>{{ t.title }} <span class="soon-tag">Soon</span></span></li>
+              <li><a class="course-nav__link" href="{{ '/topics/' | append: t.slug | append: '/' | relative_url }}"><span class="n">{{ forloop.index }}</span>{{ t.title }}</a></li>
               {% endif %}
-              {% endfor %}
-            </ol>
-          {% endif %}
+            {% else %}
+              <li><span class="course-nav__link is-soon"><span class="n">{{ forloop.index }}</span>{{ t.title }} <span class="soon-tag">Soon</span></span></li>
+            {% endif %}
+            {% endfor %}
+          </ol>
         </nav>
         {% endif %}
 
@@ -181,7 +154,18 @@ layout: default
         </section>
         {% endfor %}
 
-        {%- comment -%} Previous / Next, flowing across sections. Uses `arr` built at the top. {%- endcomment -%}
+        {%- comment -%} Previous / Next within the same category (live topics only). {%- endcomment -%}
+        {%- assign items = "" -%}
+        {%- for cat in site.data.topics.categories -%}
+          {%- if cat.id == page.category -%}
+            {%- for t in cat.topics -%}
+              {%- if t.status == "live" -%}
+                {%- assign items = items | append: t.slug | append: "::" | append: t.title | append: ",," -%}
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endif -%}
+        {%- endfor -%}
+        {%- assign arr = items | split: ",," -%}
         {%- assign curidx = -1 -%}
         {%- for it in arr -%}
           {%- assign s = it | split: "::" | first -%}

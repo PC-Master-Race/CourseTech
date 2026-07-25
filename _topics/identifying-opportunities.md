@@ -60,7 +60,7 @@ parts:
       | **Construction & skilled trades** | Project status updates, material orders, subcontractor messages | Looking up code requirements; comparing product specs; generating checklists | Client proposals; safety documentation; bid writing |
       | **Education support & childcare** | Routine parent communications and progress templates | Researching age-appropriate activities; summarizing observation notes | Parent newsletters; lesson summaries; draft documentation for educator review |
 - title: 'The flip side: where AI falls short'
-  intro: Knowing where AI shines is half the skill. Knowing where it struggles keeps you from handing over tasks it cannot handle well. We go deep on the risks in "When AI Gets It Wrong." Here is your quick orientation.
+  intro: Knowing where AI shines is half the skill. Knowing where it struggles keeps you from handing over tasks it cannot handle well. You met the biggest risk already in "When AI Gets It Wrong." Here is the rest of the picture.
   blocks:
   - type: lesson
     title: Five places to keep the human in charge

@@ -7,19 +7,18 @@ lead_in: Your phone can feel like a mystery, and I want to change that. In this 
 video_url: ''
 parts:
 - title: Before we begin
-  intro: Welcome. I am so glad you are here. Before we dive in, let's get ready so this goes smoothly.
+  intro: Grab your phone and get comfortable. This works best when you can try each step as you read it.
   blocks:
   - type: lesson
-    title: Check these four things
+    title: How to use this lesson
     body: |
-      - **Your phone is charged.** The screen should light up when you press a button. If it does not, let me know right away.
-      - **Your glasses are on**, if you use them. Everything we do is on that small screen, so you will want to see clearly.
-      - **This guide is open** in front of you. You are reading it, so that one is done. Great start.
-      - **Your sound is on.** Look at the left side of your phone. If you see a tiny switch showing orange, the sound is off. We will come back to that.
+      Keep your iPhone in your hand while you read. Every step is written so you can do it as you go, and doing it is what makes it stick.
 
-      > There are no silly questions here. If something is confusing, read it again slowly, or come back to it later. Go at your own pace. This is not a race.
+      > There are no silly questions here. If something is confusing, read it again slowly, or come back to it later. Go at your own pace. This is not a race, and nothing here can break your phone.
 
-      You are all set. Let's have some fun.
+      **One quick note about versions.** These steps are written for iOS 26, the software on most current iPhones. To check yours, open **Settings**, tap **General**, then **About**, and look at "Software Version." If your phone is on an older version, most of this still works, though a few buttons may sit in slightly different places. Where something changed recently, I will point it out.
+
+      Ready when you are.
 - title: 'Section 1: your iPhone''s physical controls'
   intro: Every device has buttons, and your phone is no different. Knowing them means you can answer calls, take photos, and control your phone without hunting around.
   blocks:
@@ -36,7 +35,7 @@ parts:
       | **Action Button** (left side, above the volume buttons, on iPhone 15 Pro, 16, and 17) | Silences the phone by default. Can be set to open the Camera, Flashlight, or other shortcuts. |
       | **Camera Control** (right side, below the Side Button, iPhone 16 and 17 only) | Opens the Camera quickly. Slide your finger along it to zoom. Press to take a photo. |
 
-      > Not all iPhones are the same. If you have an iPhone 14 or earlier, you may have a small Ring/Silent switch instead of an Action Button. If it shows orange, your phone is on silent, so it will not ring.
+      > Not all iPhones are the same. The Action Button arrived on the iPhone 15 Pro and is on every iPhone 16 and 17 model. If you have an iPhone 15, 15 Plus, or anything older, you have a small Ring/Silent switch in that spot instead. Flip it and look: if you see orange, your phone is on silent, so it will not ring.
   - type: lesson
     title: The Side Button and the volume buttons
     body: |
@@ -80,6 +79,8 @@ parts:
       4. Now find the two buttons on the left side. Press the top one (Volume Up) three times. Press the bottom one (Volume Down) three times.
 
       Success: you can lock and wake your screen, and you have found your volume buttons.
+
+      **Go further.** Now put it to use without looking: lock your screen, then wake it and turn the volume down, using only your sense of touch. Then answer one question in your own words: what is the difference between locking your phone and turning it off, and when would you want each one? Knowing which to reach for is the whole point.
 - title: 'Section 2: unlocking your iPhone'
   intro: Your phone holds your photos, your messages from family, and your important information. Unlocking it is the front door. Once you are comfortable with this, you will feel much more in control.
   blocks:
@@ -120,6 +121,8 @@ parts:
       Now practice: press the Side Button to turn off the screen, wait 3 seconds, and unlock. Repeat two more times. Notice how quick it gets.
 
       Success: your Home Screen appears each time, and the unlock feels natural.
+
+      **Go further.** Your phone will sometimes ask for your passcode even when Face ID or Touch ID normally works, after a restart, for example, or if you have not unlocked it in a couple of days. That is normal security, not a malfunction. Decide now what you will do the next time it happens, and make sure you know your passcode by heart. That one bit of preparation saves a lot of panic later.
 - title: 'Section 3: your home screen tour'
   intro: The Home Screen is the starting point for everything. It is like the living room of your iPhone. Once you know what lives here and how to move around, you will feel right at home.
   blocks:
@@ -166,6 +169,8 @@ parts:
       5. Swipe up from the bottom edge (or press the Home button) to return home.
 
       Success: you are back on your main Home Screen and can see the Phone icon and the page dots.
+
+      **Go further.** Pick an app you use often and work out where it actually lives: on the first page, a later page, inside a folder, or only in the App Library. Then find it a second way, using the search bar in the App Library. Knowing two routes to the same place means you are never truly stuck.
 - title: 'Section 4: personalizing your lock screen'
   intro: The Lock Screen is the first thing you see every time you pick up your phone. A photo of your grandchildren, a flower, or a favorite color makes every glance feel a little more personal.
   blocks:
@@ -200,6 +205,8 @@ parts:
       6. Press the Side Button to lock, then press again to see your new Lock Screen.
 
       Success: when you wake the phone, you see your chosen picture or color behind the time and date.
+
+      **Go further.** Now choose one that is actually useful to you, not just pretty. A photo of someone you love, a color that is easy on your eyes, or Photo Shuffle so it changes through the day. Then decide on purpose whether your Home Screen should match it or stay different, and set it that way. This is your phone, so it should look like your choice.
 - title: 'Section 5: adding a home screen widget'
   intro: Imagine seeing today's weather, tomorrow's appointment, or a slideshow of family photos without tapping anything. That is what widgets do. They bring the information you care about to the surface.
   blocks:
@@ -242,6 +249,8 @@ parts:
       6. Tap **Done** in the top right to stop the jiggling.
 
       Success: you see a weather widget on your Home Screen showing the current temperature.
+
+      **Go further.** Look at your Home Screen and decide the one piece of information you would most like to see without opening anything: the weather, your next appointment, a reminder list, or family photos. Add that widget, put it where your thumb naturally lands, and remove anything you added that you do not actually look at. Your Home Screen should work for you, not the other way around.
 - title: 'Section 6: organizing your home screen'
   intro: A cluttered screen can feel like a messy desk. A few minutes of organizing means the apps you want are easy to find and the ones you never use are out of the way. You are in charge here.
   blocks:
@@ -292,7 +301,14 @@ parts:
 
       > When Airplane Mode is on, you cannot make calls, send texts, or use the internet. Remember to turn it back off when you land.
 
-      **Add your own controls:** open **Settings**, tap **Control Center**, then use the green plus (+) next to any item under "More Controls" to add it, or the red minus to remove one. Good ones to add: Text Size, Timer, and Notes.
+      **Add your own controls.** You do this right inside Control Center now, not in Settings.
+
+      1. Open Control Center.
+      2. Tap the **+** in the top left corner (or press and hold an empty area) to start editing. The controls will wiggle.
+      3. Tap **Add a Control** at the bottom, then browse or search the list.
+      4. Tap the one you want, drag it where you like, and tap a blank spot or **Done** to finish.
+
+      Good ones to add: Text Size, Timer, and Notes. While you are editing, you can also drag the little handle at a control's corner to make it bigger, or tap the minus on a control to remove it.
   - type: activity
     title: 'Let''s try it together: flashlight and a new control'
     body: |
@@ -301,10 +317,12 @@ parts:
       1. Wake and unlock your phone.
       2. Swipe down from the top right corner (or up from the bottom on older iPhones).
       3. Tap the flashlight icon. The back light turns on. Tap again to turn it off, then tap outside to close.
-      4. Open **Settings**, tap **Control Center**, find "Text Size" under More Controls, and tap the green **+**.
+      4. Open Control Center again and tap the **+** in the top left corner. Tap **Add a Control**, search for "Text Size," and tap it.
       5. Go back to the Home Screen and open Control Center to see your new control.
 
       Success: you can open Control Center in one swipe, use the flashlight, and see your new control.
+
+      **Go further.** Think about what you reach for in a hurry, the flashlight, a timer, the camera, a voice memo, and build your Control Center around those. Add what you need, remove what you never touch, and move your most-used control where your thumb lands first. Then test it honestly: can you get to it in one swipe and one tap, without hunting?
 - title: 'Section 8: making the screen easier to see'
   intro: 'Your comfort matters more than anything. The iPhone has wonderful settings to make the screen easier on your eyes: bigger text, bolder letters, and a brighter or dimmer screen. Your phone, your settings.'
   blocks:
@@ -360,11 +378,13 @@ parts:
   - type: activity
     title: 'Try this at home: three challenges'
     body: |
-      1. **Customize your Control Center.** Go to Settings, then Control Center, and add one new control that interests you, like Notes, Timer, or Voice Memos. Success: you see your new button when you open Control Center.
+      1. **Customize your Control Center.** Open Control Center, tap the **+** in the top left, tap **Add a Control**, and add one that interests you, like Notes, Timer, or Voice Memos. Success: you see your new button when you open Control Center.
       2. **Set a new Lock Screen wallpaper.** Change it to a photo of someone you love, or a color or image from Apple's built-in options. Success: you see your chosen photo or color when you press the Side Button.
       3. **Add a widget to your Home Screen.** Add the Weather or Calendar widget so you see helpful information without opening an app. Success: the widget shows live information on your Home Screen.
 
       A personal note: you did not have to start learning this, but you did, and that takes real courage. Look at everything you picked up. You can turn your phone on and off, unlock it, navigate the Home Screen, personalize the Lock Screen, add a widget, control the flashlight, and more. Use your phone as often as you can. The more you use it, the more comfortable it gets.
+
+      **Go further.** Once you finish the three challenges, do the thing that locks it in: show someone else. Walk a friend or family member through one of them, in your own words, without reading from this page. If you can teach it, you own it. And if you get stuck explaining a step, that is exactly the step to come back and practice.
   - type: lesson
     title: 'Glossary: words used in this guide'
     body: |

@@ -3,7 +3,7 @@ title: Image AI, A Practical Intro
 slug: image-ai
 category: ai
 description: Expanding beyond text. What image AI can do at work, where it falls short, and how to prompt it well.
-lead_in: So far everything has been about words, but AI can make pictures too, and it is already showing up in workplaces like yours. In this lesson you will learn what image AI can do, where it falls short, and how to write a prompt that gives you something you can actually use. I will be honest with you about the limits so you do not get burned.
+lead_in: You have seen Image and Visual sitting on the map of five categories. Now let's actually use it. Everything you have practiced so far has been about words, but AI can make pictures too, and it is already showing up in workplaces like yours. In this lesson you will learn what image AI can do, where it falls short, and how to write a prompt that gives you something you can actually use. I will be honest with you about the limits so you do not get burned.
 video_url: ''
 parts:
 - title: 'Beyond text: a new tool in your kit'
@@ -50,7 +50,9 @@ parts:
   - type: lesson
     title: Gemini, Canva AI, and Adobe Firefly
     body: |
-      | Comparison point | Gemini (Google) | Canva AI (Magic Studio) | Adobe Firefly |
+      One naming note before the table. Google's image model inside Gemini is called **Nano Banana**. It is a strange name, but it is the real one, so you will see it used. When people say "make an image in Gemini," this is what is doing the work.
+
+      | Comparison point | Gemini (Nano Banana) | Canva AI (Magic Studio) | Adobe Firefly |
       |---|---|---|---|
       | **Best for** | General workplace use, built into Google Docs, Gmail, and Slides. A great starting point, and good at text in images. | Non-technical users who want drag-and-drop design alongside AI. Great for flyers and presentations. | High visual quality, best for marketing and professional materials, built into Adobe Creative Cloud. |
       | **Ease of use** | Easy. In the Gemini app and Google Workspace. No design experience needed. | Very easy. The most beginner-friendly. Templates take you from prompt to finished design fast. | Moderate. More powerful, but works best if you know some Adobe tools. |

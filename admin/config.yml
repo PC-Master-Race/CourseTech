@@ -155,9 +155,41 @@ collections:
                 options: [sparkles, grid, device, book]
               - { name: blurb, label: "Short description (one line, for cards and menu)", widget: string }
               - { name: about, label: "Course overview (paragraph, shown on the course page)", widget: text, required: false }
-              - name: topics
-                label: "Topics in this category"
+              - name: sections
+                label: "Sections (use for long courses)"
+                label_singular: "Section"
                 widget: list
+                required: false
+                summary: "{{fields.label}}"
+                hint: "Use sections once a course passes about eight lessons. Leave this empty to keep a simple flat lesson list below instead."
+                fields:
+                  - { name: id, label: "Section id (used in the web address)", widget: string, pattern: ['^[a-z0-9-]+$', "Lowercase letters, numbers, dashes."] }
+                  - { name: label, label: "Section name", widget: string }
+                  - { name: blurb, label: "One-line description", widget: string, required: false }
+                  - name: video_url
+                    label: "Section intro video (optional)"
+                    widget: string
+                    required: false
+                    hint: "Paste a YouTube link to put a video at the top of this section, or leave blank."
+                  - name: topics
+                    label: "Lessons in this section"
+                    widget: list
+                    summary: "{{fields.title}}"
+                    fields:
+                      - { name: title, label: "Title", widget: string }
+                      - { name: slug, label: "Slug", widget: string, pattern: ['^[a-z0-9-]+$', "Lowercase letters, numbers, dashes."], hint: "Must match the Topic page slug." }
+                      - { name: blurb, label: "One-line blurb", widget: string }
+                      - name: status
+                        label: "Status"
+                        widget: select
+                        default: live
+                        options:
+                          - { label: "Live (page is ready)", value: live }
+                          - { label: "Coming soon (greyed out)", value: soon }
+              - name: topics
+                label: "Lessons (flat list, for courses without sections)"
+                widget: list
+                required: false
                 summary: "{{fields.title}}"
                 fields:
                   - { name: title, label: "Title", widget: string }

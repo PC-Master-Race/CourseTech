@@ -1,0 +1,154 @@
+# ==========================================================================
+# NAVIGATION SOURCE OF TRUTH
+# This single file drives the mega menu and the home page catalog.
+# To add a topic to the menu: add an entry under the right category.
+# `slug` must match the filename in _topics/ (e.g. slug "what-ai-is"
+# -> _topics/what-ai-is.md). Set status: soon for a topic not written yet.
+# Editable from /admin (see "Site Navigation" collection).
+# ==========================================================================
+
+categories:
+  - id: ai
+    label: AI at Work
+    icon: sparkles
+    blurb: Use AI tools well, and know when not to.
+    about: >-
+      This course demystifies AI before you ever use it. You'll learn what AI
+      really is in plain English, how to prompt it well with a simple framework,
+      where it fits your actual work, how it goes wrong and how to catch it, and
+      how to use it responsibly, all the way from images to AI agents. No coding
+      and no technical background needed.
+    topics:
+      - title: What AI Actually Is
+        slug: what-ai-is
+        blurb: Plain-English basics before you touch a single tool.
+        status: live
+      - title: Prompting Fundamentals
+        slug: prompting-fundamentals
+        blurb: The one skill that changes everything. Meet RTCF.
+        status: live
+      - title: Spotting AI Opportunities at Work
+        slug: identifying-opportunities
+        blurb: Which tasks are worth handing to AI, and which are not.
+        status: live
+      - title: When AI Gets It Wrong
+        slug: when-ai-gets-it-wrong
+        blurb: Hallucinations, verification, and staying in the loop.
+        status: live
+      - title: Advanced Prompting Techniques
+        slug: advanced-prompting
+        blurb: Four moves that turn good prompts into great ones.
+        status: live
+      - title: Image AI, A Practical Intro
+        slug: image-ai
+        blurb: Make useful visuals from words, and spot the limits.
+        status: live
+      - title: Bots vs. AI Agents
+        slug: bots-vs-agents
+        blurb: What each one can do, and what to keep for yourself.
+        status: live
+      - title: The 5 Categories of AI at Work
+        slug: five-categories-of-ai
+        blurb: "The whole map: the five kinds of AI tools and what each does."
+        status: live
+      - title: Audio AI, A Practical Intro
+        slug: audio-ai
+        blurb: Transcription, meeting notes, and copyright-free music.
+        status: live
+      - title: Choosing the Right Task for AI
+        slug: choosing-the-right-task
+        blurb: A 30-second filter for which tasks to hand to AI.
+        status: live
+      - title: Scoped vs. Autonomous Agents
+        slug: scoped-vs-autonomous-agents
+        blurb: Scope and autonomy, how much a tool can do on its own.
+        status: live
+      - title: Use AI to Beat the Resume Screener
+        slug: beat-the-resume-screener
+        blurb: Get past applicant tracking software with AI.
+        status: live
+      - title: Who's Responsible When AI Gets It Wrong?
+        slug: who-is-responsible
+        blurb: The accountability gap, and why it's hard to challenge AI.
+        status: live
+      - title: When AI Has Caused Real Harm
+        slug: real-harm-cases
+        blurb: Five real, documented cases, and the lesson in each.
+        status: live
+      - title: Bias and Fairness in AI
+        slug: bias-and-fairness
+        blurb: Why AI isn't automatically fair, and what to watch for.
+        status: live
+      - title: When AI Pretends to Care
+        slug: when-ai-pretends-to-care
+        blurb: When a warm-sounding AI can't actually help.
+        status: live
+      - title: Human Dignity and the Right to an Explanation
+        slug: human-dignity
+        blurb: Treating people as people, and knowing why AI decided.
+        status: live
+      - title: The Hidden Costs of AI
+        slug: hidden-costs-of-ai
+        blurb: What AI costs the world, plus the ethics capstone.
+        status: live
+      - title: The Future of Work with AI
+        slug: future-of-work
+        blurb: How work is really changing, and how to stay ahead.
+        status: live
+      - title: AI Tools Already in Your Field
+        slug: ai-in-your-field
+        blurb: The real tools employers use, field by field.
+        status: live
+      - title: Local AI vs. Hosted AI
+        slug: local-vs-hosted-ai
+        blurb: Runs on their computer or yours? Privacy, cost, and setup.
+        status: live
+
+  - id: software
+    label: Office Productivity
+    icon: grid
+    blurb: Master the everyday office programs, from Excel to Word.
+    about: >-
+      Get comfortable with the everyday programs you'll meet at almost any desk
+      job. We start with the real basics, the kind nobody bothers to explain, and
+      build up one hands-on step at a time until you've made something real
+      yourself.
+    topics:
+      - title: "Basic Excel: Level 1"
+        slug: excel-level-1
+        blurb: Cells, formatting, and your first real formulas.
+        status: live
+      - title: "Basic Excel: Level 2"
+        slug: excel-level-2
+        blurb: Functions, sorting, and simple charts.
+        status: soon
+      - title: Writing with Word
+        slug: word-basics
+        blurb: Documents that look clean and professional.
+        status: soon
+
+  - id: devices
+    label: Devices & Digital Life
+    icon: device
+    blurb: Get comfortable with the tech you use every day.
+    about: >-
+      Get confident with the technology you use every day, from the phone in your
+      pocket to the computer on your desk. These are clear, patient, step-by-step
+      lessons with no rush, no jargon, and no such thing as a silly question.
+    topics:
+      - title: "Mobile Tech: iPhone Basics"
+        slug: iphone-basics
+        blurb: Buttons, home screen, and making it yours.
+        status: live
+      - title: "Mobile Tech: Android Basics"
+        slug: android-basics
+        blurb: The same essentials, the Samsung and Android way.
+        status: soon
+      - title: Getting Around Windows 11
+        slug: windows-11-basics
+        blurb: The desktop, the taskbar, and finding your files.
+        status: soon
+      - title: Staying Safe Online
+        slug: online-safety
+        blurb: Passwords, scams, and protecting your information.
+        status: soon

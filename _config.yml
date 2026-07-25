@@ -49,7 +49,10 @@ exclude:
   - README.md
   - DESIGN.md
   - LESSON_STYLE_PROMPT.md
+  - CURRICULUM_REVIEW.md
   - backups
+  - _dev
+  - publish.cmd
   - tutorial-hub-build-prompt.md
   - preview
   - Gemfile
