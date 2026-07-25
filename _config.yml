@@ -1,8 +1,9 @@
 title: Tutorial Hub
-tagline: Plain-English tech lessons you can actually use
+tagline: Technology explained in plain English
 description: >-
-  Hands-on tutorials for AI at work, Excel, and everyday devices. Written in
-  plain language for adult learners, by your instructor.
+  A growing library of plain-English technology lessons, covering AI at work,
+  Excel, everyday devices, and digital life. Written by a working instructor
+  and open to anyone who wants to learn.
 author: Mr. Perez
 
 # --- GitHub Pages project site ---
@@ -48,6 +49,7 @@ exclude:
   - README.md
   - DESIGN.md
   - LESSON_STYLE_PROMPT.md
+  - backups
   - tutorial-hub-build-prompt.md
   - preview
   - Gemfile

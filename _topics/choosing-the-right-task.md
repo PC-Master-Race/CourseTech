@@ -96,6 +96,8 @@ parts:
       3. **Your best prompt from this lesson.** Paste in the RTCF prompt that gave you the most useful result.
 
       Keep this document. As you learn more, you can add a risk plan for each task ("what could go wrong, and how would I catch it?") and turn a simple capability list into a responsible plan for using AI in your work.
+
+      **Go further.** Rank your three tasks from best to worst fit, and write one sentence defending each ranking using the effort-to-value question. Then pick the one you ranked lowest and decide honestly whether it belongs on the list at all. Knowing what to leave off is as valuable as knowing what to add.
   - type: lesson
     title: 'Dig deeper: recommended reading'
     body: |

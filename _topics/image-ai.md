@@ -133,6 +133,8 @@ parts:
       - Would you actually use it at work, as a draft, a mockup, or a final?
       - How long did it take versus creating it from scratch or finding a stock image?
       - Any bias, representation, or appropriateness concerns for your audience?
+
+      **Go further.** Look at your image the way a subject-matter expert in your field would. Write down every detail that is wrong, misleading, or would not pass in a real workplace document, then decide whether the image is fixable with a better prompt or genuinely needs a human designer. Making that call correctly is the professional judgment this whole lesson is building toward.
   - type: lesson
     title: What you can do now
     body: |

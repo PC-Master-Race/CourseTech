@@ -127,6 +127,8 @@ parts:
       > The legal profession has also seen adoption. The American Bar Association's 2023 Legal Technology Survey found that 51% of solo practitioners now use AI tools regularly for research and drafting, up from just 14% in 2020.
 
       **Reflection:** How many errors or unverifiable claims did you find? Were you surprised? How easy was it to spot them just by reading, without searching? Based on this, how will you verify AI content in your actual job?
+
+      **Go further.** Turn what you just learned into something you will use. Write a short verification checklist for your own role: the three specific things you will always check before an AI output leaves your hands, and the one type of claim you will never pass along unverified. Keep it somewhere you will see it.
   - type: lesson
     title: What you can do now
     body: |

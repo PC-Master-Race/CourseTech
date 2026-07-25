@@ -122,6 +122,8 @@ parts:
       2. What did the person ask for to get it?
 
       If nothing comes to mind yet, that is fine. You will be using one before this course is over.
+
+      **Go further.** Take the tool you named and work out which of the three things from the first part it really is: plain software, automation, or AI that generates something new. Then explain your reasoning in one or two sentences, the way you would to a coworker who has never thought about it. If you can do that, you have got this topic.
 - title: Busting the big myths
   intro: Let's take the common misconceptions head on. You may have heard some of these. You may have believed some. Here is the reality.
   blocks:

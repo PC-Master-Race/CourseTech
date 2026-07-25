@@ -1,0 +1,76 @@
+---
+layout: default
+title: null
+---
+<section class="hero">
+  <div class="container">
+    <p class="hero__eyebrow">
+      <svg class="icon" aria-hidden="true"><use href="#icon-sparkles"></use></svg>
+      Learn tech, in plain English
+    </p>
+    <h1>Tech skills that <span class="u">actually stick</span>.</h1>
+    <p class="hero__lead">
+      Short, hands-on courses on AI at work, Excel, and the devices you use every
+      day. No jargon, no rush. Start anywhere, come back any time.
+    </p>
+    <div class="hero__actions">
+      <a class="btn" href="#courses">
+        Explore the courses
+        <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg>
+      </a>
+      <a class="btn btn--ghost" href="{{ '/courses/ai/' | relative_url }}">Start with AI at Work</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="courses">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2 class="section-title mt-0">Courses</h2>
+      <p class="lead">Each course is a set of short lessons you can take in order or dip into as you need.</p>
+    </div>
+    <div class="course-grid">
+      {% for cat in site.data.topics.categories %}
+      {%- assign live = 0 -%}
+      {%- for t in cat.topics -%}{%- if t.status == "live" -%}{%- assign live = live | plus: 1 -%}{%- endif -%}{%- endfor -%}
+      <a class="course-card reveal" href="{{ '/courses/' | append: cat.id | append: '/' | relative_url }}">
+        <div class="course-card__icon"><svg class="icon" aria-hidden="true"><use href="#icon-{{ cat.icon }}"></use></svg></div>
+        <h3>{{ cat.label }}</h3>
+        <p>{{ cat.blurb }}</p>
+        <div class="course-card__foot">
+          <span class="course-card__count">{{ live }} lesson{% if live != 1 %}s{% endif %} ready</span>
+          <span class="course-card__cta">Explore course <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg></span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% assign recent = site.news | sort: 'date' | reverse %}
+{% if recent.size > 0 %}
+<section class="section band" id="latest-news">
+  <div class="container">
+    <div class="news-head reveal">
+      <div>
+        <h2 class="section-title mt-0">Latest news</h2>
+        <p class="lead">New lessons, tips, and updates.</p>
+      </div>
+      <a class="btn btn--ghost" href="{{ '/news/' | relative_url }}">All news
+        <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg></a>
+    </div>
+    <ul class="post-list post-list--home">
+      {% for post in recent limit: 3 %}
+      <li class="post-card reveal">
+        <a class="post-card__link" href="{{ post.url | relative_url }}">
+          <p class="post-card__date">{% if post.date %}<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>{% endif %}</p>
+          <h3>{{ post.title }}</h3>
+          {% if post.summary %}<p class="post-card__summary">{{ post.summary }}</p>{% endif %}
+          <span class="post-card__cta">Read post <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg></span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}

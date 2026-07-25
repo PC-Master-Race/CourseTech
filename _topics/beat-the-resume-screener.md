@@ -74,6 +74,8 @@ parts:
       4. Jot down your first reaction. Were you surprised by any of the words it picked out?
 
       You do not have to finish all three steps in one go. Even the keyword list is worth having.
+
+      **Go further.** Before you accept the AI's rewrite, write your own version of that summary from scratch, in your own words. Then compare the two side by side and build a final version from the best parts of each. Ask one question of every line: can I defend this in an interview? If not, cut it. The resume has to sound like you, because eventually you have to be the person who wrote it.
   - type: quiz
     title: Quick check
     body: |

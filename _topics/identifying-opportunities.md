@@ -90,6 +90,8 @@ parts:
       **Advanced option:** in the same chat, reply: "Which of these would save me the most time, and why? Then help me do that task right now using a strong prompt." That is great practice at conversational iteration.
 
       **Reflection:** after seeing what AI suggested for your field, what surprised you? Was it more knowledgeable, less knowledgeable, or about what you expected? Save your chat or take a screenshot. You may want it later.
+
+      **Go further.** Now judge the AI's suggestions instead of just collecting them. Run each one through the four-question filter yourself and mark which ones the AI got wrong for your field, along with why it was wrong. The AI does not know your workplace. Catching where its advice does not fit is the skill you actually need.
   - type: lesson
     title: What you can do now
     body: |

@@ -139,6 +139,8 @@ parts:
       - Scenario 4 is interesting: you triggered it, but it made decisions about word choice, tone, and structure. Where does your control end?
       - Scenario 5 is an agent, but with a human checkpoint built in. That checkpoint is the responsible design choice.
       - The hardest cases reveal the most. When you cannot easily classify something, that is a signal to ask more questions before trusting it.
+
+      **Go further.** Pick one real tool from your own workplace and decide how much autonomy you would actually be comfortable giving it. Name the specific task you would let it handle alone, the task you would never let it touch, and the one check you would require in between. That line you just drew is your professional judgment, and it will be worth more than any definition.
   - type: lesson
     title: What you can do now
     body: |

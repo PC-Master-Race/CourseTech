@@ -69,6 +69,8 @@ parts:
       1. Think about your field, or the career you are building toward.
       2. Name one specific situation where you would never want AI to be the only point of contact for a person in need. Just one situation, one sentence.
       3. Then look at your line and ask: what principle is underneath it? If you compared notes with people in other fields, you would likely find their lines share that same principle.
+
+      **Go further.** Turn your line into a rule someone else could follow. Write the trigger that means a real person must take over, the specific step that happens next, and who is responsible for it. If your workplace already routes something like this through AI, compare your rule to what actually happens today.
   - type: quiz
     title: Quick check
     body: |

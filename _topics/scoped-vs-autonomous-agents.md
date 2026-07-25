@@ -120,6 +120,8 @@ parts:
       6. Claude set up for customer service at one company, connected only to that company's information and told to hand off to a human when it cannot help.
 
       **Watch for these:** Scenario 1 is scoped, being smart does not make it an agent. Scenario 3 is scoped or mixed, because *you* moved the draft, so you were the agent, not the tool. Scenario 5 is a clear autonomous agent, and worth asking what rules you would want in place first. Scenario 6 is a very capable AI kept scoped on purpose, a policy choice, not a technical limit. If you cannot easily classify something, that is a signal to ask more questions before you trust it.
+
+      **Go further.** Write the rules you would want in place before your own workplace let an agent act on real work. Name what it may do without asking, what always needs a human sign-off, and who is accountable when it gets something wrong. You now know enough to write that policy, and most workplaces do not have one yet.
   - type: lesson
     title: What you can do now
     body: |

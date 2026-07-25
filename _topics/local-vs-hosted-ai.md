@@ -85,6 +85,8 @@ parts:
       2. Write the tool you will use, and the first prompt you will type.
       3. Name the one check you will always do before the output is used, your human-in-the-loop step.
       4. Do it once this week. Then note what worked and what you would change.
+
+      **Go further.** Decide whether your task belongs on hosted or local AI, and defend it using the privacy question specifically: what exactly are you typing in, and who could see it? If the honest answer makes you uneasy, that is your signal to change either the tool or the information you feed it.
   - type: quiz
     title: Quick check
     body: |

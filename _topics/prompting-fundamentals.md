@@ -142,6 +142,8 @@ parts:
       **Prompt 3, your own field.** Original: "Give me some information about my job." Make this completely specific to your real job title, a real task you do, and a realistic output you would actually use. Then write your complete RTCF version.
 
       **Reflection:** What was the biggest difference between the vague and RTCF versions? Which part of RTCF made the largest single impact for you: Role, Task, Context, or Format? Could you use any of these improved prompts in your job this week?
+
+      **Go further.** Look back at your three rewrites and decide which single part of RTCF did the most work for you: Role, Task, Context, or Format. Then take your best prompt and strip it down into a reusable template with blanks, so you can drop tomorrow's details into it without starting over. Building your own template is how this stops being an exercise and starts being a tool.
   - type: lesson
     title: What you can do now
     body: |

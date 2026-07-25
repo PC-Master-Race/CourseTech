@@ -6,12 +6,13 @@ title: null
   <div class="container">
     <p class="hero__eyebrow">
       <svg class="icon" aria-hidden="true"><use href="#icon-sparkles"></use></svg>
-      Learn tech, in plain English
+      Plain English, no gatekeeping
     </p>
-    <h1>Tech skills that <span class="u">actually stick</span>.</h1>
+    <h1>Learn technology, <span class="u">without the jargon</span>.</h1>
     <p class="hero__lead">
-      Short, hands-on courses on AI at work, Excel, and the devices you use every
-      day. No jargon, no rush. Start anywhere, come back any time.
+      A growing library of clear, patient lessons on AI at work, Excel, and the
+      devices you use every day. Written by a working instructor for anyone who
+      wants to learn, no background required.
     </p>
     <div class="hero__actions">
       <a class="btn" href="#courses">
@@ -20,6 +21,25 @@ title: null
       </a>
       <a class="btn btn--ghost" href="{{ '/courses/ai/' | relative_url }}">Start with AI at Work</a>
     </div>
+
+    {%- assign total_live = 0 -%}
+    {%- for cat in site.data.topics.categories -%}
+      {%- for t in cat.topics -%}{%- if t.status == "live" -%}{%- assign total_live = total_live | plus: 1 -%}{%- endif -%}{%- endfor -%}
+    {%- endfor -%}
+    <dl class="hero__stats">
+      <div class="hero__stat">
+        <dt class="visually-hidden">Courses</dt>
+        <dd style="margin:0"><span class="n">{{ site.data.topics.categories | size }}</span><span class="l">Courses</span></dd>
+      </div>
+      <div class="hero__stat">
+        <dt class="visually-hidden">Lessons</dt>
+        <dd style="margin:0"><span class="n">{{ total_live }}</span><span class="l">Lessons ready</span></dd>
+      </div>
+      <div class="hero__stat">
+        <dt class="visually-hidden">Pace</dt>
+        <dd style="margin:0"><span class="n">Self-paced</span><span class="l">Start anytime</span></dd>
+      </div>
+    </dl>
   </div>
 </section>
 

@@ -95,6 +95,8 @@ parts:
       4. Write down three things: the name of the source, one sentence on why you trust it, and one detail from that source that was not mentioned here.
 
       Why this matters: AI will be used to spread misinformation as easily as it is used for good. The habit of checking claims before believing them, including claims made in a lesson like this one, is one of the most valuable skills you can build. If you can verify a source, you can verify anything.
+
+      **Go further.** Take the case closest to your field and write the one safeguard that would have prevented it, specific enough that someone could actually put it in place. Then ask the harder question: does anything like that safeguard exist where you work right now? If not, you have found something worth raising.
   - type: quiz
     title: Quick check
     body: |

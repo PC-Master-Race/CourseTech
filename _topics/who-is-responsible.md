@@ -75,6 +75,8 @@ parts:
       3. Can you even get an explanation of why it happened?
 
       You do not need to land on answers. The point is to notice how hard the questions are. That difficulty has a name: the accountability gap.
+
+      **Go further.** Write the single sentence you would want added to your workplace's policy so this could not happen to someone there. Then decide who would have to agree to it: your supervisor, HR, legal, or a vendor. Turning a frustration into one concrete, specific ask is how these problems actually get fixed.
   - type: quiz
     title: Quick check
     body: |

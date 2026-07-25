@@ -73,6 +73,8 @@ parts:
       1. Think of a time you dealt with an automated system, a chatbot, a phone menu, a screening tool, an automated rejection email, and felt like you were not being treated as a full human being.
       2. Ask yourself what specifically made it feel that way. Was it the lack of explanation? The inability to make an exception? The feeling of being categorized?
       3. Then answer the closing question: what would it actually look like for an AI tool in your workplace to respect the dignity of every person it touches? Name one specific design choice that would make a difference.
+
+      **Go further.** Take the one design change you named and think it through properly: what exactly would change for the person on the other end, what would it cost the organization, and how would you know it was working? An idea becomes a proposal when you can answer those three questions.
   - type: quiz
     title: Quick check
     body: |

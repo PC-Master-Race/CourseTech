@@ -103,6 +103,8 @@ parts:
       4. Read what it captured. Ask it to "turn this into a short, organized note with a few bullet points."
 
       Then reflect: how close was it to what you meant? Would this save you time on a task you do often? And if you record other people for this in real life, how will you ask for their okay first?
+
+      **Go further.** Read the transcript against what you actually said and mark anything it got wrong, especially names, numbers, and anything specific to your field. Then write out, in your own words, the sentence you would use to ask a client or coworker for permission before recording them. If you cannot say it comfortably, keep rewriting until you can.
   - type: quiz
     title: Quick check
     body: |

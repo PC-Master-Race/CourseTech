@@ -138,6 +138,8 @@ parts:
       **Evaluate all three.** For each question, which round wins: Which is closest to something you would actually send? Which best matches your field's tone? Which needs the least editing? Which shows the most professional judgment?
 
       **Reflect:** Which round produced something usable without major editing, and what made it better? How much longer did the Round 3 prompt take, and was it worth it? Where in your job would a Round 1 prompt be enough, and where is Round 3 worth the effort?
+
+      **Go further.** Take the task you do most often at work and build one permanent prompt for it, combining a persona, two constraints, and an example of your own good work. Save it. Then, after you use it a few times, revise it based on where the output still needed fixing. A prompt you keep improving is worth more than any prompt I could write for you.
   - type: lesson
     title: What you can do now
     body: |

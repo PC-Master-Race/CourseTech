@@ -139,6 +139,18 @@ parts:
 
       - Press **Ctrl+P** to open the print screen.
       - Use the preview on the right to check it fits nicely before you print.
+  - type: activity
+    title: Build one from scratch, start to finish
+    body: |
+      This last one puts everything together. Instead of following my steps, you decide what to make.
+
+      1. **Pick something real** you would actually track: a monthly budget, hours worked, supplies to order, or a list of contacts.
+      2. **Plan it before you type.** What are your column headings? What goes in the rows? Sketch it on paper if that helps.
+      3. **Build it.** Enter your headings and your data, widen the columns, and bold the top row.
+      4. **Make it calculate.** Add at least one formula that gives you a total or a count.
+      5. **Save it**, and save a PDF copy too.
+
+      Then look it over and judge your own work: is it easy for someone else to read at a glance? What would you change if you had to hand it to a supervisor tomorrow? Making that call yourself, without me telling you, is the real sign you have got this.
   - type: quiz
     title: Quick check
     body: |

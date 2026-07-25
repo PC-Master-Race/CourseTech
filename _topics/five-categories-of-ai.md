@@ -158,6 +158,8 @@ parts:
       Example: "Language and Communication. I could use AI to draft follow-up emails after client meetings."
 
       Then push yourself with two more questions: which category feels hardest to apply to your work right now, and why? And is any category one you had never thought to use before? The map is not the same for every field. Your job is to know *your* map.
+
+      **Go further.** Design a small workflow that chains two categories together for a real task in your work, for example audio to capture a meeting, then language to turn it into a summary you would actually send. Write the steps in order, and mark the point where you would review the output before it goes anywhere. Combining categories is where the real time savings live.
   - type: quiz
     title: Quick check
     body: |

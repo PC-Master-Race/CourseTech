@@ -168,6 +168,8 @@ parts:
       - **Behavioral specialist:** "A student frequently leaves their seat, interrupts lessons, and struggles to stay on task. Write three positive behavior-intervention strategies to share with the classroom teacher, in simple, practical language."
       - **Manufacturing:** "Explain predictive maintenance in a manufacturing context, with a simple example of how it prevents an expensive breakdown, in language a floor worker with no technical background would understand."
       - **Business admin / architecture:** "Write a professional meeting summary for a project kickoff between an architecture firm and a new commercial client: scope (a 10,000 sq ft office building), timeline (18 months), budget (under discussion), next steps (site visit next week, design brief in three weeks)."
+
+      **Go further.** Judge the output the way someone senior in your field would. Mark what would not pass in a real workplace, then rewrite the prompt to fix it and run it again. Keep the version that finally works, because you have just built a tool for a task you will do many more times.
   - type: quiz
     title: Quick check
     body: |

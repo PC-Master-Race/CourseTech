@@ -68,6 +68,8 @@ parts:
       2. Ask yourself: what does the "default" person in each role look like? What assumptions are baked into the language?
       3. Now rewrite one of the three prompts to produce a more balanced, inclusive description. Run your new version and compare.
       4. Final question to sit with: does a better prompt fully remove the bias, or does it just make the bias less visible? What does that mean for using AI in hiring, evaluation, or recommendations at work?
+
+      **Go further.** Write one review rule for your own field, a specific thing you will always check before using AI output that describes, evaluates, or recommends a person. Make it concrete enough that a coworker could follow it without you explaining. Then consider what your rule still would not catch, because every rule has a blind spot.
   - type: quiz
     title: Quick check
     body: |

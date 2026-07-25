@@ -80,6 +80,8 @@ parts:
       **4. What is the human backup plan?** What happens if the AI gets it wrong? Who reviews the output before it affects a real person? Who is accountable if it causes harm? If you cannot answer this clearly, that is your ethics concern right there. Example: "Before any AI-generated report goes to a client, my supervisor reviews it, and we are both accountable."
 
       When you finish, look for the single biggest ethical concern in your answers. That is the one to watch most closely.
+
+      **Go further.** Now weigh the whole thing honestly. Given what this task gains you and what it costs, in accuracy risk, in resources, in skills you might stop practicing, decide whether it is still worth doing with AI. Write your verdict in one sentence, including the strongest argument against your own answer. A decision you can argue both sides of is one you actually understand.
   - type: quiz
     title: Quick check
     body: |

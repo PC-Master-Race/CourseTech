@@ -38,6 +38,8 @@ parts:
       1. Think back to the task you identified as a good fit for AI, the one from your AI Workplace Framework.
       2. Write one sentence about where you are with it. Have you tried it yet? Still deciding? Did something change?
       3. Then pick which of the three shifts above, augmentation, new roles, or AI users advancing, is most likely to affect your field in the next year, and why.
+
+      **Go further.** Look one year out. Name the specific part of your job most likely to change, the skill that will make you the person who handles that change well, and one concrete thing you will do in the next month to build it. Write it as one sentence you could say out loud in an interview.
   - type: quiz
     title: Quick check
     body: |
